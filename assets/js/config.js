@@ -34,7 +34,7 @@
     emailProvider: 'web3forms',
 
     /** Chave PÚBLICA do Web3Forms (é feita para ficar no front-end). Restrinja o domínio no painel. */
-    web3formsAccessKey: 'SUA_CHAVE_WEB3FORMS_AQUI',
+    web3formsAccessKey: '8ec07629-2668-4e26-a514-a80079ef59cd',
 
     /** ID do formulário Formspree, ex.: 'xyzabcd' (usado só se emailProvider = 'formspree'). */
     formspreeFormId: '',

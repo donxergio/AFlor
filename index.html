@@ -44,7 +44,8 @@
   <meta name="twitter:image" content="https://donxergio.github.io/AFLOR/assets/img/og-aflor.jpg">
 
   <!-- Ícones e manifesto -->
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
@@ -72,7 +73,7 @@
         "alternateName": ["AFLOR", "Ciranda das Flores"],
         "description": "Associação que une famílias, educadores e comunidade em Joinville para viabilizar e expandir uma educação para a liberdade baseada na Pedagogia Waldorf.",
         "url": "https://donxergio.github.io/AFLOR/",
-        "logo": "https://donxergio.github.io/AFLOR/assets/img/icon-512.png",
+        "logo": "https://donxergio.github.io/AFLOR/assets/img/logo-aflor.png",
         "image": "https://donxergio.github.io/AFLOR/assets/img/og-aflor.jpg",
         "foundingDate": "2024-05-21",
         "foundingLocation": { "@type": "Place", "name": "Joinville, SC, Brasil" },
@@ -112,22 +113,6 @@
 
   <!-- Sprite de ícones (SVG inline é permitido pela CSP) -->
   <svg xmlns="http://www.w3.org/2000/svg" class="sr-only" aria-hidden="true" focusable="false">
-    <!-- Logo AFLOR: uma flor que nasce da mesma paleta e do mesmo anel tracejado da Ciranda -->
-    <symbol id="i-logo" viewBox="0 0 48 48">
-      <g>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#f0c3ab"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#a9bfa0" transform="rotate(45 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#ddd2eb" transform="rotate(90 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#ebcd84" transform="rotate(135 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#f0c3ab" transform="rotate(180 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#a9bfa0" transform="rotate(225 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#ddd2eb" transform="rotate(270 24 24)"/>
-        <ellipse cx="24" cy="11.5" rx="4.6" ry="7.4" fill="#ebcd84" transform="rotate(315 24 24)"/>
-      </g>
-      <circle cx="24" cy="24" r="6.4" fill="#a0503a"/>
-      <circle cx="24" cy="24" r="3.4" fill="#f5e4b6"/>
-      <circle cx="24" cy="24" r="22" fill="none" stroke="#a0503a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2.4 5" opacity=".45"/>
-    </symbol>
     <!-- Logo do Jardim Ciranda (site irmão) -->
     <symbol id="i-logo-jardim" viewBox="0 0 48 48">
       <circle cx="24" cy="24" r="8" fill="#ebcd84"/>
@@ -188,7 +173,7 @@
   <header class="site-header" id="topo">
     <div class="container">
       <a class="brand" href="./" aria-label="AFLOR — página inicial">
-        <svg class="brand__flower" aria-hidden="true"><use href="#i-logo"/></svg>
+        <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" decoding="async">
         <span>
           <span class="brand__name">AFLOR</span>
           <span class="brand__tag">Ciranda das Flores</span>
@@ -1104,7 +1089,7 @@
       <div class="footer-grid footer-grid--aflor">
         <div>
           <a class="brand" href="./" aria-label="AFLOR — voltar ao topo">
-            <svg aria-hidden="true"><use href="#i-logo"/></svg>
+            <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" loading="lazy" decoding="async">
             <span><span class="brand__name">AFLOR</span><span class="brand__tag">Ciranda das Flores</span></span>
           </a>
           <p>Associação Pedagógica Antroposófica Ciranda das Flores. Famílias, educadores e comunidade de Joinville cultivando uma educação para a liberdade.</p>

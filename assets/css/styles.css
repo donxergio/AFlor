@@ -792,8 +792,9 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
   .nav { position: absolute; inset: 100% 0 auto 0; }
 }
 
-.brand svg.brand__flower { transition: transform 1.6s var(--ease); }
-.brand:hover svg.brand__flower { transform: rotate(45deg); }
+.brand__logo { width: 48px; height: 48px; flex: none; object-fit: contain; transition: transform 0.6s var(--ease); }
+.brand:hover .brand__logo { transform: scale(1.08) rotate(-6deg); }
+.site-footer .brand__logo { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25)); }
 
 /* 21.2 Hero AFLOR */
 .hero--aflor h1 em { display: inline; }
@@ -830,6 +831,7 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 }
 .letter h2 { font-size: var(--fs-2xl); }
 .letter p { font-family: var(--font-serif); font-size: var(--fs-lg); line-height: 1.8; color: var(--c-ink-700); }
+.letter p.eyebrow { font-family: var(--font-sans); font-size: var(--fs-xs); line-height: 1.4; color: var(--c-terracotta-700); }
 .letter .lead-drop::first-letter {
   float: left; font-size: 3.6em; line-height: 0.82; padding: 0.08em 0.12em 0 0; color: var(--c-terracotta-600); font-weight: 600;
 }
@@ -1019,6 +1021,7 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 .path p { color: var(--text-muted); margin: 0; flex: 1; }
 .path .btn { align-self: flex-start; margin-top: 0.75rem; }
 @media (max-width: 900px) { .paths { grid-template-columns: 1fr; } }
+ul.paths { margin-bottom: var(--sp-8); } /* vence o reset ul[role='list'] */
 
 .join-block { position: relative; z-index: 1; margin-bottom: var(--sp-8); scroll-margin-top: calc(var(--header-h) + 16px); }
 .join-block__head { max-width: 52rem; margin: 0 auto var(--sp-6); text-align: center; }
@@ -1087,10 +1090,10 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 /* 21.10 Formulário unificado — extras */
 .join-form { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; position: relative; z-index: 1; }
 .join-form__aside { position: sticky; top: calc(var(--header-h) + 2rem); }
-.join-form__aside img { width: 100%; border-radius: var(--r-blob-2); box-shadow: var(--shadow-lg); aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 1.25rem; }
+.join-form__aside img { width: 100%; border-radius: var(--r-blob-2); box-shadow: var(--shadow-lg); aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 88%; margin-bottom: 1.25rem; }
 .join-form__aside h2, .join-form__aside h3 { font-size: var(--fs-2xl); }
 .join-form__aside p { color: var(--text-muted); }
-.check-list { display: grid; gap: 0.6rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+ul.check-list { display: grid; gap: 0.6rem; margin: 1rem 0 0; padding: 0; list-style: none; }
 .check-list li { display: grid; grid-template-columns: 26px 1fr; gap: 0.6rem; align-items: start; font-size: var(--fs-sm); color: var(--c-ink-700); }
 .check-list svg { width: 22px; height: 22px; color: var(--c-sage-700); margin-top: 2px; }
 @media (max-width: 960px) { .join-form { grid-template-columns: 1fr; } .join-form__aside { position: static; } .join-form__aside img { display: none; } }
@@ -1111,6 +1114,10 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .choice input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; }
 .choice-grid[aria-invalid='true'] .choice label { border-color: var(--error); }
 .conditional { grid-column: 1 / -1; padding: 1rem 1.1rem; border-radius: var(--r-md); background: var(--c-cream-100); border: 1px dashed var(--c-peach-300); }
+.conditional legend { float: left; width: 100%; padding: 0; margin-bottom: 0.6rem; }
+.conditional legend + * { clear: both; }
+#campo-categoria { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 480px) { #campo-categoria { grid-template-columns: 1fr; } }
 .js .conditional:not([hidden]) { animation: rise var(--t-base) var(--ease) both; }
 
 .form-alt { margin-top: var(--sp-4); text-align: center; font-size: var(--fs-xs); color: var(--text-subtle); }
