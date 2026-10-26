@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,14 @@
        inline, nada de terceiros exceto o endpoint de formulário e os
        iframes de mapa carregados sob demanda.
        ========================================================= -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com https://formspree.io; frame-src https://www.openstreetmap.org; form-action 'self' https://api.web3forms.com https://formspree.io; base-uri 'self'; object-src 'none'; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com https://formspree.io; frame-src https://www.openstreetmap.org; form-action 'self' https://api.web3forms.com https://formspree.io; base-uri 'self'; object-src 'none'; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- =========================== SEO =========================== -->
   <title>AFLOR | Associação Pedagógica Antroposófica Ciranda das Flores — Joinville/SC</title>
-  <meta name="description" content="A AFLOR une famílias, educadores e comunidade em Joinville/SC para viabilizar e expandir uma educação para a liberdade baseada na Pedagogia Waldorf. Associe-se, doe ou seja voluntário.">
+  <meta name="description"
+    content="A AFLOR une famílias, educadores e comunidade em Joinville/SC para viabilizar e expandir uma educação para a liberdade baseada na Pedagogia Waldorf. Associe-se, doe ou seja voluntário.">
   <!-- ⚠️ Em produção (domínio próprio), atualize canonical, og:url e og:image. -->
   <link rel="canonical" href="https://donxergio.github.io/AFLOR/">
   <link rel="alternate" hreflang="pt-BR" href="https://donxergio.github.io/AFLOR/">
@@ -32,7 +35,8 @@
   <meta property="og:site_name" content="AFLOR — Ciranda das Flores">
   <meta property="og:url" content="https://donxergio.github.io/AFLOR/">
   <meta property="og:title" content="AFLOR — E nasce a flor: cultivando o futuro a partir da infância">
-  <meta property="og:description" content="Famílias, educadores e comunidade de Joinville unidos por uma educação para a liberdade baseada na Pedagogia Waldorf.">
+  <meta property="og:description"
+    content="Famílias, educadores e comunidade de Joinville unidos por uma educação para a liberdade baseada na Pedagogia Waldorf.">
   <meta property="og:image" content="https://donxergio.github.io/AFLOR/assets/img/og-aflor.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -53,8 +57,8 @@
   <link rel="preload" href="assets/fonts/lora-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp"
-        imagesrcset="assets/img/maos-semeando-640.webp 640w, assets/img/maos-semeando-1280.webp 1280w"
-        imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
+    imagesrcset="assets/img/maos-semeando-640.webp 640w, assets/img/maos-semeando-1280.webp 1280w"
+    imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
 
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/config.js" defer></script>
@@ -115,56 +119,204 @@
   <svg xmlns="http://www.w3.org/2000/svg" class="sr-only" aria-hidden="true" focusable="false">
     <!-- Logo do Jardim Ciranda (site irmão) -->
     <symbol id="i-logo-jardim" viewBox="0 0 48 48">
-      <circle cx="24" cy="24" r="8" fill="#ebcd84"/>
-      <circle cx="24" cy="6" r="3.2" fill="#f0c3ab"/><circle cx="36.7" cy="11.3" r="3.2" fill="#a9bfa0"/><circle cx="42" cy="24" r="3.2" fill="#ddd2eb"/><circle cx="36.7" cy="36.7" r="3.2" fill="#f0c3ab"/>
-      <circle cx="24" cy="42" r="3.2" fill="#a9bfa0"/><circle cx="11.3" cy="36.7" r="3.2" fill="#ddd2eb"/><circle cx="6" cy="24" r="3.2" fill="#f0c3ab"/><circle cx="11.3" cy="11.3" r="3.2" fill="#a9bfa0"/>
-      <circle cx="24" cy="24" r="15" fill="none" stroke="#a0503a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 5.4" opacity=".55"/>
+      <circle cx="24" cy="24" r="8" fill="#ebcd84" />
+      <circle cx="24" cy="6" r="3.2" fill="#f0c3ab" />
+      <circle cx="36.7" cy="11.3" r="3.2" fill="#a9bfa0" />
+      <circle cx="42" cy="24" r="3.2" fill="#ddd2eb" />
+      <circle cx="36.7" cy="36.7" r="3.2" fill="#f0c3ab" />
+      <circle cx="24" cy="42" r="3.2" fill="#a9bfa0" />
+      <circle cx="11.3" cy="36.7" r="3.2" fill="#ddd2eb" />
+      <circle cx="6" cy="24" r="3.2" fill="#f0c3ab" />
+      <circle cx="11.3" cy="11.3" r="3.2" fill="#a9bfa0" />
+      <circle cx="24" cy="24" r="15" fill="none" stroke="#a0503a" stroke-width="2.4" stroke-linecap="round"
+        stroke-dasharray="3 5.4" opacity=".55" />
     </symbol>
-    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
-    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
-    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19 13 11"/></symbol>
-    <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13C12 9 9 7 5 7c0 4 3 6 7 6Z"/><path d="M12 11c0-3.5 2.5-6 7-6 0 4-3 6-7 6Z"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
-    <symbol id="i-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-6"/><path d="M12 15c-4.5 0-7-2.4-7-5.6A5.3 5.3 0 0 1 9 4.4a4.6 4.6 0 0 1 6 0 5.3 5.3 0 0 1 4 5c0 3.2-2.5 5.6-7 5.6Z"/></symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/></symbol>
-    <symbol id="i-family" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="6" r="2.3"/><circle cx="17" cy="6" r="2.3"/><circle cx="12" cy="12.5" r="1.8"/><path d="M3.5 20v-5a3.5 3.5 0 0 1 7 0M13.5 15a3.5 3.5 0 0 1 7 0v5M9.5 20v-2a2.5 2.5 0 0 1 5 0v2"/></symbol>
-    <symbol id="i-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="4.8" r="2"/><circle cx="19.2" cy="12" r="2"/><circle cx="12" cy="19.2" r="2"/><circle cx="4.8" cy="12" r="2"/><path d="M14 6.3 17.7 10M17.7 14 14 17.7M10 17.7 6.3 14M6.3 10 10 6.3"/></symbol>
-    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13h2.5l3 2.5H14a1.4 1.4 0 0 1 0 2.8h-3"/><path d="M3 12.5h3V20H3z"/><path d="m14 18.3 5.2-2.6a1.5 1.5 0 0 1 1.4 2.7L14.5 21H9.5L6 19.5"/><path d="M15.5 10S12 8.1 12 5.8A2 2 0 0 1 15.5 4.5 2 2 0 0 1 19 5.8C19 8.1 15.5 10 15.5 10Z"/></symbol>
-    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 9 8 12 8Zm0 0s1.5-4.5 4-3.5S15 8 12 8Z"/></symbol>
-    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
-    <symbol id="i-assembly" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.5"/><circle cx="5" cy="11" r="2"/><circle cx="19" cy="11" r="2"/><path d="M8 20v-3a4 4 0 0 1 8 0v3M2.5 19v-1.5A2.5 2.5 0 0 1 5 15M21.5 19v-1.5A2.5 2.5 0 0 0 19 15"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.6-1-2.8 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3Z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7" r="1.2"/></symbol>
-    <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0Zm11 0-3 7a3 3 0 0 0 6 0Z"/></symbol>
-    <symbol id="i-self" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 12a1.4 1.4 0 1 1 1.4-1.4 3 3 0 1 1-3 3 4.6 4.6 0 1 1 4.6-4.6 6.3 6.3 0 1 1-6.3 6.3"/></symbol>
-    <symbol id="i-triad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8.5" r="4.6"/><circle cx="8.2" cy="15" r="4.6"/><circle cx="15.8" cy="15" r="4.6"/></symbol>
-    <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18.5" r="2.2"/><path d="M7.4 6h9.2M17.8 8.1l-4.6 8.3M6.2 8.1l4.6 8.3"/></symbol>
-    <symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 10 12 5l9.5 5-9.5 5Z"/><path d="M6.5 12.2V16c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-3.8"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
-    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m4 7 8 6 8-6"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-wave" viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 46c120-26 240-38 360-30s240 40 360 46 240-18 360-30 240-6 360 10V90H0Z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4h6v6M20 4l-9 9" />
+      <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6" />
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15" />
+      <path d="M5 19 13 11" />
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21v-8" />
+      <path d="M12 13C12 9 9 7 5 7c0 4 3 6 7 6Z" />
+      <path d="M12 11c0-3.5 2.5-6 7-6 0 4-3 6-7 6Z" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <circle cx="12" cy="12" r="4.2" />
+      <path
+        d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
+    </symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 21v-6" />
+      <path
+        d="M12 15c-4.5 0-7-2.4-7-5.6A5.3 5.3 0 0 1 9 4.4a4.6 4.6 0 0 1 6 0 5.3 5.3 0 0 1 4 5c0 3.2-2.5 5.6-7 5.6Z" />
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z" />
+    </symbol>
+    <symbol id="i-family" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="7" cy="6" r="2.3" />
+      <circle cx="17" cy="6" r="2.3" />
+      <circle cx="12" cy="12.5" r="1.8" />
+      <path d="M3.5 20v-5a3.5 3.5 0 0 1 7 0M13.5 15a3.5 3.5 0 0 1 7 0v5M9.5 20v-2a2.5 2.5 0 0 1 5 0v2" />
+    </symbol>
+    <symbol id="i-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round">
+      <circle cx="12" cy="4.8" r="2" />
+      <circle cx="19.2" cy="12" r="2" />
+      <circle cx="12" cy="19.2" r="2" />
+      <circle cx="4.8" cy="12" r="2" />
+      <path d="M14 6.3 17.7 10M17.7 14 14 17.7M10 17.7 6.3 14M6.3 10 10 6.3" />
+    </symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.5 8.5-2 5-5 2 2-5Z" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M6 13h2.5l3 2.5H14a1.4 1.4 0 0 1 0 2.8h-3" />
+      <path d="M3 12.5h3V20H3z" />
+      <path d="m14 18.3 5.2-2.6a1.5 1.5 0 0 1 1.4 2.7L14.5 21H9.5L6 19.5" />
+      <path d="M15.5 10S12 8.1 12 5.8A2 2 0 0 1 15.5 4.5 2 2 0 0 1 19 5.8C19 8.1 15.5 10 15.5 10Z" />
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="3.5" y="8" width="17" height="4" rx="1" />
+      <path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 9 8 12 8Zm0 0s1.5-4.5 4-3.5S15 8 12 8Z" />
+    </symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" />
+      <path d="M14 3v5h5M9 13h6M9 17h4" />
+    </symbol>
+    <symbol id="i-assembly" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="7" r="2.5" />
+      <circle cx="5" cy="11" r="2" />
+      <circle cx="19" cy="11" r="2" />
+      <path d="M8 20v-3a4 4 0 0 1 8 0v3M2.5 19v-1.5A2.5 2.5 0 0 1 5 15M21.5 19v-1.5A2.5 2.5 0 0 0 19 15" />
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M4 20V4M4 20h16" />
+      <path d="M8 16v-4M12 16V8M16 16v-6" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.6-1-2.8 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3Z" />
+      <circle cx="7.5" cy="11" r="1.2" />
+      <circle cx="10" cy="7" r="1.2" />
+      <circle cx="15" cy="7" r="1.2" />
+    </symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 3v18M7 21h10M4 7h16M6.5 7l-3 7a3 3 0 0 0 6 0Zm11 0-3 7a3 3 0 0 0 6 0Z" />
+    </symbol>
+    <symbol id="i-self" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M12 12a1.4 1.4 0 1 1 1.4-1.4 3 3 0 1 1-3 3 4.6 4.6 0 1 1 4.6-4.6 6.3 6.3 0 1 1-6.3 6.3" />
+    </symbol>
+    <symbol id="i-triad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <circle cx="12" cy="8.5" r="4.6" />
+      <circle cx="8.2" cy="15" r="4.6" />
+      <circle cx="15.8" cy="15" r="4.6" />
+    </symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <circle cx="5" cy="6" r="2.2" />
+      <circle cx="19" cy="6" r="2.2" />
+      <circle cx="12" cy="18.5" r="2.2" />
+      <path d="M7.4 6h9.2M17.8 8.1l-4.6 8.3M6.2 8.1l4.6 8.3" />
+    </symbol>
+    <symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 10 12 5l9.5 5-9.5 5Z" />
+      <path d="M6.5 12.2V16c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-3.8" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M4 5h16v11H9l-5 4Z" />
+      <path d="M8 9.5h8M8 12.5h5" />
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M3.5 11 12 4l8.5 7" />
+      <path d="M5.5 9.5V20h13V9.5" />
+      <path d="M10 20v-5h4v5" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z" />
+      <circle cx="12" cy="9.5" r="2.5" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="3.5" />
+      <path d="m4 7 8 6 8-6" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6Z" />
+      <path d="m9 12 2 2 4-4" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8 12 3 3 5-6" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="i-wave" viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <path d="M0 46c120-26 240-38 360-30s240 40 360 46 240-18 360-30 240-6 360 10V90H0Z" />
+    </symbol>
   </svg>
 
   <!-- ===================== BARRA DO ECOSSISTEMA ===================== -->
   <div class="topbar">
     <div class="container">
-      <p><span class="topbar__flower" aria-hidden="true"></span>AFLOR · Associação Pedagógica Antroposófica Ciranda das Flores · Joinville/SC</p>
+      <p><span class="topbar__flower" aria-hidden="true"></span>AFLOR · Associação Pedagógica Antroposófica Ciranda das
+        Flores · Joinville/SC</p>
       <div class="topbar__links">
         <!-- 🔗 Link do Jardim: valor definido em assets/js/config.js (jardimUrl). Em produção: https://www.jardimciranda.com.br -->
-        <a href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer" id="topbar-jardim">
+        <a href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer"
+          id="topbar-jardim">
           Conheça nossa iniciativa educativa: Jardim Waldorf Ciranda ↗
         </a>
-        <a class="topbar__social" href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer" id="topbar-instagram">@aflor_assoc</a>
+        <a class="topbar__social" href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer"
+          id="topbar-instagram">@aflor_assoc</a>
       </div>
     </div>
   </div>
@@ -180,7 +332,8 @@
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" id="btn-menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+        aria-label="Abrir menu" id="btn-menu">
         <span></span>
       </button>
 
@@ -202,7 +355,8 @@
 
     <!-- ============================ A. HERO ============================ -->
     <section class="hero hero--aflor" id="inicio" aria-labelledby="hero-titulo">
-      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l3"></span></div>
+      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l3"></span>
+      </div>
 
       <div class="container hero__grid">
         <div>
@@ -214,17 +368,22 @@
           </p>
           <div class="hero__ctas">
             <a class="btn" href="#associado" id="cta-hero-associado">
-              <svg aria-hidden="true"><use href="#i-sprout"/></svg>
+              <svg aria-hidden="true">
+                <use href="#i-sprout" />
+              </svg>
               Faça Parte como Associado
             </a>
             <a class="btn btn--ghost" href="#quem-somos" id="cta-hero-historia">
               Conheça Nossa História
-              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              <svg aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg>
             </a>
           </div>
           <figure class="hero__quote">
             <blockquote>
-              <p>“A nossa mais elevada tarefa é a de formar seres humanos livres, capazes de, por si mesmos, encontrar propósito e direção em suas vidas.”</p>
+              <p>“A nossa mais elevada tarefa é a de formar seres humanos livres, capazes de, por si mesmos, encontrar
+                propósito e direção em suas vidas.”</p>
             </blockquote>
             <figcaption><cite>— Rudolf Steiner</cite></figcaption>
           </figure>
@@ -234,34 +393,37 @@
           <span class="hero__ring" aria-hidden="true"></span>
           <div class="hero__blob">
             <!-- Sem rostos (ECA/LGPD): apenas mãos de adulto e criança semeando. LCP: sem lazy-loading -->
-            <img
-              src="assets/img/maos-semeando-1280.webp"
+            <img src="assets/img/maos-semeando-1280.webp"
               srcset="assets/img/maos-semeando-640.webp 640w, assets/img/maos-semeando-1280.webp 1280w"
-              sizes="(max-width: 900px) 90vw, 560px"
-              width="1280" height="860"
+              sizes="(max-width: 900px) 90vw, 560px" width="1280" height="860"
               alt="Mão de um adulto e mão de uma criança colocando juntas uma semente na terra escura, ao lado de um broto"
               fetchpriority="high" decoding="async">
           </div>
           <div class="hero__card hero__card--a" aria-hidden="true">
-            <span class="dot"><svg><use href="#i-family"/></svg></span>
+            <span class="dot"><svg>
+                <use href="#i-family" />
+              </svg></span>
             <span>Feita em comunidade<small>famílias, educadores e apoiadores</small></span>
           </div>
           <div class="hero__card hero__card--b" aria-hidden="true">
-            <span class="dot"><svg><use href="#i-sprout"/></svg></span>
+            <span class="dot"><svg>
+                <use href="#i-sprout" />
+              </svg></span>
             <span>Fundada em 21/05/2024<small>uma nova flor na Ciranda</small></span>
           </div>
         </div>
       </div>
 
-      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== B. QUEM SOMOS — "E NASCE A FLOR" ===================== -->
     <section class="section section--alt" id="quem-somos" aria-labelledby="quem-somos-titulo">
       <div class="container letter-wrap">
         <aside class="letter-aside reveal" aria-label="Linha do tempo da AFLOR">
-          <img
-            src="assets/img/aquarela-lazur-1280.webp"
+          <img src="assets/img/aquarela-lazur-1280.webp"
             srcset="assets/img/aquarela-lazur-640.webp 640w, assets/img/aquarela-lazur-1280.webp 1280w"
             sizes="(max-width: 960px) 46vw, 400px" width="1280" height="948"
             alt="Aquarela em técnica Lazur com flores em tons de pêssego, rosa e ocre e uma semente germinando ao centro"
@@ -278,26 +440,49 @@
           <p class="eyebrow">Quem somos · Sobre a Associação</p>
           <h2 id="quem-somos-titulo">E nasce a <em>flor</em></h2>
 
-          <p class="lead-drop">Só é possível falar do surgimento da AFLOR a partir da história do Jardim Waldorf Ciranda. E por aí começamos.</p>
-          <p>O Jardim Waldorf Ciranda foi criado para trazer às crianças de Joinville uma educação baseada e inspirada na Pedagogia Waldorf, com o propósito de contribuir para a formação de seres humanos livres. Com espaço de contato com a natureza, brinquedos adequados à idade e a abertura e incentivo para engajamento das famílias no dia a dia do Ciranda.</p>
-          <p>Foram 7 anos semeando, começando lá em 2017, a falar sobre a pedagogia Waldorf, sobre a Antroposofia e modelos de gestão associativos. Conceitos que ainda são inovadores e disruptivos para quem está acostumado com modelos tradicionais na área da educação.</p>
-          <p class="pull">Estamos a serviço da criança, a serviço do desenvolvimento do ser humano, pensando no que esse ser poderá, conforme o que receber agora na infância, oferecer para o mundo no futuro. Essa é a NOSSA tarefa, não só do educador em sala de aula, mas da comunidade como um todo.</p>
-          <p>A tarefa é do coletivo e não de um único ser. Precisamos atuar juntos, como comunidade na educação da criança, não só de nossos próprios filhos e filhas, mas também das crianças ao nosso entorno, pois elas irão conviver no futuro e farão parte da próxima geração.</p>
-          <p>Quando assumimos a responsabilidade de olhar para a infância a partir de um olhar ampliado, como humanidade, iremos perceber que não existe nenhuma outra necessidade mais importante no mundo do que cuidar da infância. É lá que estão as sementes que irão dar flores e frutos no futuro. Cuidar da qualidade da semente, do solo, do germinar é o que irá garantir que essas flores e frutos possam alcançar todo seu potencial e, de fato, mudar o contexto em que vivemos.</p>
-          <p>Esse propósito se fortaleceu ainda mais, consolidando a visão de comunidade com a abertura da AFLOR e ampliando o foco na educação da criança como ser do futuro.</p>
-          <p>Durante todo o ano de 2023, um grupo de familiares de crianças do Ciranda juntou-se para elaborar a associação e formar o que seria esse germe de comunidade. Em 2024, no dia 21 de maio, é realizada a assembleia de fundação da AFLOR, contando com a presença de fundadores do Ciranda, familiares e demais apoiadores para fortalecer esse movimento.</p>
-          <p class="welcome">Convidamos a vocês que também acreditam que é possível mudar o mundo a partir da infância. Queremos semear juntos para que a Ciranda das Flores seja cada vez mais linda. Hoje nasce uma nova flor. Sejam todas as pessoas bem-vindas à AFLOR.</p>
+          <p class="lead-drop">Só é possível falar do surgimento da AFLOR a partir da história do Jardim Waldorf
+            Ciranda. E por aí começamos.</p>
+          <p>O Jardim Waldorf Ciranda foi criado para trazer às crianças de Joinville uma educação baseada e inspirada
+            na Pedagogia Waldorf, com o propósito de contribuir para a formação de seres humanos livres. Com espaço de
+            contato com a natureza, brinquedos adequados à idade e a abertura e incentivo para engajamento das famílias
+            no dia a dia do Ciranda.</p>
+          <p>Foram 7 anos semeando, começando lá em 2017, a falar sobre a pedagogia Waldorf, sobre a Antroposofia e
+            modelos de gestão associativos. Conceitos que ainda são inovadores e disruptivos para quem está acostumado
+            com modelos tradicionais na área da educação.</p>
+          <p class="pull">Estamos a serviço da criança, a serviço do desenvolvimento do ser humano, pensando no que esse
+            ser poderá, conforme o que receber agora na infância, oferecer para o mundo no futuro. Essa é a NOSSA
+            tarefa, não só do educador em sala de aula, mas da comunidade como um todo.</p>
+          <p>A tarefa é do coletivo e não de um único ser. Precisamos atuar juntos, como comunidade na educação da
+            criança, não só de nossos próprios filhos e filhas, mas também das crianças ao nosso entorno, pois elas irão
+            conviver no futuro e farão parte da próxima geração.</p>
+          <p>Quando assumimos a responsabilidade de olhar para a infância a partir de um olhar ampliado, como
+            humanidade, iremos perceber que não existe nenhuma outra necessidade mais importante no mundo do que cuidar
+            da infância. É lá que estão as sementes que irão dar flores e frutos no futuro. Cuidar da qualidade da
+            semente, do solo, do germinar é o que irá garantir que essas flores e frutos possam alcançar todo seu
+            potencial e, de fato, mudar o contexto em que vivemos.</p>
+          <p>Esse propósito se fortaleceu ainda mais, consolidando a visão de comunidade com a abertura da AFLOR e
+            ampliando o foco na educação da criança como ser do futuro.</p>
+          <p>Durante todo o ano de 2023, um grupo de familiares de crianças do Ciranda juntou-se para elaborar a
+            associação e formar o que seria esse germe de comunidade. Em 2024, no dia 21 de maio, é realizada a
+            assembleia de fundação da AFLOR, contando com a presença de fundadores do Ciranda, familiares e demais
+            apoiadores para fortalecer esse movimento.</p>
+          <p class="welcome">Convidamos a vocês que também acreditam que é possível mudar o mundo a partir da infância.
+            Queremos semear juntos para que a Ciranda das Flores seja cada vez mais linda. Hoje nasce uma nova flor.
+            Sejam todas as pessoas bem-vindas à AFLOR.</p>
 
           <footer class="signatures">
             <p class="signatures__place">Joinville, 21 de maio de 2024</p>
             <ul role="list">
               <li><strong>Letícia Vilela</strong><span>Co-fundadora do Jardim Ciranda</span></li>
-              <li><strong>Leonardo Bertoldi, Luciana Rosa, Patrícia Carneiro e Raphael Rodrigues</strong><span>Comissão de Associação</span></li>
+              <li><strong>Leonardo Bertoldi, Luciana Rosa, Patrícia Carneiro e Raphael Rodrigues</strong><span>Comissão
+                  de Associação</span></li>
             </ul>
           </footer>
         </article>
       </div>
-      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== C. DIRECIONADORES ESTRATÉGICOS ===================== -->
@@ -307,30 +492,46 @@
         <header class="section-head reveal">
           <p class="eyebrow">Direcionadores Estratégicos</p>
           <h2 id="direcionadores-titulo">Propósito, Imagem de Futuro, <em>Valores</em> e Princípios</h2>
-          <p>Os direcionadores estratégicos foram elaborados pela Comissão da Associação em paralelo ao desenvolvimento do Estatuto da AFLOR e compõem o mesmo dada a importância que possuem. Este material foi resultado de profundas reflexões sobre o papel de uma associação como a AFLOR para os seres humanos em desenvolvimento e a comunidade.</p>
+          <p>Os direcionadores estratégicos foram elaborados pela Comissão da Associação em paralelo ao desenvolvimento
+            do Estatuto da AFLOR e compõem o mesmo dada a importância que possuem. Este material foi resultado de
+            profundas reflexões sobre o papel de uma associação como a AFLOR para os seres humanos em desenvolvimento e
+            a comunidade.</p>
         </header>
 
         <div class="compass">
           <article class="compass__card tint-peach reveal">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-compass"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-compass" />
+              </svg></span>
             <h3>Propósito</h3>
-            <p>Viabilizar, promover e potencializar o desenvolvimento de seres humanos livres e conscientes, por meio da antroposofia e da pedagogia Waldorf, e, assim, contribuir para a evolução integral da humanidade.</p>
+            <p>Viabilizar, promover e potencializar o desenvolvimento de seres humanos livres e conscientes, por meio da
+              antroposofia e da pedagogia Waldorf, e, assim, contribuir para a evolução integral da humanidade.</p>
           </article>
           <article class="compass__card tint-lavender reveal d1">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-eye"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-eye" />
+              </svg></span>
             <h3>Imagem de Futuro</h3>
-            <p>Queremos um mundo onde os seres humanos possam conviver em harmonia, respeitando a individualidade de cada um, onde a empatia e a colaboração possam ser valores reais da vida em comunidade, e nós adultos possamos atuar como guardiões da infância e do ser humano em desenvolvimento.</p>
+            <p>Queremos um mundo onde os seres humanos possam conviver em harmonia, respeitando a individualidade de
+              cada um, onde a empatia e a colaboração possam ser valores reais da vida em comunidade, e nós adultos
+              possamos atuar como guardiões da infância e do ser humano em desenvolvimento.</p>
           </article>
         </div>
 
         <div class="principles-intro reveal">
           <h3>Os 7 Valores e Princípios</h3>
-          <p>A clareza de princípios de governança é importante para sustentar uma decisão quando uma determinada regra não é clara ou então quando existem duas regras que se contradizem entre si, ou ainda quando não há regras suficientes para solucionar uma determinada situação. Os princípios, baseados nos valores, irão auxiliar no processo decisório da comunidade na escolha de um caminho ou outro.</p>
+          <p>A clareza de princípios de governança é importante para sustentar uma decisão quando uma determinada regra
+            não é clara ou então quando existem duas regras que se contradizem entre si, ou ainda quando não há regras
+            suficientes para solucionar uma determinada situação. Os princípios, baseados nos valores, irão auxiliar no
+            processo decisório da comunidade na escolha de um caminho ou outro.</p>
         </div>
 
         <div class="values-tools">
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-valores-todos" aria-expanded="false" aria-controls="lista-valores" hidden>
-            <svg aria-hidden="true"><use href="#i-plus"/></svg><span data-label>Abrir todos os princípios</span>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-valores-todos" aria-expanded="false"
+            aria-controls="lista-valores" hidden>
+            <svg aria-hidden="true">
+              <use href="#i-plus" />
+            </svg><span data-label>Abrir todos os princípios</span>
           </button>
         </div>
 
@@ -339,10 +540,16 @@
             <summary>
               <span class="value__num" aria-hidden="true">1</span>
               <span class="value__title">Criança no centro<small>Valor e princípio 1</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>As decisões e prioridades devem ser balizadas pela necessidade da criança. A criança deve estar sempre no centro das perspectivas, visando garantir sua segurança, um mundo bom e relações saudáveis ao seu redor. Entende-se aqui o termo “criança” como o ser humano em desenvolvimento que estará diretamente envolvido num processo educativo, podendo eventualmente estar na fase da infância, adolescência, juventude ou até mesmo na fase adulta.</p>
+              <p>As decisões e prioridades devem ser balizadas pela necessidade da criança. A criança deve estar sempre
+                no centro das perspectivas, visando garantir sua segurança, um mundo bom e relações saudáveis ao seu
+                redor. Entende-se aqui o termo “criança” como o ser humano em desenvolvimento que estará diretamente
+                envolvido num processo educativo, podendo eventualmente estar na fase da infância, adolescência,
+                juventude ou até mesmo na fase adulta.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
@@ -358,10 +565,15 @@
             <summary>
               <span class="value__num" aria-hidden="true">2</span>
               <span class="value__title">Autoconhecimento e autoeducação<small>Valor e princípio 2</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>As pessoas envolvidas na governança da AFLOR devem prezar pelo seu autoconhecimento e busca pela autoeducação prática, exercida no dia a dia e nas relações. Temos a consciência de que somos seres humanos em desenvolvimento e assim respeitamos e aceitamos a etapa de cada um, ao mesmo tempo em que compartilhamos com transparência as necessidades de ajustes nas relações.</p>
+              <p>As pessoas envolvidas na governança da AFLOR devem prezar pelo seu autoconhecimento e busca pela
+                autoeducação prática, exercida no dia a dia e nas relações. Temos a consciência de que somos seres
+                humanos em desenvolvimento e assim respeitamos e aceitamos a etapa de cada um, ao mesmo tempo em que
+                compartilhamos com transparência as necessidades de ajustes nas relações.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
@@ -378,10 +590,15 @@
             <summary>
               <span class="value__num" aria-hidden="true">3</span>
               <span class="value__title">Liberdade, amor e verdade<small>Valor e princípio 3</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>Atuamos com liberdade e responsabilidade para que cada um possa viver de forma plena, leve, equilibrada e coerente, buscando expressar amor em tudo o que fazemos e falamos, inclusive nas conversas difíceis. Procuramos ser verdadeiros conosco, com os outros e com a sociedade, cultivando relações e acordos justos e éticos visando sempre o propósito da AFLOR.</p>
+              <p>Atuamos com liberdade e responsabilidade para que cada um possa viver de forma plena, leve, equilibrada
+                e coerente, buscando expressar amor em tudo o que fazemos e falamos, inclusive nas conversas difíceis.
+                Procuramos ser verdadeiros conosco, com os outros e com a sociedade, cultivando relações e acordos
+                justos e éticos visando sempre o propósito da AFLOR.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
@@ -397,16 +614,24 @@
             <summary>
               <span class="value__num" aria-hidden="true">4</span>
               <span class="value__title">Integração com a natureza<small>Valor e princípio 4</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>Para nós a natureza é uma professora. Somos parte integrada e sua extensão. Tudo o que fazemos e aprendemos deve ter relação com ela, pois somos uma coisa só. A valorização da vida em toda a sua forma e diversidade é um elemento central nas nossas ações e realizações. Nas nossas atividades pedagógicas a integração com a natureza é figura central para que possamos fortalecer nossa existência com consciência e aprendizados orgânicos que possam gerar equilíbrio na vida individual e coletiva, além de uma construção de visão de mundo sustentável e regenerativo.</p>
+              <p>Para nós a natureza é uma professora. Somos parte integrada e sua extensão. Tudo o que fazemos e
+                aprendemos deve ter relação com ela, pois somos uma coisa só. A valorização da vida em toda a sua forma
+                e diversidade é um elemento central nas nossas ações e realizações. Nas nossas atividades pedagógicas a
+                integração com a natureza é figura central para que possamos fortalecer nossa existência com consciência
+                e aprendizados orgânicos que possam gerar equilíbrio na vida individual e coletiva, além de uma
+                construção de visão de mundo sustentável e regenerativo.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
                   <li>Nossas ações respeitam e cuidam da natureza em nosso entorno?</li>
                   <li>Estamos oferecendo um ambiente de relação entre a natureza e a criança?</li>
-                  <li>Nossas ações proporcionam um movimento sustentável e regenerativo na comunidade em que atuamos?</li>
+                  <li>Nossas ações proporcionam um movimento sustentável e regenerativo na comunidade em que atuamos?
+                  </li>
                 </ul>
               </div>
             </div>
@@ -416,16 +641,22 @@
             <summary>
               <span class="value__num" aria-hidden="true">5</span>
               <span class="value__title">Diversidade, inclusão e equidade<small>Valor e princípio 5</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>Olhamos para o ser humano de forma integral, respeitando a sua condição atual e histórica, e buscando resgatar e incluir pessoas em nossa comunidade que estejam interessadas em participar do nosso movimento, considerando raças, origens, neurodiversidades, deficiências e situação econômica, entre outras necessidades.</p>
+              <p>Olhamos para o ser humano de forma integral, respeitando a sua condição atual e histórica, e buscando
+                resgatar e incluir pessoas em nossa comunidade que estejam interessadas em participar do nosso
+                movimento, considerando raças, origens, neurodiversidades, deficiências e situação econômica, entre
+                outras necessidades.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
                   <li>Nossas ações permitem a inclusão de pessoas de diversas naturezas, origens e necessidades?</li>
                   <li>Estamos agindo de forma equânime nas relações, estruturas e decisões?</li>
-                  <li>Buscamos um olhar mais profundo das relações e das necessidades individuais das pessoas envolvidas nos dramas escolares, acolhendo e viabilizando a inclusão?</li>
+                  <li>Buscamos um olhar mais profundo das relações e das necessidades individuais das pessoas envolvidas
+                    nos dramas escolares, acolhendo e viabilizando a inclusão?</li>
                 </ul>
               </div>
             </div>
@@ -435,10 +666,15 @@
             <summary>
               <span class="value__num" aria-hidden="true">6</span>
               <span class="value__title">Colaboração e altruísmo<small>Valor e princípio 6</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>Atuamos de forma colaborativa, entendendo que o principal objetivo do ser humano é viver em comunidade, desenvolvendo suas habilidades de relação. Buscamos a empatia na relação com o outro, o exercício da comunicação não violenta e também relações baseadas no altruísmo. Prezamos pela comunicação positiva, assertiva e não-violenta.</p>
+              <p>Atuamos de forma colaborativa, entendendo que o principal objetivo do ser humano é viver em comunidade,
+                desenvolvendo suas habilidades de relação. Buscamos a empatia na relação com o outro, o exercício da
+                comunicação não violenta e também relações baseadas no altruísmo. Prezamos pela comunicação positiva,
+                assertiva e não-violenta.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
@@ -455,10 +691,17 @@
             <summary>
               <span class="value__num" aria-hidden="true">7</span>
               <span class="value__title">Transformação pela arte<small>Valor e princípio 7</small></span>
-              <span class="value__chev" aria-hidden="true"><svg><use href="#i-chevron"/></svg></span>
+              <span class="value__chev" aria-hidden="true"><svg>
+                  <use href="#i-chevron" />
+                </svg></span>
             </summary>
             <div class="value__body">
-              <p>Atuamos de forma criativa e nos apoiamos na arte como ferramenta para o desenvolvimento humano e organizacional. Acreditamos que todos somos artistas em essência e que essa capacidade deve ser desenvolvida em prol da evolução de cada ser humano. Entendemos que as atividades artísticas em todas as suas expressões têm como objetivo acessar o sutil, o sentir, a alma das pessoas e assim contribuir para aprendizados profundos e transformadores além de revelar uma expressão única e singela de cada indivíduo.</p>
+              <p>Atuamos de forma criativa e nos apoiamos na arte como ferramenta para o desenvolvimento humano e
+                organizacional. Acreditamos que todos somos artistas em essência e que essa capacidade deve ser
+                desenvolvida em prol da evolução de cada ser humano. Entendemos que as atividades artísticas em todas as
+                suas expressões têm como objetivo acessar o sutil, o sentir, a alma das pessoas e assim contribuir para
+                aprendizados profundos e transformadores além de revelar uma expressão única e singela de cada
+                indivíduo.</p>
               <div class="questions">
                 <h4>Perguntas norteadoras</h4>
                 <ul role="list">
@@ -470,7 +713,9 @@
           </details>
         </div>
       </div>
-      <svg class="wave wave--bottom wave--to-sage" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-sage" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== D. FINALIDADES E GOVERNANÇA ===================== -->
@@ -483,14 +728,35 @@
         </header>
 
         <ol class="purposes" role="list">
-          <li class="purpose tint-peach reveal"><p>Criar e sustentar um ambiente escolar onde sejam atendidas crianças, adolescentes e jovens, por uma educação baseada na Pedagogia Waldorf;</p></li>
-          <li class="purpose tint-ochre reveal d1"><p>Administrar as iniciativas sob sua tutela, garantindo sustentabilidade financeira, engajamento das pessoas associadas e equipe contratada, prezando pelos valores institucionais;</p></li>
-          <li class="purpose tint-lavender reveal d2"><p>Viabilizar a ampliação da oferta do atendimento escolar baseado na pedagogia Waldorf em Joinville e região incluindo educação infantil e ensino fundamental;</p></li>
-          <li class="purpose tint-rose reveal d3"><p>Oferecer atividades culturais, pedagógicas e que fomentem a divulgação da antroposofia e pedagogia Waldorf em Joinville e região;</p></li>
-          <li class="purpose tint-sky reveal"><p>Mobilizar ações de captação de recursos com a finalidade de viabilizar os objetivos institucionais;</p></li>
-          <li class="purpose tint-sage reveal d1"><p>Possibilitar a inclusão socioeconômica por meio de parcerias com instituições públicas e privadas;</p></li>
-          <li class="purpose tint-peach reveal d2"><p>Mobilizar ações para educação continuada de educadores em pedagogia Waldorf;</p></li>
-          <li class="purpose tint-ochre reveal d3"><p>Garantir o alinhamento das atividades realizadas pelas iniciativas sob sua tutela com os princípios da Antroposofia e Pedagogia Waldorf, bem como com a legislação vigente.</p></li>
+          <li class="purpose tint-peach reveal">
+            <p>Criar e sustentar um ambiente escolar onde sejam atendidas crianças, adolescentes e jovens, por uma
+              educação baseada na Pedagogia Waldorf;</p>
+          </li>
+          <li class="purpose tint-ochre reveal d1">
+            <p>Administrar as iniciativas sob sua tutela, garantindo sustentabilidade financeira, engajamento das
+              pessoas associadas e equipe contratada, prezando pelos valores institucionais;</p>
+          </li>
+          <li class="purpose tint-lavender reveal d2">
+            <p>Viabilizar a ampliação da oferta do atendimento escolar baseado na pedagogia Waldorf em Joinville e
+              região incluindo educação infantil e ensino fundamental;</p>
+          </li>
+          <li class="purpose tint-rose reveal d3">
+            <p>Oferecer atividades culturais, pedagógicas e que fomentem a divulgação da antroposofia e pedagogia
+              Waldorf em Joinville e região;</p>
+          </li>
+          <li class="purpose tint-sky reveal">
+            <p>Mobilizar ações de captação de recursos com a finalidade de viabilizar os objetivos institucionais;</p>
+          </li>
+          <li class="purpose tint-sage reveal d1">
+            <p>Possibilitar a inclusão socioeconômica por meio de parcerias com instituições públicas e privadas;</p>
+          </li>
+          <li class="purpose tint-peach reveal d2">
+            <p>Mobilizar ações para educação continuada de educadores em pedagogia Waldorf;</p>
+          </li>
+          <li class="purpose tint-ochre reveal d3">
+            <p>Garantir o alinhamento das atividades realizadas pelas iniciativas sob sua tutela com os princípios da
+              Antroposofia e Pedagogia Waldorf, bem como com a legislação vigente.</p>
+          </li>
         </ol>
 
         <div class="subhead reveal">
@@ -500,33 +766,61 @@
 
         <ul class="gov" role="list">
           <li class="pillar tint-sage reveal">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-circle"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-circle" />
+              </svg></span>
             <h3>Sociocracia</h3>
-            <p>Trata-se de um sistema de governança e autogestão organizacional que utiliza princípios que olham tanto para o indivíduo quanto para o coletivo de forma sistêmica, buscando equivalência, transparência, equilíbrio entre eficiência e eficácia, ambiente aberto ao que emerge, feedback contínuo, onde a gestão é exercida coletivamente.</p>
+            <p>Trata-se de um sistema de governança e autogestão organizacional que utiliza princípios que olham tanto
+              para o indivíduo quanto para o coletivo de forma sistêmica, buscando equivalência, transparência,
+              equilíbrio entre eficiência e eficácia, ambiente aberto ao que emerge, feedback contínuo, onde a gestão é
+              exercida coletivamente.</p>
           </li>
           <li class="pillar tint-peach reveal d1">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-heart"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-heart" />
+              </svg></span>
             <h3>Servir à educação</h3>
-            <p>Alinhado ao propósito da AFLOR, todas as pessoas associadas ou contratadas precisam colocar-se a serviço da educação das crianças e outras faixas etárias que sejam público-alvo das atividades que serão oferecidas. Com esse olhar, busca-se direcionar o processo decisório de forma objetiva.</p>
+            <p>Alinhado ao propósito da AFLOR, todas as pessoas associadas ou contratadas precisam colocar-se a serviço
+              da educação das crianças e outras faixas etárias que sejam público-alvo das atividades que serão
+              oferecidas. Com esse olhar, busca-se direcionar o processo decisório de forma objetiva.</p>
           </li>
           <li class="pillar tint-ochre reveal d2">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-family"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-family" />
+              </svg></span>
             <h3>Gestão Colaborativa</h3>
-            <p>Prática que envolve todas as pessoas integrantes da comunidade escolar e possui um desenvolvimento contínuo. É a realização dos direcionadores estratégicos a partir de princípios como uma liderança apoiadora, a responsabilidade compartilhada, autonomia entre as partes, autoeducação dos participantes, clareza e processos bem definidos, reuniões eficazes e papéis e responsabilidades claros.</p>
+            <p>Prática que envolve todas as pessoas integrantes da comunidade escolar e possui um desenvolvimento
+              contínuo. É a realização dos direcionadores estratégicos a partir de princípios como uma liderança
+              apoiadora, a responsabilidade compartilhada, autonomia entre as partes, autoeducação dos participantes,
+              clareza e processos bem definidos, reuniões eficazes e papéis e responsabilidades claros.</p>
           </li>
           <li class="pillar tint-lavender reveal">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-triad"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-triad" />
+              </svg></span>
             <h3>Trimembração Social</h3>
-            <p>Considerando a visão de liberdade, igualdade e fraternidade, atua em todos os ambientes da organização de igual maneira, partindo do princípio que cada célula do organismo possui sua vida cultural, política e econômica compartilhada e própria também. No dia a dia, revela-se na relação entre as necessidades reais da organização (aspectos culturais e educacionais), de que forma irá organizar-se para atendê-las (relações e acordos) e quais são as capacidades que possui para a realização (fraternidade dos recursos, materiais ou não).</p>
+            <p>Considerando a visão de liberdade, igualdade e fraternidade, atua em todos os ambientes da organização de
+              igual maneira, partindo do princípio que cada célula do organismo possui sua vida cultural, política e
+              econômica compartilhada e própria também. No dia a dia, revela-se na relação entre as necessidades reais
+              da organização (aspectos culturais e educacionais), de que forma irá organizar-se para atendê-las
+              (relações e acordos) e quais são as capacidades que possui para a realização (fraternidade dos recursos,
+              materiais ou não).</p>
           </li>
           <li class="pillar tint-sky reveal d1">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-flow"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-flow" />
+              </svg></span>
             <h3>Gestão por processos</h3>
-            <p>Diante da definição da missão da AFLOR, o processo principal é a educação do ser humano em desenvolvimento, realizado com base na Antroposofia e pedagogia Waldorf. A partir dele, as necessidades de manutenção e estruturação que surgirem serão atendidas por processos essenciais ou de apoio, conforme suas características, e organizados a partir de processos de gestão.</p>
+            <p>Diante da definição da missão da AFLOR, o processo principal é a educação do ser humano em
+              desenvolvimento, realizado com base na Antroposofia e pedagogia Waldorf. A partir dele, as necessidades de
+              manutenção e estruturação que surgirem serão atendidas por processos essenciais ou de apoio, conforme suas
+              características, e organizados a partir de processos de gestão.</p>
           </li>
         </ul>
       </div>
-      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== E. O QUE FAZEMOS ===================== -->
@@ -537,26 +831,32 @@
         <header class="section-head reveal">
           <p class="eyebrow">O que fazemos</p>
           <h2 id="atuacao-titulo">Atuação em <em>Educação</em></h2>
-          <p>Iniciativas que tornam concreto o nosso propósito, sempre a serviço da criança e do ser humano em desenvolvimento.</p>
+          <p>Iniciativas que tornam concreto o nosso propósito, sempre a serviço da criança e do ser humano em
+            desenvolvimento.</p>
         </header>
 
         <ul class="services" role="list">
           <li class="service service--featured reveal">
             <div class="service__media">
               <img src="assets/img/caminho-no-jardim-1280.webp"
-                   srcset="assets/img/caminho-no-jardim-640.webp 640w, assets/img/caminho-no-jardim-1280.webp 1280w"
-                   sizes="(max-width: 960px) 92vw, 640px" width="1280" height="714"
-                   alt="Três crianças de costas, de mãos dadas, caminhando descalças por uma trilha de grama em direção a uma grande árvore ao entardecer"
-                   loading="lazy" decoding="async">
+                srcset="assets/img/caminho-no-jardim-640.webp 640w, assets/img/caminho-no-jardim-1280.webp 1280w"
+                sizes="(max-width: 960px) 92vw, 640px" width="1280" height="714"
+                alt="Três crianças de costas, de mãos dadas, caminhando descalças por uma trilha de grama em direção a uma grande árvore ao entardecer"
+                loading="lazy" decoding="async">
             </div>
             <div class="service__body">
               <span class="service__tag tint-peach">Nossa iniciativa educativa</span>
               <h3>Jardim Waldorf Ciranda</h3>
-              <p>Educação infantil baseada e inspirada na Pedagogia Waldorf, com espaço de contato com a natureza, brinquedos adequados à idade e a abertura e incentivo para engajamento das famílias no dia a dia. Foi daqui que nasceu a AFLOR.</p>
+              <p>Educação infantil baseada e inspirada na Pedagogia Waldorf, com espaço de contato com a natureza,
+                brinquedos adequados à idade e a abertura e incentivo para engajamento das famílias no dia a dia. Foi
+                daqui que nasceu a AFLOR.</p>
               <div class="service__actions">
-                <a class="btn" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer" id="cta-jardim-site">
+                <a class="btn" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank"
+                  rel="noopener noreferrer" id="cta-jardim-site">
                   Conheça o Jardim Ciranda
-                  <svg aria-hidden="true"><use href="#i-external"/></svg>
+                  <svg aria-hidden="true">
+                    <use href="#i-external" />
+                  </svg>
                 </a>
               </div>
               <p class="service__url">www.jardimciranda.com.br</p>
@@ -566,50 +866,56 @@
           <li class="service reveal">
             <div class="service__media">
               <img src="assets/img/horta-colheita-640.webp"
-                   srcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
-                   sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="896"
-                   alt="Mãos pequenas sujas de terra segurando cenouras e alface recém-colhidas na horta"
-                   loading="lazy" decoding="async">
+                srcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
+                sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="896"
+                alt="Mãos pequenas sujas de terra segurando cenouras e alface recém-colhidas na horta" loading="lazy"
+                decoding="async">
             </div>
             <div class="service__body">
               <span class="service__tag tint-sage">Infância e juventude</span>
               <h3>Contraturno escolar</h3>
-              <p>Atividades no período oposto ao escolar, com arte, natureza, movimento e trabalhos manuais inspirados na Pedagogia Waldorf.</p>
+              <p>Atividades no período oposto ao escolar, com arte, natureza, movimento e trabalhos manuais inspirados
+                na Pedagogia Waldorf.</p>
             </div>
           </li>
 
           <li class="service reveal d1">
             <div class="service__media">
               <img src="assets/img/pintura-aquarela-640.webp"
-                   srcset="assets/img/pintura-aquarela-640.webp 640w, assets/img/pintura-aquarela-1280.webp 1200w"
-                   sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="896"
-                   alt="Pintura em aquarela úmido sobre úmido, com cores suaves se misturando no papel"
-                   loading="lazy" decoding="async">
+                srcset="assets/img/pintura-aquarela-640.webp 640w, assets/img/pintura-aquarela-1280.webp 1200w"
+                sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="896"
+                alt="Pintura em aquarela úmido sobre úmido, com cores suaves se misturando no papel" loading="lazy"
+                decoding="async">
             </div>
             <div class="service__body">
               <span class="service__tag tint-lavender">Formação</span>
               <h3>Consultoria em Pedagogia Waldorf</h3>
-              <p>Apoio a escolas, educadores e iniciativas que desejam conhecer, implantar ou aprofundar a Pedagogia Waldorf e modelos de gestão associativos.</p>
+              <p>Apoio a escolas, educadores e iniciativas que desejam conhecer, implantar ou aprofundar a Pedagogia
+                Waldorf e modelos de gestão associativos.</p>
             </div>
           </li>
 
           <li class="service reveal d2">
             <div class="service__media">
               <img src="assets/img/maos-amassando-pao-640.webp"
-                   srcset="assets/img/maos-amassando-pao-640.webp 640w, assets/img/maos-amassando-pao-1280.webp 1200w"
-                   sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="700"
-                   alt="Mãos amassando pão integral sobre mesa de madeira polvilhada de farinha"
-                   loading="lazy" decoding="async">
+                srcset="assets/img/maos-amassando-pao-640.webp 640w, assets/img/maos-amassando-pao-1280.webp 1200w"
+                sizes="(max-width: 620px) 92vw, (max-width: 960px) 46vw, 380px" width="1200" height="700"
+                alt="Mãos amassando pão integral sobre mesa de madeira polvilhada de farinha" loading="lazy"
+                decoding="async">
             </div>
             <div class="service__body">
               <span class="service__tag tint-ochre">Comunidade</span>
               <h3>Projetos Sociais</h3>
-              <p>Ações e parcerias com instituições públicas e privadas para ampliar o acesso a uma educação Waldorf e possibilitar a inclusão socioeconômica.</p>
+              <p>Ações e parcerias com instituições públicas e privadas para ampliar o acesso a uma educação Waldorf e
+                possibilitar a inclusão socioeconômica.</p>
             </div>
           </li>
         </ul>
       </div>
-      <svg class="wave wave--bottom wave--to-lavender" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-lavender" aria-hidden="true" viewBox="0 0 1440 90"
+        preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== F. TRANSPARÊNCIA E PARCEIROS ===================== -->
@@ -618,39 +924,52 @@
         <header class="section-head reveal">
           <p class="eyebrow">Transparência e Parceiros</p>
           <h2 id="transparencia-titulo">Tudo à luz do <em>sol</em></h2>
-          <p>Transparência é parte da nossa forma de existir: os documentos da associação ficam abertos a toda a comunidade.</p>
+          <p>Transparência é parte da nossa forma de existir: os documentos da associação ficam abertos a toda a
+            comunidade.</p>
         </header>
 
         <div class="transp">
           <!-- Links dos documentos: edite em assets/js/config.js → docs. Vazio = botão "Em breve". -->
           <ul class="docs reveal" role="list">
             <li class="doc tint-sage">
-              <span class="doc__icon" aria-hidden="true"><svg><use href="#i-doc"/></svg></span>
+              <span class="doc__icon" aria-hidden="true"><svg>
+                  <use href="#i-doc" />
+                </svg></span>
               <div>
                 <h3>Estatuto Social da AFLOR</h3>
                 <p>O documento que nos constitui, com os direcionadores estratégicos.</p>
               </div>
-              <a class="btn btn--sm" href="https://drive.google.com/drive/folders/17uXQIuZGNfTxKL-hNsOTFFr9UEyERPCq?usp=drive_link" data-doc="estatuto" target="_blank" rel="noopener noreferrer" id="doc-estatuto">
-                <span data-label>Abrir</span><svg aria-hidden="true"><use href="#i-external"/></svg>
+              <a class="btn btn--sm"
+                href="https://drive.google.com/drive/folders/17uXQIuZGNfTxKL-hNsOTFFr9UEyERPCq?usp=drive_link"
+                data-doc="estatuto" target="_blank" rel="noopener noreferrer" id="doc-estatuto">
+                <span data-label>Abrir</span><svg aria-hidden="true">
+                  <use href="#i-external" />
+                </svg>
               </a>
             </li>
             <li class="doc tint-peach">
-              <span class="doc__icon" aria-hidden="true"><svg><use href="#i-assembly"/></svg></span>
+              <span class="doc__icon" aria-hidden="true"><svg>
+                  <use href="#i-assembly" />
+                </svg></span>
               <div>
                 <h3>Última Assembleia</h3>
                 <p>Ata e registros da assembleia mais recente das pessoas associadas.</p>
               </div>
-              <a class="btn btn--sm is-pending" href="#transparencia" data-doc="assembleia" data-label-ready="Abrir" aria-disabled="true" id="doc-assembleia">
+              <a class="btn btn--sm is-pending" href="#transparencia" data-doc="assembleia" data-label-ready="Abrir"
+                aria-disabled="true" id="doc-assembleia">
                 <span data-label>Em breve</span>
               </a>
             </li>
             <li class="doc tint-ochre">
-              <span class="doc__icon" aria-hidden="true"><svg><use href="#i-chart"/></svg></span>
+              <span class="doc__icon" aria-hidden="true"><svg>
+                  <use href="#i-chart" />
+                </svg></span>
               <div>
                 <h3>Orçamento</h3>
                 <p>Como os recursos da associação são planejados e aplicados.</p>
               </div>
-              <a class="btn btn--sm is-pending" href="#transparencia" data-doc="orcamento" data-label-ready="Abrir" aria-disabled="true" id="doc-orcamento">
+              <a class="btn btn--sm is-pending" href="#transparencia" data-doc="orcamento" data-label-ready="Abrir"
+                aria-disabled="true" id="doc-orcamento">
                 <span data-label>Em breve</span>
               </a>
             </li>
@@ -659,25 +978,37 @@
           <aside class="partners reveal d1" aria-labelledby="parceiros-titulo">
             <p class="eyebrow">Parceiros</p>
             <h3 id="parceiros-titulo">Um canteiro preparado para novas alianças</h3>
-            <p>Este espaço está sendo cultivado com carinho para receber as instituições, empresas e pessoas que desejam caminhar conosco. Juntos, podemos levar a Pedagogia Waldorf a mais crianças em Joinville e região.</p>
+            <p>Este espaço está sendo cultivado com carinho para receber as instituições, empresas e pessoas que desejam
+              caminhar conosco. Juntos, podemos levar a Pedagogia Waldorf a mais crianças em Joinville e região.</p>
             <div class="partners__slots" aria-hidden="true">
-              <span><svg><use href="#i-sprout"/></svg></span>
-              <span><svg><use href="#i-sprout"/></svg></span>
-              <span><svg><use href="#i-sprout"/></svg></span>
+              <span><svg>
+                  <use href="#i-sprout" />
+                </svg></span>
+              <span><svg>
+                  <use href="#i-sprout" />
+                </svg></span>
+              <span><svg>
+                  <use href="#i-sprout" />
+                </svg></span>
             </div>
             <a class="btn btn--ghost btn--sm" href="#contato" id="cta-parceiro">
               Quero ser parceiro
-              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              <svg aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg>
             </a>
           </aside>
         </div>
       </div>
-      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== G. FAÇA PARTE ===================== -->
     <section class="section" id="faca-parte" aria-labelledby="faca-parte-titulo">
-      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l4"></span></div>
+      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l4"></span>
+      </div>
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Faça Parte</p>
@@ -687,22 +1018,37 @@
 
         <ul class="paths" role="list">
           <li class="path tint-peach reveal">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-sprout"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-sprout" />
+              </svg></span>
             <h3>Associado</h3>
-            <p>Faça parte da comunidade que sustenta e decide os caminhos da AFLOR, em uma das quatro categorias do Estatuto.</p>
-            <a class="btn btn--sm" href="#associado" id="path-associado">Quero me associar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <p>Faça parte da comunidade que sustenta e decide os caminhos da AFLOR, em uma das quatro categorias do
+              Estatuto.</p>
+            <a class="btn btn--sm" href="#associado" id="path-associado">Quero me associar <svg aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </li>
           <li class="path tint-ochre reveal d1">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-gift"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-gift" />
+              </svg></span>
             <h3>Doação</h3>
-            <p>Participe do Dia de Doar ou faça uma doação livre, pontual ou periódica, para viabilizar nossos objetivos.</p>
-            <a class="btn btn--sm" href="#doacao" id="path-doacao">Quero doar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <p>Participe do Dia de Doar ou faça uma doação livre, pontual ou periódica, para viabilizar nossos
+              objetivos.</p>
+            <a class="btn btn--sm" href="#doacao" id="path-doacao">Quero doar <svg aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </li>
           <li class="path tint-sage reveal d2">
-            <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-hands"/></svg></span>
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-hands" />
+              </svg></span>
             <h3>Voluntariado</h3>
             <p>Dedique seu tempo e seus talentos junto às crianças, adolescentes e jovens e à vida da comunidade.</p>
-            <a class="btn btn--sm" href="#voluntariado" id="path-voluntariado">Quero ser voluntário <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--sm" href="#voluntariado" id="path-voluntariado">Quero ser voluntário <svg
+                aria-hidden="true">
+                <use href="#i-arrow" />
+              </svg></a>
           </li>
         </ul>
 
@@ -711,19 +1057,24 @@
           <div class="join-block__head reveal">
             <p class="eyebrow">1 · Associado</p>
             <h3>Faça parte como associado</h3>
-            <p>Ficamos felizes com seu interesse em fazer parte da AFLOR - Associação Pedagógica Antroposófica Ciranda das Flores.</p>
+            <p>Ficamos felizes com seu interesse em fazer parte da AFLOR - Associação Pedagógica Antroposófica Ciranda
+              das Flores.</p>
           </div>
 
           <div class="welcome-card reveal">
             <blockquote>
               <b>Nosso Propósito</b>
-              <p>Viabilizar, promover e potencializar o desenvolvimento de seres humanos livres e conscientes, por meio da antroposofia e da pedagogia Waldorf, e, assim, contribuir para a evolução integral da humanidade.</p>
+              <p>Viabilizar, promover e potencializar o desenvolvimento de seres humanos livres e conscientes, por meio
+                da antroposofia e da pedagogia Waldorf, e, assim, contribuir para a evolução integral da humanidade.</p>
             </blockquote>
             <blockquote>
               <b>Nossa Imagem de Futuro</b>
-              <p>Queremos um mundo onde os seres humanos possam conviver em harmonia, respeitando a individualidade de cada um, onde a empatia e a colaboração possam ser valores reais da vida em comunidade, e nós adultos possamos atuar como guardiões da infância e do ser humano em desenvolvimento.</p>
+              <p>Queremos um mundo onde os seres humanos possam conviver em harmonia, respeitando a individualidade de
+                cada um, onde a empatia e a colaboração possam ser valores reais da vida em comunidade, e nós adultos
+                possamos atuar como guardiões da infância e do ser humano em desenvolvimento.</p>
             </blockquote>
-            <p class="welcome-card__close">Que bom que você está aqui para fazer parte disso. Preencha o formulário abaixo e em breve entraremos em contato. <strong>Bem-vinda! Bem-vindo!</strong></p>
+            <p class="welcome-card__close">Que bom que você está aqui para fazer parte disso. Preencha o formulário
+              abaixo e em breve entraremos em contato. <strong>Bem-vinda! Bem-vindo!</strong></p>
           </div>
 
           <div class="statute">
@@ -734,15 +1085,24 @@
               </div>
               <div class="article">
                 <span class="article__num">ART. 8º</span>
-                <p>Visando ao fortalecimento da comunidade, a admissão, nas categorias “b” e “c”, acontecerá por meio de ficha de inscrição, preferencialmente no momento da matrícula ou contratação; nas demais, mediante solicitação escrita da pessoa interessada, em formulário específico, submetido à apreciação do Conselho de Guardiões.</p>
+                <p>Visando ao fortalecimento da comunidade, a admissão, nas categorias “b” e “c”, acontecerá por meio de
+                  ficha de inscrição, preferencialmente no momento da matrícula ou contratação; nas demais, mediante
+                  solicitação escrita da pessoa interessada, em formulário específico, submetido à apreciação do
+                  Conselho de Guardiões.</p>
               </div>
               <div class="article">
                 <span class="article__num">ART. 9º</span>
-                <p>Nas categorias “b” e “c”, a demissão acontecerá automaticamente ao encerrar o vínculo com o respectivo núcleo de trabalho da AFLOR, e, nas demais, mediante comunicação por escrito pelo menos 30 (trinta) dias antes da saída.</p>
+                <p>Nas categorias “b” e “c”, a demissão acontecerá automaticamente ao encerrar o vínculo com o
+                  respectivo núcleo de trabalho da AFLOR, e, nas demais, mediante comunicação por escrito pelo menos 30
+                  (trinta) dias antes da saída.</p>
               </div>
               <div class="statute__link">
-                <a class="btn btn--ghost btn--sm" href="https://drive.google.com/drive/folders/17uXQIuZGNfTxKL-hNsOTFFr9UEyERPCq?usp=drive_link" data-doc="estatuto" target="_blank" rel="noopener noreferrer" id="estatuto-integra">
-                  <svg aria-hidden="true"><use href="#i-doc"/></svg>Ler o Estatuto na íntegra
+                <a class="btn btn--ghost btn--sm"
+                  href="https://drive.google.com/drive/folders/17uXQIuZGNfTxKL-hNsOTFFr9UEyERPCq?usp=drive_link"
+                  data-doc="estatuto" target="_blank" rel="noopener noreferrer" id="estatuto-integra">
+                  <svg aria-hidden="true">
+                    <use href="#i-doc" />
+                  </svg>Ler o Estatuto na íntegra
                 </a>
                 <small>Abre no Google Drive</small>
               </div>
@@ -754,30 +1114,39 @@
                 <li class="category tint-peach">
                   <span class="category__letter" aria-hidden="true">a</span>
                   <h4>Empreendedora</h4>
-                  <p>quem participa como voluntário regular, tendo ou não crianças, adolescentes ou jovens matriculados em núcleos de trabalho da AFLOR, ou seja, quem trabalha pelo propósito voluntariamente;</p>
+                  <p>quem participa como voluntário regular, tendo ou não crianças, adolescentes ou jovens matriculados
+                    em núcleos de trabalho da AFLOR, ou seja, quem trabalha pelo propósito voluntariamente;</p>
                   <span class="category__essence">Trabalha pelo propósito</span>
-                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="a" id="cat-a">Quero ser Empreendedora</a>
+                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="a"
+                    id="cat-a">Quero ser Empreendedora</a>
                 </li>
                 <li class="category tint-sage">
                   <span class="category__letter" aria-hidden="true">b</span>
                   <h4>Essencial</h4>
-                  <p>quem atua como profissional contratado pela AFLOR ou suas filiais, em qualquer modalidade jurídica, prestando serviços diretamente relacionados às atividades fim, ou seja, quem trabalha no propósito;</p>
+                  <p>quem atua como profissional contratado pela AFLOR ou suas filiais, em qualquer modalidade jurídica,
+                    prestando serviços diretamente relacionados às atividades fim, ou seja, quem trabalha no propósito;
+                  </p>
                   <span class="category__essence">Trabalha no propósito</span>
-                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="b" id="cat-b">Quero ser Essencial</a>
+                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="b"
+                    id="cat-b">Quero ser Essencial</a>
                 </li>
                 <li class="category tint-lavender">
                   <span class="category__letter" aria-hidden="true">c</span>
                   <h4>Apoiadora</h4>
-                  <p>quem não participa como voluntário regular ou participa pontualmente em atividades da AFLOR e tem crianças, adolescentes ou jovens matriculados em algum de seus núcleos de trabalho, ou seja, é atendido e apoia o propósito;</p>
+                  <p>quem não participa como voluntário regular ou participa pontualmente em atividades da AFLOR e tem
+                    crianças, adolescentes ou jovens matriculados em algum de seus núcleos de trabalho, ou seja, é
+                    atendido e apoia o propósito;</p>
                   <span class="category__essence">É atendida e apoia o propósito</span>
-                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="c" id="cat-c">Quero ser Apoiadora</a>
+                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="c"
+                    id="cat-c">Quero ser Apoiadora</a>
                 </li>
                 <li class="category tint-ochre">
                   <span class="category__letter" aria-hidden="true">d</span>
                   <h4>Entusiasta</h4>
                   <p>quem realiza apenas doação financeira periódica ou pontual, ou seja, apoia o propósito.</p>
                   <span class="category__essence">Apoia o propósito</span>
-                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="d" id="cat-d">Quero ser Entusiasta</a>
+                  <a class="btn btn--ghost btn--sm" href="#formulario" data-motivo="associar" data-categoria="d"
+                    id="cat-d">Quero ser Entusiasta</a>
                 </li>
               </ul>
             </div>
@@ -794,37 +1163,55 @@
 
           <div class="give">
             <article class="give-card tint-ochre reveal" id="doacao">
-              <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-gift"/></svg></span>
+              <span class="pillar__icon" aria-hidden="true"><svg>
+                  <use href="#i-gift" />
+                </svg></span>
               <h3>Dia de Doar</h3>
-              <p>O Dia de Doar é a versão brasileira do movimento global de generosidade #GivingTuesday. Participe da campanha da AFLOR e ajude a semear uma educação para a liberdade em Joinville.</p>
-              <a class="btn btn--sm" href="#formulario" data-motivo="doacao" data-doacao="dia-de-doar" id="cta-dia-de-doar">Quero participar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <p>O Dia de Doar é a versão brasileira do movimento global de generosidade #GivingTuesday. Participe da
+                campanha da AFLOR e ajude a semear uma educação para a liberdade em Joinville.</p>
+              <a class="btn btn--sm" href="#formulario" data-motivo="doacao" data-doacao="dia-de-doar"
+                id="cta-dia-de-doar">Quero participar <svg aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </article>
 
             <article class="give-card tint-rose reveal d1" id="doacao-livre">
-              <span class="pillar__icon" aria-hidden="true"><svg><use href="#i-heart"/></svg></span>
+              <span class="pillar__icon" aria-hidden="true"><svg>
+                  <use href="#i-heart" />
+                </svg></span>
               <h3>Doação Livre</h3>
-              <p>Contribua com o valor e a frequência que fizerem sentido para você — pontual ou periódica. Os recursos captados viabilizam os objetivos institucionais da AFLOR.</p>
+              <p>Contribua com o valor e a frequência que fizerem sentido para você — pontual ou periódica. Os recursos
+                captados viabilizam os objetivos institucionais da AFLOR.</p>
               <!-- 💡 Quando houver chave PIX/dados bancários oficiais, inclua-os aqui. -->
               <p class="give-card__note">Quem doa periodicamente pode se associar como Entusiasta (categoria d).</p>
-              <a class="btn btn--sm" href="#formulario" data-motivo="doacao" data-doacao="livre" id="cta-doacao-livre">Quero doar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn--sm" href="#formulario" data-motivo="doacao" data-doacao="livre"
+                id="cta-doacao-livre">Quero doar <svg aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg></a>
             </article>
 
             <article class="give-card give-card--volunteer reveal d2" id="voluntariado">
               <img src="assets/img/jardim-familias-plantando-640.webp"
-                   srcset="assets/img/jardim-familias-plantando-640.webp 640w, assets/img/jardim-familias-plantando-1280.webp 1280w"
-                   sizes="(max-width: 1000px) 92vw, 420px" width="1280" height="851"
-                   alt="Adultos, em mutirão, plantando uma muda de árvore com as mãos na terra"
-                   loading="lazy" decoding="async">
+                srcset="assets/img/jardim-familias-plantando-640.webp 640w, assets/img/jardim-familias-plantando-1280.webp 1280w"
+                sizes="(max-width: 1000px) 92vw, 420px" width="1280" height="851"
+                alt="Adultos, em mutirão, plantando uma muda de árvore com as mãos na terra" loading="lazy"
+                decoding="async">
               <div class="give-card__body">
                 <h3>Voluntariado</h3>
-                <p>Seja um voluntário da AFLOR. Buscamos pessoas que tenham interesse em atuar junto à criança, adolescentes e jovens, com abertura para aprender e disponível para colaborar.</p>
-                <a class="btn btn--sm" href="#formulario" data-motivo="voluntariado" id="cta-voluntariado">Quero ser voluntário <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <p>Seja um voluntário da AFLOR. Buscamos pessoas que tenham interesse em atuar junto à criança,
+                  adolescentes e jovens, com abertura para aprender e disponível para colaborar.</p>
+                <a class="btn btn--sm" href="#formulario" data-motivo="voluntariado" id="cta-voluntariado">Quero ser
+                  voluntário <svg aria-hidden="true">
+                    <use href="#i-arrow" />
+                  </svg></a>
               </div>
             </article>
           </div>
         </div>
       </div>
-      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== FORMULÁRIO UNIFICADO ===================== -->
@@ -832,17 +1219,23 @@
       <div class="container join-form">
         <div class="join-form__aside reveal">
           <img src="assets/img/roda-comunitaria-640.webp"
-               srcset="assets/img/roda-comunitaria-640.webp 640w, assets/img/roda-comunitaria-1280.webp 1280w"
-               sizes="420px" width="1280" height="714"
-               alt="Vista distante de uma grande roda de adultos e crianças de mãos dadas sob uma árvore, ao entardecer"
-               loading="lazy" decoding="async">
+            srcset="assets/img/roda-comunitaria-640.webp 640w, assets/img/roda-comunitaria-1280.webp 1280w"
+            sizes="420px" width="1280" height="714"
+            alt="Vista distante de uma grande roda de adultos e crianças de mãos dadas sob uma árvore, ao entardecer"
+            loading="lazy" decoding="async">
           <p class="eyebrow">Formulário</p>
           <h2 id="formulario-titulo">Vamos dar as mãos?</h2>
           <p>Conte como você quer participar. Respondemos com carinho pelo canal que você preferir.</p>
           <ul class="check-list" role="list">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Envie pelo WhatsApp ou por e-mail (contato.aflor@gmail.com).</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Seus dados não ficam armazenados neste site.</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sem compromisso: conversamos antes de qualquer passo.</li>
+            <li><svg aria-hidden="true">
+                <use href="#i-check" />
+              </svg>Envie pelo WhatsApp ou por e-mail (contato.aflor@gmail.com).</li>
+            <li><svg aria-hidden="true">
+                <use href="#i-check" />
+              </svg>Seus dados não ficam armazenados neste site.</li>
+            <li><svg aria-hidden="true">
+                <use href="#i-check" />
+              </svg>Sem compromisso: conversamos antes de qualquer passo.</li>
           </ul>
         </div>
 
@@ -855,9 +1248,10 @@
             Com JavaScript, form.js intercepta o envio: valida, sanitiza e
             (a) abre o WhatsApp com mensagem pronta, ou (b) envia via fetch() sem recarregar.
           -->
-          <form id="form-faca-parte" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8" autocomplete="on">
+          <form id="form-faca-parte" action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8"
+            autocomplete="on">
             <!-- Chave pública do Web3Forms (é segura no front-end; restrinja o domínio no painel). Mesma de config.js. -->
-            <input type="hidden" name="access_key" value="SUA_CHAVE_WEB3FORMS_AQUI">
+            <input type="hidden" name="access_key" value="8ec07629-2668-4e26-a514-a80079ef59cd">
             <input type="hidden" name="subject" value="Faça Parte — novo contato pelo site da AFLOR">
             <input type="hidden" name="from_name" value="Site AFLOR">
 
@@ -920,36 +1314,39 @@
               <div class="field field--full">
                 <label for="nome">Seu nome</label>
                 <input id="nome" name="nome" type="text" required minlength="3" maxlength="80"
-                       pattern="[A-Za-zÀ-ÖØ-öø-ÿ' .\-]{3,80}" autocomplete="name"
-                       placeholder="Ex.: Ana Souza" aria-describedby="nome-erro">
+                  pattern="[A-Za-zÀ-ÖØ-öø-ÿ' .\-]{3,80}" autocomplete="name" placeholder="Ex.: Ana Souza"
+                  aria-describedby="nome-erro">
                 <span class="field__error" id="nome-erro" role="alert"></span>
               </div>
 
               <div class="field">
                 <label for="telefone">WhatsApp <span class="opt">(opcional)</span></label>
                 <input id="telefone" name="telefone" type="tel" inputmode="tel" maxlength="16"
-                       pattern="\(?[1-9]{2}\)? ?9?[0-9]{4}-?[0-9]{4}" autocomplete="tel-national"
-                       placeholder="(47) 99999-9999" aria-describedby="telefone-erro">
+                  pattern="\(?[1-9]{2}\)? ?9?[0-9]{4}-?[0-9]{4}" autocomplete="tel-national"
+                  placeholder="(47) 99999-9999" aria-describedby="telefone-erro">
                 <span class="field__error" id="telefone-erro" role="alert"></span>
               </div>
 
               <div class="field">
                 <label for="email">E-mail <span class="opt">(p/ envio por e-mail)</span></label>
                 <input id="email" name="email" type="email" maxlength="120" autocomplete="email"
-                       placeholder="voce@email.com" aria-describedby="email-erro">
+                  placeholder="voce@email.com" aria-describedby="email-erro">
                 <span class="field__error" id="email-erro" role="alert"></span>
               </div>
 
               <div class="field field--full">
                 <label for="mensagem">Quer contar algo? <span class="opt">(opcional)</span></label>
                 <textarea id="mensagem" name="mensagem" maxlength="600" rows="3"
-                          placeholder="Ex.: como conheceu a AFLOR, talentos que deseja compartilhar, dúvidas…" aria-describedby="mensagem-dica"></textarea>
-                <span class="field__hint" id="mensagem-dica"><span data-counter="mensagem">0</span>/600 caracteres. Não inclua dados de saúde, documentos ou dados de crianças.</span>
+                  placeholder="Ex.: como conheceu a AFLOR, talentos que deseja compartilhar, dúvidas…"
+                  aria-describedby="mensagem-dica"></textarea>
+                <span class="field__hint" id="mensagem-dica"><span data-counter="mensagem">0</span>/600 caracteres. Não
+                  inclua dados de saúde, documentos ou dados de crianças.</span>
               </div>
 
               <div class="field field--full">
                 <div class="consent">
-                  <input id="consentimento" name="consentimento" type="checkbox" value="sim" required aria-describedby="consentimento-erro">
+                  <input id="consentimento" name="consentimento" type="checkbox" value="sim" required
+                    aria-describedby="consentimento-erro">
                   <label for="consentimento">
                     Li e concordo com a <a href="politica-de-privacidade.html">Política de Privacidade</a> e autorizo a
                     AFLOR a usar estes dados apenas para responder ao meu contato.
@@ -961,17 +1358,23 @@
 
             <div class="form-actions">
               <button class="btn btn--whatsapp" type="submit" name="canal" value="whatsapp" id="btn-enviar-whatsapp">
-                <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                <svg aria-hidden="true">
+                  <use href="#i-whatsapp" />
+                </svg>
                 Enviar pelo WhatsApp
               </button>
               <button class="btn btn--ghost" type="submit" name="canal" value="email" id="btn-enviar-email">
-                <svg aria-hidden="true"><use href="#i-mail"/></svg>
+                <svg aria-hidden="true">
+                  <use href="#i-mail" />
+                </svg>
                 Enviar por e-mail
               </button>
             </div>
 
             <p class="form-secure">
-              <svg aria-hidden="true"><use href="#i-shield"/></svg>
+              <svg aria-hidden="true">
+                <use href="#i-shield" />
+              </svg>
               Seus dados não são armazenados neste site nem compartilhados com terceiros.
             </p>
 
@@ -979,7 +1382,9 @@
           </form>
         </div>
       </div>
-      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
 
     <!-- ===================== H. ONDE ESTAMOS E CONTATO ===================== -->
@@ -995,7 +1400,9 @@
         <div class="places">
           <article class="place reveal">
             <header>
-              <span class="doc__icon tint-peach" aria-hidden="true"><svg><use href="#i-home"/></svg></span>
+              <span class="doc__icon tint-peach" aria-hidden="true"><svg>
+                  <use href="#i-home" />
+                </svg></span>
               <div>
                 <h3>Sede Administrativa</h3>
                 <p>AFLOR — Ciranda das Flores</p>
@@ -1005,21 +1412,30 @@
             <!-- Mapa: só carrega o iframe do OpenStreetMap após clique ou consentimento (privacidade + desempenho) -->
             <div class="map" data-map-box="sede" id="mapa-sede">
               <div class="map__facade">
-                <svg class="map__pin" aria-hidden="true"><use href="#i-pin"/></svg>
-                <button type="button" class="btn btn--sm" data-map-load="sede" id="btn-mapa-sede">Ver mapa interativo</button>
+                <svg class="map__pin" aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>
+                <button type="button" class="btn btn--sm" data-map-load="sede" id="btn-mapa-sede">Ver mapa
+                  interativo</button>
                 <p>O mapa é fornecido pelo OpenStreetMap e só é carregado com a sua permissão.</p>
               </div>
             </div>
             <div class="place__links">
-              <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20General%20Andrade%20Neves%2C%20462%2C%20Am%C3%A9rica%2C%20Joinville%20-%20SC" target="_blank" rel="noopener noreferrer" id="rota-sede">
-                <svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar
+              <a class="btn btn--ghost btn--sm"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20General%20Andrade%20Neves%2C%20462%2C%20Am%C3%A9rica%2C%20Joinville%20-%20SC"
+                target="_blank" rel="noopener noreferrer" id="rota-sede">
+                <svg aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>Como chegar
               </a>
             </div>
           </article>
 
           <article class="place reveal d1">
             <header>
-              <span class="doc__icon tint-sage" aria-hidden="true"><svg><use href="#i-logo-jardim"/></svg></span>
+              <span class="doc__icon tint-sage" aria-hidden="true"><svg>
+                  <use href="#i-logo-jardim" />
+                </svg></span>
               <div>
                 <h3>Jardim Waldorf Ciranda</h3>
                 <p>Nossa iniciativa educativa</p>
@@ -1029,17 +1445,27 @@
             <address>Rua General Andrade Neves, 462 — América, Joinville - SC</address>
             <div class="map" data-map-box="jardim" id="mapa-jardim">
               <div class="map__facade">
-                <svg class="map__pin" aria-hidden="true"><use href="#i-pin"/></svg>
-                <button type="button" class="btn btn--sm" data-map-load="jardim" id="btn-mapa-jardim">Ver mapa interativo</button>
+                <svg class="map__pin" aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>
+                <button type="button" class="btn btn--sm" data-map-load="jardim" id="btn-mapa-jardim">Ver mapa
+                  interativo</button>
                 <p>O mapa é fornecido pelo OpenStreetMap e só é carregado com a sua permissão.</p>
               </div>
             </div>
             <div class="place__links">
-              <a class="btn btn--sm" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer" id="local-jardim-site">
-                Site do Jardim Ciranda<svg aria-hidden="true"><use href="#i-external"/></svg>
+              <a class="btn btn--sm" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank"
+                rel="noopener noreferrer" id="local-jardim-site">
+                Site do Jardim Ciranda<svg aria-hidden="true">
+                  <use href="#i-external" />
+                </svg>
               </a>
-              <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20General%20Andrade%20Neves%2C%20462%2C%20Am%C3%A9rica%2C%20Joinville%20-%20SC" target="_blank" rel="noopener noreferrer" id="rota-jardim">
-                <svg aria-hidden="true"><use href="#i-pin"/></svg>Como chegar
+              <a class="btn btn--ghost btn--sm"
+                href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20General%20Andrade%20Neves%2C%20462%2C%20Am%C3%A9rica%2C%20Joinville%20-%20SC"
+                target="_blank" rel="noopener noreferrer" id="rota-jardim">
+                <svg aria-hidden="true">
+                  <use href="#i-pin" />
+                </svg>Como chegar
               </a>
             </div>
           </article>
@@ -1048,19 +1474,27 @@
         <ul class="contact-strip" role="list">
           <li class="reveal">
             <a href="mailto:contato.aflor@gmail.com" class="tint-peach" id="contato-email">
-              <span class="ic" aria-hidden="true"><svg><use href="#i-mail"/></svg></span>
+              <span class="ic" aria-hidden="true"><svg>
+                  <use href="#i-mail" />
+                </svg></span>
               <span><b>E-mail</b><span>contato.aflor@gmail.com</span></span>
             </a>
           </li>
           <li class="reveal d1">
-            <a href="https://wa.me/5547988916765" data-wa-link target="_blank" rel="noopener noreferrer" class="tint-sage" id="contato-whatsapp">
-              <span class="ic" aria-hidden="true"><svg><use href="#i-whatsapp"/></svg></span>
+            <a href="https://wa.me/5547988916765" data-wa-link target="_blank" rel="noopener noreferrer"
+              class="tint-sage" id="contato-whatsapp">
+              <span class="ic" aria-hidden="true"><svg>
+                  <use href="#i-whatsapp" />
+                </svg></span>
               <span><b>WhatsApp / Telefone</b><span>47 9 8891 6765</span></span>
             </a>
           </li>
           <li class="reveal d2">
-            <a href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer" class="tint-lavender" id="contato-instagram">
-              <span class="ic" aria-hidden="true"><svg><use href="#i-instagram"/></svg></span>
+            <a href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer"
+              class="tint-lavender" id="contato-instagram">
+              <span class="ic" aria-hidden="true"><svg>
+                  <use href="#i-instagram" />
+                </svg></span>
               <span><b>Instagram</b><span>@aflor_assoc</span></span>
             </a>
           </li>
@@ -1073,13 +1507,21 @@
       <div class="lazur" aria-hidden="true"><span class="l2"></span><span class="l3"></span></div>
       <div class="container">
         <h2 id="cta-final-titulo" class="reveal">Hoje nasce uma nova flor. 🌸</h2>
-        <p class="reveal d1">Convidamos a vocês que também acreditam que é possível mudar o mundo a partir da infância.</p>
+        <p class="reveal d1">Convidamos a vocês que também acreditam que é possível mudar o mundo a partir da infância.
+        </p>
         <div class="hero__ctas reveal d2">
-          <a class="btn" href="#faca-parte" id="cta-final-faca-parte"><svg aria-hidden="true"><use href="#i-sprout"/></svg>Faça Parte</a>
-          <a class="btn btn--whatsapp" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link id="cta-final-whatsapp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Conversar no WhatsApp</a>
+          <a class="btn" href="#faca-parte" id="cta-final-faca-parte"><svg aria-hidden="true">
+              <use href="#i-sprout" />
+            </svg>Faça Parte</a>
+          <a class="btn btn--whatsapp" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer"
+            data-wa-link id="cta-final-whatsapp"><svg aria-hidden="true">
+              <use href="#i-whatsapp" />
+            </svg>Conversar no WhatsApp</a>
         </div>
       </div>
-      <svg class="wave wave--bottom wave--to-ink" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none"><use href="#i-wave"/></svg>
+      <svg class="wave wave--bottom wave--to-ink" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
     </section>
   </main>
 
@@ -1089,12 +1531,17 @@
       <div class="footer-grid footer-grid--aflor">
         <div>
           <a class="brand" href="./" aria-label="AFLOR — voltar ao topo">
-            <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" loading="lazy" decoding="async">
+            <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" loading="lazy"
+              decoding="async">
             <span><span class="brand__name">AFLOR</span><span class="brand__tag">Ciranda das Flores</span></span>
           </a>
-          <p>Associação Pedagógica Antroposófica Ciranda das Flores. Famílias, educadores e comunidade de Joinville cultivando uma educação para a liberdade.</p>
-          <a class="footer-sister" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer" id="footer-jardim">
-            <svg aria-hidden="true"><use href="#i-logo-jardim"/></svg>
+          <p>Associação Pedagógica Antroposófica Ciranda das Flores. Famílias, educadores e comunidade de Joinville
+            cultivando uma educação para a liberdade.</p>
+          <a class="footer-sister" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank"
+            rel="noopener noreferrer" id="footer-jardim">
+            <svg aria-hidden="true">
+              <use href="#i-logo-jardim" />
+            </svg>
             Jardim Waldorf Ciranda ↗
           </a>
         </div>
@@ -1122,31 +1569,39 @@
           <h2>Contato</h2>
           <ul role="list">
             <li><a href="mailto:contato.aflor@gmail.com">contato.aflor@gmail.com</a></li>
-            <li><a href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link>WhatsApp 47 9 8891 6765</a></li>
-            <li><a href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer">Instagram @aflor_assoc</a></li>
+            <li><a href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link>WhatsApp 47
+                9 8891 6765</a></li>
+            <li><a href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer">Instagram
+                @aflor_assoc</a></li>
             <li>Rua General Andrade Neves, 462 - Sala 1<br>América — Joinville/SC</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span data-year>2026</span> AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores. Feito com carinho, sem rastreadores.</p>
+        <p>© <span data-year>2026</span> AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores. Feito com
+          carinho, sem rastreadores.</p>
         <p><button type="button" data-open-consent>Preferências de privacidade</button></p>
       </div>
     </div>
   </footer>
 
   <!-- Botão flutuante de WhatsApp -->
-  <a class="wa-float" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link id="whatsapp-flutuante" aria-label="Conversar com a AFLOR pelo WhatsApp (abre em nova aba)">
-    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  <a class="wa-float" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link
+    id="whatsapp-flutuante" aria-label="Conversar com a AFLOR pelo WhatsApp (abre em nova aba)">
+    <svg aria-hidden="true">
+      <use href="#i-whatsapp" />
+    </svg>
     <span class="wa-float__label">Fale conosco</span>
   </a>
 
   <!-- Aviso de privacidade (LGPD) — exibido por main.js -->
-  <div class="consent-banner" id="aviso-privacidade" role="dialog" aria-modal="false" aria-labelledby="aviso-titulo" aria-describedby="aviso-texto" hidden>
+  <div class="consent-banner" id="aviso-privacidade" role="dialog" aria-modal="false" aria-labelledby="aviso-titulo"
+    aria-describedby="aviso-texto" hidden>
     <h2 id="aviso-titulo">🌿 Sua privacidade importa</h2>
     <p id="aviso-texto">
       Este site <strong>não usa cookies nem rastreadores</strong>. Conteúdos externos (como os mapas do OpenStreetMap)
-      só são carregados se você permitir. Saiba mais na <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+      só são carregados se você permitir. Saiba mais na <a href="politica-de-privacidade.html">Política de
+        Privacidade</a>.
     </p>
     <div class="consent-banner__actions">
       <button type="button" class="btn btn--sm" data-consent="externos">Permitir conteúdos externos</button>
@@ -1154,4 +1609,5 @@
     </div>
   </div>
 </body>
+
 </html>
