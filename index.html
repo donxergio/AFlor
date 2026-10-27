@@ -346,6 +346,12 @@
           <li><a href="#transparencia">Transparência</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
+        <!-- Campanha temporária: visível só até a data de config.js (diaDeDoar.encerraEm). Oculto por padrão. -->
+        <a class="btn btn--sm btn--doar" href="dia-de-doar.html" id="nav-dia-de-doar" data-dia-de-doar hidden>
+          <svg aria-hidden="true">
+            <use href="#i-gift" />
+          </svg>Dia de Doar
+        </a>
         <a class="btn btn--sm" href="#faca-parte" id="nav-faca-parte">Faça Parte</a>
       </nav>
     </div>
@@ -1033,7 +1039,7 @@
                 <use href="#i-gift" />
               </svg></span>
             <h3>Doação</h3>
-            <p>Participe do Dia de Doar ou faça uma doação livre, pontual ou periódica, para viabilizar nossos
+            <p>Faça uma doação livre, pontual ou periódica, para viabilizar nossos
               objetivos.</p>
             <a class="btn btn--sm" href="#doacao" id="path-doacao">Quero doar <svg aria-hidden="true">
                 <use href="#i-arrow" />
@@ -1161,16 +1167,16 @@
             <p>Toda contribuição, do tamanho que for, rega o mesmo jardim.</p>
           </div>
 
-          <div class="give">
-            <article class="give-card tint-ochre reveal" id="doacao">
+          <div class="give" id="doacao">
+            <!-- Campanha temporária (some após diaDeDoar.encerraEm em config.js) -->
+            <article class="give-card give-card--campanha tint-ochre reveal" id="dia-de-doar-card" data-dia-de-doar hidden>
               <span class="pillar__icon" aria-hidden="true"><svg>
                   <use href="#i-gift" />
                 </svg></span>
               <h3>Dia de Doar</h3>
               <p>O Dia de Doar é a versão brasileira do movimento global de generosidade #GivingTuesday. Participe da
                 campanha da AFLOR e ajude a semear uma educação para a liberdade em Joinville.</p>
-              <a class="btn btn--sm" href="#formulario" data-motivo="doacao" data-doacao="dia-de-doar"
-                id="cta-dia-de-doar">Quero participar <svg aria-hidden="true">
+              <a class="btn btn--sm" href="dia-de-doar.html" id="cta-dia-de-doar">Conheça a campanha <svg aria-hidden="true">
                   <use href="#i-arrow" />
                 </svg></a>
             </article>
@@ -1268,7 +1274,7 @@
                   <option value="">Selecione…</option>
                   <option value="associar">Quero me associar</option>
                   <option value="voluntariado">Voluntariado</option>
-                  <option value="doacao">Doação Livre / Dia de Doar</option>
+                  <option value="doacao">Doação Livre</option>
                 </select>
                 <span class="field__error" id="motivo-erro" role="alert"></span>
               </div>
@@ -1296,20 +1302,8 @@
                 <span class="field__error" id="categoria-erro" role="alert"></span>
               </fieldset>
 
-              <fieldset class="field conditional" data-show-when="doacao" aria-describedby="doacao-erro">
-                <legend>Tipo de doação</legend>
-                <div class="choice-grid" id="campo-doacao">
-                  <div class="choice">
-                    <input type="radio" id="doacao-dia" name="doacao" value="dia-de-doar">
-                    <label for="doacao-dia">Dia de Doar<small>campanha anual de generosidade</small></label>
-                  </div>
-                  <div class="choice">
-                    <input type="radio" id="doacao-livre-opt" name="doacao" value="livre">
-                    <label for="doacao-livre-opt">Doação Livre<small>pontual ou periódica</small></label>
-                  </div>
-                </div>
-                <span class="field__error" id="doacao-erro" role="alert"></span>
-              </fieldset>
+              <!-- Dia de Doar tem página e formulário próprios (dia-de-doar.html); aqui só Doação Livre. -->
+              <input type="hidden" name="doacao" value="livre">
 
               <div class="field field--full">
                 <label for="nome">Seu nome</label>
@@ -1559,7 +1553,7 @@
           <h2>Participe</h2>
           <ul role="list">
             <li><a href="#associado">Seja associado</a></li>
-            <li><a href="#doacao">Dia de Doar</a></li>
+            <li data-dia-de-doar hidden><a href="dia-de-doar.html">Dia de Doar</a></li>
             <li><a href="#doacao-livre">Doação Livre</a></li>
             <li><a href="#voluntariado">Voluntariado</a></li>
             <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>

@@ -1,12 +1,19 @@
 # Pendientes — sitio AFLOR
 
 ## Antes de producción
-- [ ] **Clave de Web3Forms:** sustituir `SUA_CHAVE_WEB3FORMS_AQUI` en `assets/js/config.js` (`web3formsAccessKey`) **y** en el campo oculto `access_key` de `index.html`. Hasta entonces, el envío por correo usa el respaldo `mailto:`.
+- [x] **Clave de Web3Forms:** sustituir `SUA_CHAVE_WEB3FORMS_AQUI` en `assets/js/config.js` (`web3formsAccessKey`) **y** en el campo oculto `access_key` de `index.html`. Hasta entonces, el envío por correo usa el respaldo `mailto:`.
 - [ ] **Documentos:** añadir los enlaces de *Última Assembleia* y *Orçamento* en `docs` de `assets/js/config.js` (mientras estén vacíos, los botones muestran "Em breve").
 - [ ] **Textos de servicios:** revisar/confirmar las descripciones de *Contraturno escolar*, *Consultoria em Pedagogia Waldorf* y *Projetos Sociais* en `index.html` (no venían en el contenido oficial).
 - [ ] **Dirección del Jardim:** confirmar dirección y coordenadas del Jardim Waldorf Ciranda (`maps.jardim` en `config.js` y el texto en `index.html`). Ahora usa la misma ubicación que la sede.
 - [ ] **Opcional:** añadir CNPJ y clave PIX si se quieren mostrar.
 - [ ] **Comprobar la consola del navegador** (F12) para ver si hay errores de la política de seguridad (CSP). No llegué a verificarlo.
+
+## Campaña Dia de Doar (`dia-de-doar.html`)
+- [ ] **QR PIX:** guardar la imagen en `assets/img/` (p. ej. `pix-aflor.png`) y rellenar `diaDeDoar.pixQr` (y, si se quiere, `pixChave`) en `assets/js/config.js`.
+- [ ] **Validar los textos de la página:** redactados sin poder leer el PDF "PL Joinville - SC" ni diadedoar.org.br.
+- [ ] **Confirmar la fecha:** 1 de diciembre de 2026 (martes posterior a Acción de Gracias).
+- [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa").
+- Fin automático: el botón, la tarjeta y el enlace del pie desaparecen el 06/12/2026 a las 00:00 (`diaDeDoar.encerraEm`). Para probarlo, añade `?simular=encerrado` a la URL.
 
 ## En el proyecto JardimCiranda
 - [ ] Añadir el enlace de vuelta a AFLOR en el `index.html` de JardimCiranda, en la primera columna del footer, después del párrafo descriptivo:

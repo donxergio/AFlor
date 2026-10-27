@@ -185,6 +185,7 @@
   function intro(d) {
     if (d.motivo === 'associar') return 'Olá! Quero fazer parte da AFLOR como associado(a). 🌸';
     if (d.motivo === 'voluntariado') return 'Olá! Quero ser voluntário(a) da AFLOR. 🌱';
+    if (d.doacao === 'dia-de-doar') return 'Olá! Participei do Dia de Doar da AFLOR e quero deixar meus dados. 🎁';
     return 'Olá! Quero apoiar a AFLOR com uma doação. 💛';
   }
 
@@ -263,7 +264,7 @@
     }
 
     var payload = {
-      subject: 'Faça Parte (' + MOTIVOS[data.motivo] + ') — ' + data.nome,
+      subject: 'Faça Parte (' + MOTIVOS[data.motivo] + (data.doacao ? ' — ' + DOACOES[data.doacao] : '') + ') — ' + data.nome,
       from_name: 'Site AFLOR',
       name: data.nome,
       email: data.email,

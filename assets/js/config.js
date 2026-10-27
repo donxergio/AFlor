@@ -76,5 +76,22 @@
 
     /** Versão do aviso de privacidade: incremente para pedir nova escolha aos visitantes. */
     consentVersion: 1,
+
+    /**
+     * 🎁 Campanha Dia de Doar (página dia-de-doar.html).
+     *   encerraEm   → a partir deste instante o botão do menu, o cartão e o link do rodapé
+     *                 deixam de aparecer e a página mostra "campanha encerrada".
+     *                 (fim do dia 05/12/2026 no horário de Brasília)
+     *   pixQr       → imagem do QR Code PIX dentro de assets/img/ (ex.: 'assets/img/pix-aflor.png').
+     *                 Deixe '' para mostrar "QR Code em breve".
+     *   pixChave    → chave PIX em texto (CNPJ, e-mail ou aleatória). '' para ocultar.
+     *   pixFavorecido → nome do favorecido exibido abaixo do QR.
+     */
+    diaDeDoar: {
+      encerraEm: '2026-12-06T00:00:00-03:00',
+      pixQr: '',
+      pixChave: '',
+      pixFavorecido: 'AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores',
+    },
   });
 })();

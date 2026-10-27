@@ -41,6 +41,65 @@
     $$('[data-jardim-link]').forEach(function (a) { a.href = jardimUrl; });
   }
 
+  /* ---------- Campanha Dia de Doar (temporária; data em config.js → diaDeDoar.encerraEm) ----------
+     Tudo que tem [data-dia-de-doar] nasce oculto no HTML e só aparece ANTES da data de encerramento.
+     Depois dela, os elementos são removidos do DOM e [data-dia-de-doar-encerrado] é exibido.
+     Teste do estado encerrado: acrescente ?simular=encerrado à URL. */
+  var ddd = CFG.diaDeDoar || {};
+  var dddEnd = Date.parse(ddd.encerraEm || '');
+  var dddActive = isFinite(dddEnd) && Date.now() < dddEnd &&
+    !/[?&]simular=encerrado(&|$)/.test(window.location.search);
+
+  $$('[data-dia-de-doar]').forEach(function (el) {
+    if (dddActive) el.hidden = false;
+    else el.remove();
+  });
+  $$('[data-dia-de-doar-encerrado]').forEach(function (el) {
+    if (dddActive) el.remove();
+    else el.hidden = false;
+  });
+
+  if (dddActive) {
+    // QR Code PIX: só imagens locais (img-src 'self' na CSP)
+    var qrBox = $('[data-pix-qr]');
+    var qrSrc = String(ddd.pixQr || '');
+    if (qrBox && /^assets\/img\/[\w.-]+\.(png|webp|jpe?g|svg)$/i.test(qrSrc)) {
+      var qrImg = doc.createElement('img');
+      qrImg.src = qrSrc;
+      qrImg.width = 260;
+      qrImg.height = 260;
+      qrImg.alt = 'QR Code PIX para doar à AFLOR';
+      qrImg.decoding = 'async';
+      qrBox.textContent = '';
+      qrBox.appendChild(qrImg);
+      qrBox.classList.add('is-ready');
+    }
+
+    // Chave PIX em texto + botão copiar
+    var keyBox = $('[data-pix-chave]');
+    var pixKey = String(ddd.pixChave || '').trim().slice(0, 120);
+    if (keyBox && pixKey) {
+      var keyValue = $('[data-pix-chave-valor]', keyBox);
+      if (keyValue) keyValue.textContent = pixKey;
+      keyBox.hidden = false;
+      var copyBtn = $('[data-pix-copiar]', keyBox);
+      if (copyBtn && navigator.clipboard) {
+        copyBtn.addEventListener('click', function () {
+          navigator.clipboard.writeText(pixKey).then(function () {
+            copyBtn.textContent = 'Chave copiada ✓';
+            window.setTimeout(function () { copyBtn.textContent = 'Copiar chave'; }, 2500);
+          });
+        });
+      } else if (copyBtn) {
+        copyBtn.hidden = true;
+      }
+    }
+
+    if (ddd.pixFavorecido) {
+      $$('[data-pix-favorecido]').forEach(function (el) { el.textContent = String(ddd.pixFavorecido).slice(0, 140); });
+    }
+  }
+
   /* ---------- Links de WhatsApp com mensagem padrão ---------- */
   function buildWaUrl(message) {
     var number = String(CFG.whatsappNumber || '').replace(/\D/g, '');
