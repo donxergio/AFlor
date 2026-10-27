@@ -18,7 +18,7 @@
 - La sección muestra solo los 7 nombres. Los textos de cada valor y las *perguntas norteadoras* se quitaron del HTML (siguen en el historial de git si se quieren recuperar).
 
 ## Campaña Dia de Doar (`dia-de-doar.html`)
-- [ ] **QR PIX:** guardar la imagen en `assets/img/` (p. ej. `pix-aflor.png`) y rellenar `diaDeDoar.pixQr` (y, si se quiere, `pixChave`) en `assets/js/config.js`.
+- [x] **QR PIX:** `assets/img/pix-aflor.png` (limpio con `python .agents/scripts/build_pix_qr.py <imagen>`), clave CNPJ 58.981.530/0001-48 en `config.js`. QR estático sin valor fijo, identificador `diadedoar`.
 - [ ] **Validar los textos de la página:** la sección "O que é" y las cifras de 2024 vienen de la carta-convite oficial del Dia de Doar (carpeta *Materiais para Parcerias*); el resto (portada, "Por que doar", PIX y formulario) es redacción propia.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.
