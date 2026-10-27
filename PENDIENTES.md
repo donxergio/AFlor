@@ -10,6 +10,7 @@
 
 ## Projeto Raízes do Aprender (`projeto-raizes.html`)
 - [ ] **Foto real** del proyecto (sin rostros). Por ahora usa imágenes existentes: `horta-colheita` (hero), `maos-tecendo-la` (card de la home y pilar 1), `pintura-aquarela` y `caminho-no-jardim`.
+- [ ] **Validar textos de la Fundação Fritz Müller:** confirmar la redacción de agradecimiento por el financiamiento 2026 en `index.html` (sección Parceiros y tarjeta de Raízes) y en `projeto-raizes.html` (ficha técnica y bloque institucional de patrocinio).
 - [ ] **Validar el párrafo del CTA final** ("Fale com a AFLOR para inscrever uma criança…"), redactado para el sitio. El resto es el texto enviado, solo reordenado.
 - [ ] **Cita de Ruth Rocha:** está cortada con "..." como en el texto enviado; completar si se quiere la frase entera.
 - Mensaje de WhatsApp pre-rellenado: `whatsappMessages.raizes` en `assets/js/config.js`.

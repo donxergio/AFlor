@@ -64,6 +64,17 @@
     },
 
     /**
+     * Parceiros institucionais da AFLOR.
+     */
+    parceiros: [
+      {
+        nome: 'Fundação Fritz Müller',
+        url: 'https://www.fundacaofritzmuller.com.br/sobre-a-fritzmuller/',
+        papel: 'Financiadora do Projeto Raízes do Aprender em 2026',
+      },
+    ],
+
+    /**
      * Mapas (OpenStreetMap) — sem cookies de rastreamento.
      * ⚠️ CONFIRMAR as coordenadas de cada endereço antes de publicar.
      */

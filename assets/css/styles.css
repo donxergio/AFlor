@@ -975,15 +975,57 @@ ol.values-list { position: relative; z-index: 1; display: flex; flex-wrap: wrap;
 }
 
 .partners {
-  position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: 0.75rem;
+  position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;
   padding: clamp(1.75rem, 1rem + 2vw, 2.5rem); border-radius: var(--r-xl);
-  border: 2px dashed var(--c-sage-300); background: var(--c-sage-100);
+  border: 1px solid var(--border); background: var(--c-sage-100);
 }
 .partners h3 { font-size: var(--fs-xl); margin: 0; }
 .partners p { color: var(--c-ink-700); margin: 0; }
-.partners__slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin: 0.5rem 0 0.75rem; }
-.partners__slots span { aspect-ratio: 3 / 2; border-radius: var(--r-md); border: 1.5px dashed var(--c-sage-300); background: rgba(253, 251, 247, 0.7); display: grid; place-items: center; color: var(--c-sage-700); }
-.partners__slots svg { width: 26px; height: 26px; opacity: 0.7; }
+
+.partners__list { display: flex; flex-direction: column; gap: 0.85rem; margin: 0.25rem 0; }
+
+.partner-card {
+  display: flex; flex-direction: column; gap: 0.85rem;
+  padding: 1.15rem 1.25rem; border-radius: var(--r-lg); background: var(--c-surface);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+.partner-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.partner-card__brand {
+  display: inline-flex; align-items: center; justify-content: flex-start;
+  padding: 0.55rem 0.85rem; border-radius: var(--r-md); background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07); width: fit-content; max-width: 100%;
+}
+.partner-card__brand img { max-width: 180px; height: auto; display: block; object-fit: contain; }
+.partner-card__body { display: flex; flex-direction: column; gap: 0.35rem; }
+.partner-card__tag {
+  display: inline-block; font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--c-sage-800); background: var(--c-sage-200);
+  padding: 0.2rem 0.55rem; border-radius: var(--r-pill); width: fit-content;
+}
+.partner-card__name { font-size: var(--fs-base); font-family: var(--font-sans); font-weight: 800; margin: 0; }
+.partner-card__name a { color: var(--c-ink-900); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; }
+.partner-card__name a:hover { color: var(--primary); }
+.partner-card__name svg { width: 14px; height: 14px; transition: transform var(--t-base) ease; }
+.partner-card__name a:hover svg { transform: translateX(3px); }
+.partner-card__desc { font-size: var(--fs-sm); color: var(--c-ink-700); line-height: 1.55; margin: 0; }
+.partner-card__desc a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.partner-card__desc a:hover { color: var(--primary-hover); }
+
+.partners__invite {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;
+  padding-top: 0.75rem; border-top: 1px dashed var(--c-sage-300);
+}
+.partners__invite-text { display: flex; align-items: center; gap: 0.5rem; flex: 1 1 200px; }
+.partners__invite-sprout {
+  display: grid; place-items: center; width: 32px; height: 32px; flex: none;
+  border-radius: var(--r-blob-2); background: rgba(253, 251, 247, 0.9);
+  border: 1px dashed var(--c-sage-300); color: var(--c-sage-700);
+}
+.partners__invite-sprout svg { width: 18px; height: 18px; }
+.partners__invite p { font-size: var(--fs-sm); color: var(--c-ink-700); font-style: italic; margin: 0; }
+.partners__invite .btn { align-self: center; }
+
 @media (max-width: 860px) { .transp { grid-template-columns: 1fr; } }
 
 /* 21.9 Faça Parte — caminhos */
@@ -1322,5 +1364,31 @@ ul.raizes-indicators { position: relative; z-index: 1; display: grid; grid-templ
 @media (max-width: 900px) { .raizes-offer { grid-template-columns: 1fr; } }
 @media (max-width: 620px) {
   ul.raizes-stats, ul.raizes-indicators, .services.raizes-pillars { grid-template-columns: 1fr; }
+}
+
+/* Parceiro Financiador (projeto-raizes.html) */
+.raizes-partner-section { padding-top: var(--sp-6); padding-bottom: var(--sp-6); }
+.raizes-partner-box {
+  position: relative; z-index: 1; display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 3vw, 2.75rem); align-items: center;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem); border-radius: var(--r-xl);
+  background: linear-gradient(135deg, var(--c-surface), var(--c-sage-100));
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.raizes-partner-box__brand {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  padding: 1.25rem 1.5rem; border-radius: var(--r-lg); background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06); box-shadow: var(--shadow-xs);
+  align-items: center; text-align: center;
+}
+.raizes-partner-box__brand .eyebrow { margin: 0; font-size: 0.72rem; }
+.raizes-partner-box__brand img { max-width: 210px; height: auto; display: block; object-fit: contain; }
+.raizes-partner-box__content h2,
+.raizes-partner-box__content h3 { font-size: var(--fs-xl); margin: 0 0 0.5rem; }
+.raizes-partner-box__content p { color: var(--c-ink-700); font-size: var(--fs-base); line-height: 1.65; margin: 0; }
+.raizes-partner-box__content a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.raizes-partner-box__content a:hover { color: var(--primary-hover); }
+@media (max-width: 760px) {
+  .raizes-partner-box { grid-template-columns: 1fr; text-align: center; }
+  .raizes-partner-box__brand { align-self: center; }
 }
 
