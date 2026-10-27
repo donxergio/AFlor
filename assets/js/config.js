@@ -21,6 +21,14 @@
     /** Mensagem usada pelos botões genéricos de WhatsApp (flutuante, rodapé). */
     whatsappDefaultMessage: 'Olá! Vim pelo site da AFLOR e gostaria de saber mais sobre a associação. 🌸',
 
+    /**
+     * Mensagens específicas: um link com data-wa-link="chave" usa whatsappMessages[chave].
+     * Sem chave (ou chave inexistente), vale a whatsappDefaultMessage.
+     */
+    whatsappMessages: {
+      raizes: 'Olá! Gostaria de informações sobre a inscrição no Projeto Raízes do Aprender.',
+    },
+
     /** E-mail institucional (usado no fallback mailto:). */
     email: 'contato.aflor@gmail.com',
 
@@ -89,8 +97,9 @@
      */
     diaDeDoar: {
       encerraEm: '2026-12-06T00:00:00-03:00',
-      pixQr: '',
-      pixChave: '',
+      // QR estático decodificado: chave CNPJ 58.981.530/0001-48, txid "diadedoar", sem valor fixo
+      pixQr: 'assets/img/pix-aflor.png',
+      pixChave: '58.981.530/0001-48',
       pixFavorecido: 'AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores',
     },
   });

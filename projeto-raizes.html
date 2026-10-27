@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Mesma CSP estrita de index.html (sem scripts/estilos inline). -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com https://formspree.io; frame-src https://www.openstreetmap.org; form-action 'self' https://api.web3forms.com https://formspree.io; base-uri 'self'; object-src 'none'; manifest-src 'self'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Projeto Raízes do Aprender | Contraturno gratuito — AFLOR, Joinville/SC</title>
+  <meta name="description"
+    content="Contraturno escolar gratuito para crianças de 6 a 8 anos da rede pública de Joinville, inspirado na Pedagogia Waldorf: trabalhos manuais, aquarela e brincar livre na natureza.">
+  <!-- ⚠️ Em produção (domínio próprio), atualize canonical, og:url e og:image. -->
+  <link rel="canonical" href="https://donxergio.github.io/AFLOR/projeto-raizes.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#faf7f2">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="AFLOR — Ciranda das Flores">
+  <meta property="og:url" content="https://donxergio.github.io/AFLOR/projeto-raizes.html">
+  <meta property="og:title" content="Projeto Raízes do Aprender — contraturno escolar gratuito da AFLOR">
+  <meta property="og:description"
+    content="Para crianças de 6 a 8 anos da rede pública de Joinville, inspirado na Pedagogia Waldorf.">
+  <meta property="og:image" content="https://donxergio.github.io/AFLOR/assets/img/og-aflor.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/lora-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/webp"
+    imagesrcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
+    imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Dados estruturados (Schema.org) — bloco de dados, não é executado pelo navegador -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://donxergio.github.io/AFLOR/projeto-raizes.html#pagina",
+    "url": "https://donxergio.github.io/AFLOR/projeto-raizes.html",
+    "name": "Projeto Raízes do Aprender",
+    "description": "Contraturno escolar gratuito para crianças de 6 a 8 anos, matriculadas na rede pública de Joinville, inspirado na Pedagogia Waldorf.",
+    "inLanguage": "pt-BR",
+    "isPartOf": { "@id": "https://donxergio.github.io/AFLOR/#website" },
+    "publisher": { "@id": "https://donxergio.github.io/AFLOR/#aflor" }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Sprite de ícones (subconjunto do index.html + ícones da ficha técnica) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="sr-only" aria-hidden="true" focusable="false">
+    <symbol id="i-logo-jardim" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="8" fill="#ebcd84" />
+      <circle cx="24" cy="6" r="3.2" fill="#f0c3ab" />
+      <circle cx="36.7" cy="11.3" r="3.2" fill="#a9bfa0" />
+      <circle cx="42" cy="24" r="3.2" fill="#ddd2eb" />
+      <circle cx="36.7" cy="36.7" r="3.2" fill="#f0c3ab" />
+      <circle cx="24" cy="42" r="3.2" fill="#a9bfa0" />
+      <circle cx="11.3" cy="36.7" r="3.2" fill="#ddd2eb" />
+      <circle cx="6" cy="24" r="3.2" fill="#f0c3ab" />
+      <circle cx="11.3" cy="11.3" r="3.2" fill="#a9bfa0" />
+      <circle cx="24" cy="24" r="15" fill="none" stroke="#a0503a" stroke-width="2.4" stroke-linecap="round"
+        stroke-dasharray="3 5.4" opacity=".55" />
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.2-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 5v14M6 13l6 6 6-6" />
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21v-8" />
+      <path d="M12 13C12 9 9 7 5 7c0 4 3 6 7 6Z" />
+      <path d="M12 11c0-3.5 2.5-6 7-6 0 4-3 6-7 6Z" />
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15" />
+      <path d="M5 19 13 11" />
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z" />
+    </symbol>
+    <symbol id="i-family" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="7" cy="6" r="2.3" />
+      <circle cx="17" cy="6" r="2.3" />
+      <circle cx="12" cy="12.5" r="1.8" />
+      <path d="M3.5 20v-5a3.5 3.5 0 0 1 7 0M13.5 15a3.5 3.5 0 0 1 7 0v5M9.5 20v-2a2.5 2.5 0 0 1 5 0v2" />
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5" width="17" height="15" rx="3" />
+      <path d="M3.5 10h17M8 3v4M16 3v4" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.2 2" />
+    </symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 8.2c-1.6-1.3-5.8-1.6-6.9 2.2-1 3.6 1.4 9.6 4.4 9.6 1.1 0 1.6-.6 2.5-.6s1.4.6 2.5.6c3 0 5.4-6 4.4-9.6-1.1-3.8-5.3-3.5-6.9-2.2Z" />
+      <path d="M12 8.2c0-2 .8-3.6 2.6-4.7M12 6.5c-1.2-1.8-3-2.2-4.3-1.8.4 1.5 2.1 2.4 4.3 1.8Z" />
+    </symbol>
+    <symbol id="i-school" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 10 12 5l9.5 5-9.5 5Z" />
+      <path d="M6.5 12.2V16c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-3.8" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="4" y="3.5" width="16" height="14" rx="3" />
+      <path d="M4 11h16M8 17.5V20M16 17.5V20" />
+      <circle cx="8" cy="14.3" r=".6" fill="currentColor" />
+      <circle cx="16" cy="14.3" r=".6" fill="currentColor" />
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M4 20V4M4 20h16" />
+      <path d="M8 16v-4M12 16V8M16 16v-6" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m8 12 3 3 5-6" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M4 5h16v11H9l-5 4Z" />
+      <path d="M8 9.5h8M8 12.5h5" />
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <rect x="3.5" y="8" width="17" height="4" rx="1" />
+      <path d="M5 12v8h14v-8M12 8v12M12 8S10.5 3.5 8 4.5 9 8 12 8Zm0 0s1.5-4.5 4-3.5S15 8 12 8Z" />
+    </symbol>
+    <symbol id="i-wave" viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <path d="M0 46c120-26 240-38 360-30s240 40 360 46 240-18 360-30 240-6 360 10V90H0Z" />
+    </symbol>
+  </svg>
+
+  <!-- ===================== BARRA DO ECOSSISTEMA ===================== -->
+  <div class="topbar">
+    <div class="container">
+      <p><span class="topbar__flower" aria-hidden="true"></span>AFLOR · Associação Pedagógica Antroposófica Ciranda das
+        Flores · Joinville/SC</p>
+      <div class="topbar__links">
+        <a href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank" rel="noopener noreferrer"
+          id="topbar-jardim">
+          Conheça nossa iniciativa educativa: Jardim Waldorf Ciranda ↗
+        </a>
+        <a class="topbar__social" href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer"
+          id="topbar-instagram">@aflor_assoc</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ CABEÇALHO ============================ -->
+  <header class="site-header" id="topo">
+    <div class="container">
+      <a class="brand" href="./" aria-label="AFLOR — página inicial">
+        <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" decoding="async">
+        <span>
+          <span class="brand__name">AFLOR</span>
+          <span class="brand__tag">Ciranda das Flores</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+        aria-label="Abrir menu" id="btn-menu">
+        <span></span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul class="nav__list" role="list">
+          <li><a href="./#quem-somos">Quem Somos</a></li>
+          <li><a href="./#direcionadores">Direcionadores</a></li>
+          <li><a href="./#governanca">Governança</a></li>
+          <li><a href="./#atuacao">O Que Fazemos</a></li>
+          <li><a href="./#transparencia">Transparência</a></li>
+          <li><a href="./#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--sm btn--doar" href="dia-de-doar.html" id="nav-dia-de-doar" data-dia-de-doar hidden>
+          <svg aria-hidden="true">
+            <use href="#i-gift" />
+          </svg>Dia de Doar
+        </a>
+        <a class="btn btn--sm" href="./#faca-parte" id="nav-faca-parte">Faça Parte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero hero--aflor" id="inicio" aria-labelledby="raizes-titulo">
+      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l3"></span>
+      </div>
+
+      <div class="container hero__grid">
+        <div>
+          <p class="eyebrow">AFLOR</p>
+          <h1 id="raizes-titulo">Projeto <em>Raízes do Aprender</em></h1>
+          <p class="hero__lead">
+            Contraturno escolar gratuito para crianças de 6 a 8 anos, matriculadas na rede pública de Joinville,
+            inspirado na Pedagogia Waldorf.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--whatsapp" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer"
+              data-wa-link="raizes" id="cta-raizes-whatsapp-hero">
+              <svg aria-hidden="true">
+                <use href="#i-whatsapp" />
+              </svg>
+              Inscrição pelo WhatsApp
+            </a>
+            <a class="btn btn--ghost" href="#o-que-oferecemos" id="cta-raizes-saiba-mais">
+              Conhecer o projeto
+              <svg aria-hidden="true">
+                <use href="#i-down" />
+              </svg>
+            </a>
+          </div>
+          <figure class="hero__quote">
+            <blockquote>
+              <p>“Toda criança no mundo deve ser protegida contra os rigores do tempo, contra os rigores da vida...”</p>
+            </blockquote>
+            <figcaption><cite>— Ruth Rocha</cite></figcaption>
+          </figure>
+        </div>
+
+        <div class="hero__media">
+          <span class="hero__ring" aria-hidden="true"></span>
+          <div class="hero__blob">
+            <!-- Sem rostos (ECA/LGPD): apenas mãos. LCP: sem lazy-loading -->
+            <img src="assets/img/horta-colheita-1280.webp"
+              srcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
+              sizes="(max-width: 900px) 90vw, 560px" width="1200" height="896"
+              alt="Mãos pequenas sujas de terra segurando cenouras e alface recém-colhidas na horta"
+              fetchpriority="high" decoding="async">
+          </div>
+          <div class="hero__card hero__card--a" aria-hidden="true">
+            <span class="dot"><svg>
+                <use href="#i-sprout" />
+              </svg></span>
+            <span>Gratuito<small>crianças de 6 a 8 anos</small></span>
+          </div>
+          <div class="hero__card hero__card--b" aria-hidden="true">
+            <span class="dot"><svg>
+                <use href="#i-clock" />
+              </svg></span>
+            <span>1 vez por semana<small>das 13h30 às 17h30</small></span>
+          </div>
+        </div>
+      </div>
+
+      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+
+    <!-- ===================== O QUE OFERECEMOS ===================== -->
+    <section class="section section--alt" id="o-que-oferecemos" aria-labelledby="oferecemos-titulo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">O projeto</p>
+          <h2 id="oferecemos-titulo">O que <em>oferecemos</em></h2>
+        </header>
+
+        <div class="raizes-offer">
+          <div class="reveal">
+            <article class="raizes-goal tint-sage">
+              <h3><span class="ic" aria-hidden="true"><svg>
+                    <use href="#i-sprout" />
+                  </svg></span>Objetivo geral</h3>
+              <p>Fortalecer a prontidão escolar da criança de 6 a 8 anos que ingressa no 1º ano do Ensino Fundamental,
+                com atividades que integram pensar, sentir e agir, permitindo sua inclusão no fluxo regular de
+                aprendizado e reduzindo a defasagem escolar futura.</p>
+            </article>
+            <article class="raizes-goal tint-peach">
+              <h3><span class="ic" aria-hidden="true"><svg>
+                    <use href="#i-leaf" />
+                  </svg></span>Objetivo específico</h3>
+              <p>Oferecemos contraturno escolar gratuito com metodologias ativas inspiradas na Pedagogia Waldorf
+                (trabalhos manuais, aquarela e brincar livre), em um ambiente seguro, acolhedor e conectado à natureza,
+                na sede da AFLOR (Joinville/SC), voltado especialmente a crianças em situação de vulnerabilidade.</p>
+            </article>
+          </div>
+
+          <aside class="raizes-sheet reveal d1" aria-labelledby="ficha-titulo">
+            <h3 id="ficha-titulo">Ficha técnica</h3>
+            <ul class="raizes-facts" role="list">
+              <li>
+                <span class="ic tint-sage" aria-hidden="true"><svg>
+                    <use href="#i-family" />
+                  </svg></span>
+                <span><b>Público</b>16 crianças por turma, matriculadas no 1º ano do Ensino Fundamental da rede
+                  pública</span>
+              </li>
+              <li>
+                <span class="ic tint-ochre" aria-hidden="true"><svg>
+                    <use href="#i-calendar" />
+                  </svg></span>
+                <span><b>Duração</b>11 meses · 40 encontros</span>
+              </li>
+              <li>
+                <span class="ic tint-lavender" aria-hidden="true"><svg>
+                    <use href="#i-clock" />
+                  </svg></span>
+                <span><b>Horário</b>1 vez por semana, das 13h30 às 17h30 (4 horas)</span>
+              </li>
+              <li>
+                <span class="ic tint-peach" aria-hidden="true"><svg>
+                    <use href="#i-apple" />
+                  </svg></span>
+                <span><b>Alimentação</b>Lanche saudável, gratuito</span>
+              </li>
+              <li>
+                <span class="ic tint-sky" aria-hidden="true"><svg>
+                    <use href="#i-school" />
+                  </svg></span>
+                <span><b>Equipe e estrutura</b>2 educadoras (regente e auxiliar), material pedagógico de qualidade e
+                  espaço em contato com a natureza, adequado à idade</span>
+              </li>
+              <li>
+                <span class="ic tint-rose" aria-hidden="true"><svg>
+                    <use href="#i-eye" />
+                  </svg></span>
+                <span><b>Acompanhamento</b>Avaliação especializada da prontidão escolar e visitas à escola de origem
+                  para trocas sobre o desenvolvimento</span>
+              </li>
+              <li>
+                <span class="ic tint-sage" aria-hidden="true"><svg>
+                    <use href="#i-bus" />
+                  </svg></span>
+                <span><b>Transporte</b>Escola → AFLOR, conforme disponibilidade / captação de recursos</span>
+              </li>
+            </ul>
+            <a class="btn btn--whatsapp btn--block" href="https://wa.me/5547988916765" target="_blank"
+              rel="noopener noreferrer" data-wa-link="raizes" id="cta-raizes-whatsapp-ficha">
+              <svg aria-hidden="true">
+                <use href="#i-whatsapp" />
+              </svg>
+              Inscrição pelo WhatsApp
+            </a>
+          </aside>
+        </div>
+      </div>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+
+    <!-- ===================== POR QUE ESTE PROJETO IMPORTA ===================== -->
+    <section class="section" id="por-que" aria-labelledby="por-que-titulo">
+      <div class="lazur" aria-hidden="true"><span class="l1"></span><span class="l4"></span></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Contexto</p>
+          <h2 id="por-que-titulo">Por que este projeto <em>importa</em></h2>
+        </header>
+
+        <ul class="raizes-stats" role="list">
+          <li class="raizes-stat tint-peach reveal">
+            <strong>37%</strong>
+            <p>das crianças que ingressaram no 1º ano em 2025 não estavam prontas — baixa prontidão motora, cognitiva e
+              emocional, o que dificulta a alfabetização.</p>
+          </li>
+          <li class="raizes-stat tint-ochre reveal d1">
+            <strong>4,2 milhões</strong>
+            <p>de estudantes (12,5% das matrículas da educação básica em 2024) são atingidos pela defasagem escolar no
+              Brasil — problema que começa quando a alfabetização no 1º ano não se completa.</p>
+          </li>
+          <li class="raizes-stat tint-lavender reveal d2">
+            <strong>60%</strong>
+            <p>das mães no Brasil estão fora do mercado de trabalho, com jornadas triplas, menor remuneração e
+              dificuldade de recolocação. O contraturno mantém as crianças em ambiente seguro enquanto as famílias
+              trabalham, prevenindo o tempo ocioso e riscos sociais.</p>
+          </li>
+          <li class="raizes-stat tint-sage reveal d3">
+            <strong>ODS 4<small>Educação de Qualidade (ONU) · Meta 4.1</small></strong>
+            <p>Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário livre,
+              equitativo e de qualidade, que conduza a resultados de aprendizagem relevantes e eficazes.</p>
+          </li>
+        </ul>
+      </div>
+      <svg class="wave wave--bottom wave--to-sage" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+
+    <!-- ===================== COMO TRABALHAMOS ===================== -->
+    <section class="section section--sage" id="como-trabalhamos" aria-labelledby="como-titulo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Metodologia</p>
+          <h2 id="como-titulo">Como <em>trabalhamos</em></h2>
+          <p>Três pilares semanais, inspirados na Pedagogia Waldorf.</p>
+        </header>
+
+        <ul class="services raizes-pillars" role="list">
+          <li class="service reveal">
+            <div class="service__media">
+              <img src="assets/img/maos-tecendo-la-640.webp"
+                srcset="assets/img/maos-tecendo-la-640.webp 640w, assets/img/maos-tecendo-la-1280.webp 1200w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="1200" height="896"
+                alt="Mãos trabalhando fios de lã em um tricô artesanal" loading="lazy" decoding="async">
+            </div>
+            <div class="service__body">
+              <span class="service__tag tint-peach">Pilar 1</span>
+              <h3>Trabalhos manuais</h3>
+              <p>Tricô de dedo, tricô com agulha e produção de brinquedos.</p>
+              <p class="raizes-acts"><b>Atua em:</b> pensar estruturado, concentração, matemática, motricidade fina e
+                propriocepção.</p>
+            </div>
+          </li>
+          <li class="service reveal d1">
+            <div class="service__media">
+              <img src="assets/img/pintura-aquarela-640.webp"
+                srcset="assets/img/pintura-aquarela-640.webp 640w, assets/img/pintura-aquarela-1280.webp 1200w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="1200" height="896"
+                alt="Pintura em aquarela úmido sobre úmido, com cores suaves se misturando no papel" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="service__body">
+              <span class="service__tag tint-lavender">Pilar 2</span>
+              <h3>Aquarela</h3>
+              <p>Pintura em aquarela molhada, com pincel.</p>
+              <p class="raizes-acts"><b>Atua em:</b> elaboração do sentir, resiliência e percepção das cores.</p>
+            </div>
+          </li>
+          <li class="service reveal d2">
+            <div class="service__media">
+              <img src="assets/img/caminho-no-jardim-640.webp"
+                srcset="assets/img/caminho-no-jardim-640.webp 640w, assets/img/caminho-no-jardim-1280.webp 1280w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 92vw, 380px" width="1280" height="714"
+                alt="Três crianças de costas, de mãos dadas, caminhando descalças por uma trilha de grama em direção a uma grande árvore"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="service__body">
+              <span class="service__tag tint-sage">Pilar 3</span>
+              <h3>Brincar livre</h3>
+              <p>Nos espaços interno e externo, em contato com a natureza.</p>
+              <p class="raizes-acts"><b>Atua em:</b> motricidade ampla, socialização, criatividade, propriocepção e
+                equilíbrio das funções orgânicas.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+
+    <!-- ===================== RESULTADOS E INDICADORES ===================== -->
+    <section class="section" id="resultados" aria-labelledby="resultados-titulo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Resultados</p>
+          <h2 id="resultados-titulo">Resultados esperados e <em>indicadores</em></h2>
+        </header>
+        <p class="raizes-results-lead reveal">Melhora da concentração, das habilidades motoras amplas e finas e da
+          regulação emocional, para uma alfabetização mais fluida.</p>
+
+        <ul class="raizes-indicators" role="list">
+          <li class="pillar tint-peach reveal">
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-chart" />
+              </svg></span>
+            <h3>+5% de prontidão escolar</h3>
+            <p>Medida antes e depois pela Avaliação de Prontidão Neuromotora para Aprendizagem, desenvolvida pelo INPP
+              (Instituto de Psicologia Neuro-Fisiológica).</p>
+          </li>
+          <li class="pillar tint-ochre reveal d1">
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-check" />
+              </svg></span>
+            <h3>75% de frequência</h3>
+            <p>Acompanhada por lista de presença.</p>
+          </li>
+          <li class="pillar tint-lavender reveal d2">
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-chat" />
+              </svg></span>
+            <h3>Aceitação familiar</h3>
+            <p>Questionário com as famílias sobre a percepção do comportamento da criança.</p>
+          </li>
+          <li class="pillar tint-sage reveal d3">
+            <span class="pillar__icon" aria-hidden="true"><svg>
+                <use href="#i-school" />
+              </svg></span>
+            <h3>Desempenho escolar</h3>
+            <p>Avaliação experimental, em parceria com a escola pública, do processo de alfabetização dos participantes.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ CTA FINAL ============================ -->
+    <!-- ⚠️ Texto do parágrafo redigido para o site: validar com a AFLOR. -->
+    <section class="final-cta" aria-labelledby="cta-final-titulo">
+      <div class="lazur" aria-hidden="true"><span class="l2"></span><span class="l3"></span></div>
+      <div class="container">
+        <h2 id="cta-final-titulo" class="reveal">Inscrições pelo WhatsApp 🌱</h2>
+        <p class="reveal d1">Fale com a AFLOR para inscrever uma criança no Projeto Raízes do Aprender — ou apoie o
+          projeto para que mais crianças possam participar.</p>
+        <div class="hero__ctas reveal d2">
+          <a class="btn btn--whatsapp" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer"
+            data-wa-link="raizes" id="cta-raizes-whatsapp-final">
+            <svg aria-hidden="true">
+              <use href="#i-whatsapp" />
+            </svg>
+            Inscrição pelo WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="./#doacao-livre" id="cta-raizes-apoie">
+            <svg aria-hidden="true">
+              <use href="#i-heart" />
+            </svg>
+            Apoie o Projeto Raízes
+          </a>
+        </div>
+      </div>
+      <svg class="wave wave--bottom wave--to-ink" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+  </main>
+
+  <!-- ============================ RODAPÉ ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid footer-grid--aflor">
+        <div>
+          <a class="brand" href="./" aria-label="AFLOR — página inicial">
+            <img class="brand__logo" src="assets/img/logo-flor.webp" width="48" height="48" alt="" loading="lazy"
+              decoding="async">
+            <span><span class="brand__name">AFLOR</span><span class="brand__tag">Ciranda das Flores</span></span>
+          </a>
+          <p>Associação Pedagógica Antroposófica Ciranda das Flores. Famílias, educadores e comunidade de Joinville
+            cultivando uma educação para a liberdade.</p>
+          <a class="footer-sister" href="https://donxergio.github.io/JardimCiranda/" data-jardim-link target="_blank"
+            rel="noopener noreferrer" id="footer-jardim">
+            <svg aria-hidden="true">
+              <use href="#i-logo-jardim" />
+            </svg>
+            Jardim Waldorf Ciranda ↗
+          </a>
+        </div>
+        <div>
+          <h2>A Associação</h2>
+          <ul role="list">
+            <li><a href="./#quem-somos">Quem Somos</a></li>
+            <li><a href="./#direcionadores">Direcionadores Estratégicos</a></li>
+            <li><a href="./#governanca">Finalidades e Governança</a></li>
+            <li><a href="./#atuacao">O Que Fazemos</a></li>
+            <li><a href="projeto-raizes.html" aria-current="page">Projeto Raízes do Aprender</a></li>
+            <li><a href="./#transparencia">Transparência</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Participe</h2>
+          <ul role="list">
+            <li><a href="./#associado">Seja associado</a></li>
+            <li data-dia-de-doar hidden><a href="dia-de-doar.html">Dia de Doar</a></li>
+            <li><a href="./#doacao-livre">Doação Livre</a></li>
+            <li><a href="./#voluntariado">Voluntariado</a></li>
+            <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contato</h2>
+          <ul role="list">
+            <li><a href="mailto:contato.aflor@gmail.com">contato.aflor@gmail.com</a></li>
+            <li><a href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer" data-wa-link>WhatsApp 47
+                9 8891 6765</a></li>
+            <li><a href="https://www.instagram.com/aflor_assoc" target="_blank" rel="noopener noreferrer">Instagram
+                @aflor_assoc</a></li>
+            <li>Rua General Andrade Neves, 462 - Sala 1<br>América — Joinville/SC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores. Feito com
+          carinho, sem rastreadores.</p>
+        <p><button type="button" data-open-consent>Preferências de privacidade</button></p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5547988916765" target="_blank" rel="noopener noreferrer"
+    data-wa-link="raizes" id="whatsapp-flutuante" aria-label="Conversar com a AFLOR pelo WhatsApp (abre em nova aba)">
+    <svg aria-hidden="true">
+      <use href="#i-whatsapp" />
+    </svg>
+    <span class="wa-float__label">Fale conosco</span>
+  </a>
+
+  <div class="consent-banner" id="aviso-privacidade" role="dialog" aria-modal="false" aria-labelledby="aviso-titulo"
+    aria-describedby="aviso-texto" hidden>
+    <h2 id="aviso-titulo">🌿 Sua privacidade importa</h2>
+    <p id="aviso-texto">
+      Este site <strong>não usa cookies nem rastreadores</strong>. Conteúdos externos (como os mapas do OpenStreetMap)
+      só são carregados se você permitir. Saiba mais na <a href="politica-de-privacidade.html">Política de
+        Privacidade</a>.
+    </p>
+    <div class="consent-banner__actions">
+      <button type="button" class="btn btn--sm" data-consent="externos">Permitir conteúdos externos</button>
+      <button type="button" class="btn btn--ghost btn--sm" data-consent="essencial">Apenas o essencial</button>
+    </div>
+  </div>
+</body>
+
+</html>

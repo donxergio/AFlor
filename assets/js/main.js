@@ -2,7 +2,7 @@
  * AFLOR — main.js
  * Interações gerais: menu, cabeçalho, animações suaves, WhatsApp flutuante,
  * links do ecossistema (Jardim Ciranda), documentos de transparência,
- * acordeão de valores, aviso de privacidade (LGPD) e mapas sob demanda.
+ * aviso de privacidade (LGPD) e mapas sob demanda.
  * Baseado no main.js do Jardim Ciranda. Sem dependências. Sem innerHTML.
  */
 (function () {
@@ -107,8 +107,11 @@
   }
   window.AFLOR_buildWaUrl = buildWaUrl; // reutilizado por form.js
 
+  var waMessages = CFG.whatsappMessages || {};
   $$('[data-wa-link]').forEach(function (a) {
-    a.href = buildWaUrl(CFG.whatsappDefaultMessage);
+    var key = a.getAttribute('data-wa-link');
+    var msg = key && Object.prototype.hasOwnProperty.call(waMessages, key) ? waMessages[key] : CFG.whatsappDefaultMessage;
+    a.href = buildWaUrl(msg);
   });
 
   /* ---------- Documentos de transparência ---------- */
@@ -207,27 +210,6 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     reveals.forEach(function (el) { io.observe(el); });
-  }
-
-  /* ---------- Acordeão dos Valores: abrir/fechar todos ---------- */
-  var valuesToggle = $('#btn-valores-todos');
-  var valueItems = $$('.value');
-  function syncValuesToggle() {
-    if (!valuesToggle) return;
-    var allOpen = valueItems.every(function (d) { return d.open; });
-    valuesToggle.setAttribute('aria-expanded', String(allOpen));
-    var label = valuesToggle.querySelector('[data-label]');
-    if (label) label.textContent = allOpen ? 'Recolher todos os princípios' : 'Abrir todos os princípios';
-  }
-  if (valuesToggle && valueItems.length) {
-    valuesToggle.hidden = false;
-    valuesToggle.addEventListener('click', function () {
-      var open = valuesToggle.getAttribute('aria-expanded') !== 'true';
-      valueItems.forEach(function (d) { d.open = open; });
-      syncValuesToggle();
-    });
-    valueItems.forEach(function (d) { d.addEventListener('toggle', syncValuesToggle); });
-    syncValuesToggle();
   }
 
   /* ---------- Atalhos "Quero participar" → pré-seleciona o formulário ---------- */

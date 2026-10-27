@@ -868,46 +868,25 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 .principles-intro h3 { font-size: var(--fs-2xl); }
 .principles-intro p { color: var(--text-muted); font-size: var(--fs-lg); }
 
-/* 21.5 Acordeão dos 7 Valores e Princípios */
-.values-tools { position: relative; z-index: 1; display: flex; justify-content: center; margin-bottom: var(--sp-5); }
-.values { position: relative; z-index: 1; display: grid; gap: 0.9rem; max-width: 58rem; margin-inline: auto; counter-reset: value; }
-.value {
-  border-radius: var(--r-lg); background: var(--c-surface); border: 1px solid var(--border);
-  transition: box-shadow var(--t-base) ease, border-color var(--t-base) ease, transform var(--t-base) var(--ease);
+/* 21.5 Os 7 Valores (apenas os nomes) */
+ol.values-list { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 64rem; margin: 0 auto; padding: 0; list-style: none; }
+.value-item {
+  flex: 0 1 calc((100% - 3rem) / 4); display: flex; flex-direction: column; align-items: center; gap: 0.85rem; text-align: center;
+  padding: 1.6rem 1.25rem 1.7rem; border-radius: var(--r-lg); background: var(--c-surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
 }
-.value:hover { box-shadow: var(--shadow-sm); }
-.value[open] { box-shadow: var(--shadow-md); border-color: var(--c-peach-300); }
-.value summary {
-  list-style: none; cursor: pointer; display: grid; grid-template-columns: 56px 1fr 28px; gap: 1rem; align-items: center;
-  padding: 1rem 1.25rem; border-radius: var(--r-lg);
-}
-.value summary::-webkit-details-marker { display: none; }
-.value__num {
-  width: 56px; height: 56px; display: grid; place-items: center; border-radius: var(--r-blob-1);
+.value-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.value-item__num {
+  width: 56px; height: 56px; flex: none; display: grid; place-items: center; border-radius: var(--r-blob-1);
   background: var(--pillar-tint, var(--c-peach-200)); font-family: var(--font-serif); font-size: 1.45rem; font-weight: 600; color: var(--c-ink-900);
   transition: border-radius var(--t-slow) var(--ease), transform var(--t-slow) var(--ease);
 }
-.value[open] .value__num { border-radius: var(--r-blob-2); transform: rotate(-6deg); }
-.value__title { font-family: var(--font-serif); font-size: var(--fs-xl); font-weight: 500; color: var(--c-ink-900); line-height: 1.25; }
-.value__title small { display: block; font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-subtle); margin-top: 0.2rem; }
-.value__chev { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--c-cream-100); color: var(--c-terracotta-600); transition: transform var(--t-base) var(--ease), background-color var(--t-fast) ease; }
-.value__chev svg { width: 16px; height: 16px; }
-.value[open] .value__chev { transform: rotate(180deg); background: var(--c-peach-200); }
-.value__body { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1.5rem; padding: 0.25rem 1.5rem 1.6rem calc(1.25rem + 56px + 1rem); }
-.value__body > p { color: var(--text-muted); margin: 0; }
-.questions { margin: 0; padding: 1.15rem 1.25rem; border-radius: var(--r-md); background: var(--pillar-tint, var(--c-peach-200)); background: color-mix(in srgb, var(--pillar-tint, var(--c-peach-200)) 55%, var(--c-surface)); }
-.questions h4 { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-ink-700); margin-bottom: 0.65rem; }
-.questions ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.55rem; }
-.questions li { position: relative; padding-left: 1.6rem; font-size: var(--fs-sm); color: var(--c-ink-900); line-height: 1.5; }
-.questions li::before {
-  content: '?'; position: absolute; left: 0; top: 0.1rem; width: 1.15rem; height: 1.15rem; border-radius: 50%;
-  display: grid; place-items: center; font-size: 0.7rem; font-weight: 900; background: var(--c-surface); color: var(--c-terracotta-700);
-}
-.js .value[open] .value__body { animation: rise var(--t-base) var(--ease) both; }
-@media (max-width: 760px) {
-  .value summary { grid-template-columns: 46px 1fr 28px; gap: 0.75rem; padding: 0.85rem 1rem; }
-  .value__num { width: 46px; height: 46px; font-size: 1.2rem; }
-  .value__body { grid-template-columns: 1fr; padding: 0 1rem 1.25rem; }
+.value-item:hover .value-item__num { border-radius: var(--r-blob-2); transform: rotate(-6deg); }
+.value-item__name { font-family: var(--font-serif); font-size: var(--fs-lg); font-weight: 500; line-height: 1.3; color: var(--c-ink-900); }
+@media (max-width: 900px) { .value-item { flex-basis: calc((100% - 1rem) / 2); } }
+@media (max-width: 480px) {
+  .value-item { flex-basis: 100%; flex-direction: row; text-align: left; gap: 1rem; padding: 0.9rem 1.15rem; }
+  .value-item__num { width: 46px; height: 46px; font-size: 1.2rem; }
 }
 
 /* 21.6 Finalidades (8) */
@@ -944,8 +923,8 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 }
 @media (max-width: 640px) { .gov { grid-template-columns: 1fr; } }
 
-/* 21.7 O que fazemos */
-.services { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
+/* 21.7 O que fazemos (destaque do Jardim + cartões em 2 colunas) */
+.services { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin: 0; padding: 0; list-style: none; }
 .service {
   display: flex; flex-direction: column; overflow: hidden;
   border-radius: var(--r-lg); background: var(--c-surface); border: 1px solid var(--border); box-shadow: var(--shadow-sm);
@@ -967,6 +946,7 @@ body.has-consent-banner .wa-float { bottom: calc(max(1rem, env(safe-area-inset-b
 .service--featured p { font-size: var(--fs-base); color: var(--c-ink-700); }
 .service__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 .service__url { font-size: var(--fs-xs) !important; color: var(--text-subtle) !important; }
+.service__body .service__note { font-size: var(--fs-xs); font-weight: 800; color: var(--c-sage-800); }
 @media (max-width: 960px) {
   .services { grid-template-columns: 1fr 1fr; }
   .service--featured { grid-template-columns: 1fr; }
@@ -1201,6 +1181,26 @@ ul.ddd-movement { position: relative; z-index: 1; display: grid; grid-template-c
 .ddd-more { position: relative; z-index: 1; margin: var(--sp-6) 0 0; text-align: center; }
 @media (max-width: 900px) { ul.ddd-movement { grid-template-columns: 1fr; } }
 
+.ddd-stats {
+  position: relative; z-index: 1; margin: var(--sp-6) 0 0; padding: 1.75rem clamp(1.25rem, 3vw, 2.25rem);
+  border-radius: var(--r-lg); background: var(--c-surface); border: 1px solid var(--border); box-shadow: var(--shadow-md);
+  text-align: center;
+}
+.ddd-stats figcaption {
+  margin-bottom: 1.25rem; font-weight: 800; font-size: var(--fs-xs); letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--c-terracotta-700);
+}
+ul.ddd-stats__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 0; padding: 0; }
+.ddd-stats__list li { display: grid; gap: 0.35rem; align-content: start; padding: 0 0.5rem; }
+.ddd-stats__list li + li { border-left: 1px dashed var(--border); }
+.ddd-stats__list strong { font-family: var(--font-serif); font-size: var(--fs-2xl); font-weight: 600; line-height: 1.1; color: var(--text); }
+.ddd-stats__list span { font-size: var(--fs-sm); color: var(--text-muted); }
+.ddd-stats small { display: block; margin-top: 1.25rem; font-size: var(--fs-xs); color: var(--text-subtle); }
+@media (max-width: 900px) {
+  ul.ddd-stats__list { grid-template-columns: 1fr 1fr; }
+  .ddd-stats__list li + li { border-left: 0; }
+}
+
 .ddd-why { position: relative; z-index: 1; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .ddd-why h2 { font-size: var(--fs-2xl); }
 .ddd-why > div > p { color: var(--text-muted); font-size: var(--fs-lg); }
@@ -1268,6 +1268,59 @@ ol.ddd-steps { counter-reset: passo; display: grid; gap: 0.9rem; margin: var(--s
 
 @media print {
   .topbar { display: none !important; }
-  .value__body { display: grid !important; }
+}
+
+/* 21.14 Página Projeto Raízes do Aprender (projeto-raizes.html) */
+.raizes-offer { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.raizes-goal + .raizes-goal { margin-top: var(--sp-6); }
+.raizes-goal h3 { display: flex; align-items: center; gap: 0.75rem; font-size: var(--fs-xl); margin-bottom: 0.65rem; }
+.raizes-goal h3 .ic { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border-radius: var(--r-blob-2); background: var(--pillar-tint, var(--c-peach-200)); }
+.raizes-goal h3 .ic svg { width: 24px; height: 24px; color: var(--c-ink-900); }
+.raizes-goal p { margin: 0; color: var(--c-ink-700); font-size: var(--fs-lg); line-height: 1.7; }
+
+.raizes-sheet {
+  position: relative; overflow: hidden; padding: clamp(1.5rem, 3vw, 2.25rem); border-radius: var(--r-xl);
+  background: var(--c-surface); border: 1px solid var(--border); box-shadow: var(--shadow-lg);
+}
+.raizes-sheet::before { content: ''; position: absolute; width: 220px; height: 220px; right: -90px; top: -100px; border-radius: 50%; background: var(--c-ochre-200); filter: blur(10px); opacity: 0.7; }
+.raizes-sheet > * { position: relative; }
+.raizes-sheet h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-4); }
+ul.raizes-facts { display: grid; gap: 0.95rem; margin: 0 0 var(--sp-5); padding: 0; }
+.raizes-facts li { display: grid; grid-template-columns: 44px 1fr; gap: 0.85rem; align-items: start; font-size: var(--fs-sm); color: var(--c-ink-700); }
+.raizes-facts b { display: block; color: var(--text); font-weight: 800; }
+.raizes-facts .ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--pillar-tint, var(--c-peach-200)); }
+.raizes-facts .ic svg { width: 22px; height: 22px; color: var(--c-terracotta-700); }
+
+ul.raizes-stats { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 0; padding: 0; }
+.raizes-stat {
+  display: flex; flex-direction: column; gap: 0.7rem; padding: 1.75rem 1.5rem 1.6rem; border-radius: var(--r-lg);
+  background: var(--c-surface); border: 1px solid var(--border); border-top: 6px solid var(--pillar-tint, var(--c-peach-200)); box-shadow: var(--shadow-sm);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+.raizes-stat:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.raizes-stat strong { font-family: var(--font-serif); font-size: var(--fs-3xl); font-weight: 600; line-height: 1; color: var(--c-terracotta-700); }
+.raizes-stat strong small { display: block; margin-top: 0.4rem; font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.4; color: var(--text-subtle); }
+.raizes-stat p { margin: 0; font-size: var(--fs-sm); line-height: 1.6; color: var(--c-ink-700); }
+
+.services.raizes-pillars { grid-template-columns: repeat(3, 1fr); }
+.raizes-pillars .raizes-acts { padding-top: 0.6rem; border-top: 1px dashed var(--border); color: var(--c-ink-700); }
+.raizes-pillars .raizes-acts b { color: var(--text); }
+
+.raizes-results-lead { position: relative; z-index: 1; max-width: 46rem; margin: calc(-1 * var(--sp-4)) auto var(--sp-6); text-align: center; font-family: var(--font-serif); font-size: var(--fs-lg); line-height: 1.6; color: var(--c-ink-900); }
+ul.raizes-indicators { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 0; padding: 0; }
+.raizes-indicators .pillar { padding: 1.6rem 1.4rem 1.5rem; }
+.raizes-indicators .pillar__icon { width: 52px; height: 52px; margin-bottom: 1rem; }
+.raizes-indicators .pillar__icon svg { width: 26px; height: 26px; }
+.raizes-indicators h3 { font-size: var(--fs-lg); }
+.raizes-indicators p { font-size: var(--fs-sm); line-height: 1.6; }
+
+@media (max-width: 1000px) {
+  ul.raizes-stats, ul.raizes-indicators { grid-template-columns: 1fr 1fr; }
+  .services.raizes-pillars { grid-template-columns: 1fr 1fr; }
+  .raizes-pillars .service:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) { .raizes-offer { grid-template-columns: 1fr; } }
+@media (max-width: 620px) {
+  ul.raizes-stats, ul.raizes-indicators, .services.raizes-pillars { grid-template-columns: 1fr; }
 }
 
