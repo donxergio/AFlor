@@ -1313,6 +1313,14 @@ ol.ddd-steps { counter-reset: passo; display: grid; gap: 0.9rem; margin: var(--s
 }
 
 /* 21.14 Página Projeto Raízes do Aprender (projeto-raizes.html) */
+.raizes-badge {
+  display: inline-flex; align-items: center; gap: 0.65rem; margin-bottom: var(--sp-3);
+  padding: 0.3rem 0.85rem 0.3rem 0.4rem; border-radius: var(--r-pill);
+  background: var(--c-surface); border: 1px solid var(--border); box-shadow: var(--shadow-xs);
+}
+.raizes-badge__logo { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+.raizes-badge__text { font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-terracotta-700); }
+
 .raizes-offer { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
 .raizes-goal + .raizes-goal { margin-top: var(--sp-6); }
 .raizes-goal h3 { display: flex; align-items: center; gap: 0.75rem; font-size: var(--fs-xl); margin-bottom: 0.65rem; }

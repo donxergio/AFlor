@@ -40,7 +40,7 @@
   <link rel="preload" href="assets/fonts/lora-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/webp"
-    imagesrcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
+    imagesrcset="assets/img/raizes-trico-mesa-640.webp 640w, assets/img/raizes-trico-mesa-1280.webp 1200w"
     imagesizes="(max-width: 900px) 90vw, 560px" fetchpriority="high">
 
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -232,7 +232,10 @@
 
       <div class="container hero__grid">
         <div>
-          <p class="eyebrow">AFLOR</p>
+          <div class="raizes-badge">
+            <img class="raizes-badge__logo" src="assets/img/logo-projeto-raizes-square-640.webp" width="34" height="34" alt="" aria-hidden="true" decoding="async">
+            <span class="raizes-badge__text">AFLOR · Contraturno Escolar</span>
+          </div>
           <h1 id="raizes-titulo">Projeto <em>Raízes do Aprender</em></h1>
           <p class="hero__lead">
             Contraturno escolar gratuito para crianças de 6 a 8 anos, matriculadas na rede pública de Joinville,
@@ -264,11 +267,11 @@
         <div class="hero__media">
           <span class="hero__ring" aria-hidden="true"></span>
           <div class="hero__blob">
-            <!-- Sem rostos (ECA/LGPD): apenas mãos. LCP: sem lazy-loading -->
-            <img src="assets/img/horta-colheita-1280.webp"
-              srcset="assets/img/horta-colheita-640.webp 640w, assets/img/horta-colheita-1280.webp 1200w"
-              sizes="(max-width: 900px) 90vw, 560px" width="1200" height="896"
-              alt="Mãos pequenas sujas de terra segurando cenouras e alface recém-colhidas na horta"
+            <!-- Privacidade preservada (ECA/LGPD): rostos suavizados com filtro sutil. LCP: sem lazy-loading -->
+            <img src="assets/img/raizes-trico-mesa-1280.webp"
+              srcset="assets/img/raizes-trico-mesa-640.webp 640w, assets/img/raizes-trico-mesa-1280.webp 1200w"
+              sizes="(max-width: 900px) 90vw, 560px" width="1200" height="750"
+              alt="Crianças reunidas em torno da mesa de madeira com cesto de lãs coloridas fazendo tricô manual"
               fetchpriority="high" decoding="async">
           </div>
           <div class="hero__card hero__card--a" aria-hidden="true">
@@ -439,10 +442,10 @@
         <ul class="services raizes-pillars" role="list">
           <li class="service reveal">
             <div class="service__media">
-              <img src="assets/img/maos-tecendo-la-640.webp"
-                srcset="assets/img/maos-tecendo-la-640.webp 640w, assets/img/maos-tecendo-la-1280.webp 1200w"
-                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="1200" height="896"
-                alt="Mãos trabalhando fios de lã em um tricô artesanal" loading="lazy" decoding="async">
+              <img src="assets/img/raizes-tecelagem-640.webp"
+                srcset="assets/img/raizes-tecelagem-640.webp 640w, assets/img/raizes-tecelagem-1280.webp 899w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="899" height="562"
+                alt="Mão tecendo fios de lã coloridos em um pequeno tear artesanal de madeira" loading="lazy" decoding="async">
             </div>
             <div class="service__body">
               <span class="service__tag tint-peach">Pilar 1</span>
@@ -454,10 +457,10 @@
           </li>
           <li class="service reveal d1">
             <div class="service__media">
-              <img src="assets/img/pintura-aquarela-640.webp"
-                srcset="assets/img/pintura-aquarela-640.webp 640w, assets/img/pintura-aquarela-1280.webp 1200w"
-                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="1200" height="896"
-                alt="Pintura em aquarela úmido sobre úmido, com cores suaves se misturando no papel" loading="lazy"
+              <img src="assets/img/raizes-aquarela-640.webp"
+                srcset="assets/img/raizes-aquarela-640.webp 640w, assets/img/raizes-aquarela-1280.webp 1280w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 46vw, 380px" width="1280" height="800"
+                alt="Pintura em aquarela úmido sobre úmido com pincel sobre papel molhado" loading="lazy"
                 decoding="async">
             </div>
             <div class="service__body">
@@ -469,10 +472,10 @@
           </li>
           <li class="service reveal d2">
             <div class="service__media">
-              <img src="assets/img/caminho-no-jardim-640.webp"
-                srcset="assets/img/caminho-no-jardim-640.webp 640w, assets/img/caminho-no-jardim-1280.webp 1280w"
-                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 92vw, 380px" width="1280" height="714"
-                alt="Três crianças de costas, de mãos dadas, caminhando descalças por uma trilha de grama em direção a uma grande árvore"
+              <img src="assets/img/raizes-brincar-patio-640.webp"
+                srcset="assets/img/raizes-brincar-patio-640.webp 640w, assets/img/raizes-brincar-patio-1280.webp 1280w"
+                sizes="(max-width: 620px) 92vw, (max-width: 1000px) 92vw, 380px" width="1280" height="576"
+                alt="Crianças brincando livremente no pátio gramado com monte de terra e árvores"
                 loading="lazy" decoding="async">
             </div>
             <div class="service__body">
@@ -484,6 +487,71 @@
             </div>
           </li>
         </ul>
+      </div>
+      <svg class="wave wave--bottom wave--to-alt" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <use href="#i-wave" />
+      </svg>
+    </section>
+
+    <!-- ===================== VIVÊNCIAS NO DIA A DIA ===================== -->
+    <section class="section section--alt" id="vivencias" aria-labelledby="vivencias-titulo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Vivências</p>
+          <h2 id="vivencias-titulo">O dia a dia no <em>Raízes do Aprender</em></h2>
+          <p>Registros reais das atividades de arte, natureza, trabalhos manuais e acolhimento.</p>
+        </header>
+
+        <div class="gallery reveal d1">
+          <figure class="wide">
+            <img src="assets/img/raizes-trico-mesa-640.webp"
+              srcset="assets/img/raizes-trico-mesa-640.webp 640w, assets/img/raizes-trico-mesa-1280.webp 1200w"
+              sizes="(max-width: 860px) 92vw, 600px" width="1200" height="750"
+              alt="Crianças reunidas ao redor da mesa com cesto de novelos de lã coloridos fazendo tricô manual"
+              loading="lazy" decoding="async">
+            <figcaption>Tricô de dedo e novelos de lã ao redor da mesa</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/raizes-aquarela-640.webp"
+              srcset="assets/img/raizes-aquarela-640.webp 640w, assets/img/raizes-aquarela-1280.webp 1280w"
+              sizes="(max-width: 860px) 46vw, 300px" width="1280" height="800"
+              alt="Pintura em aquarela úmido sobre úmido no papel molhado" loading="lazy" decoding="async">
+            <figcaption>Aquarela úmido sobre úmido</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/raizes-brincar-sementes-640.webp"
+              srcset="assets/img/raizes-brincar-sementes-640.webp 640w, assets/img/raizes-brincar-sementes-1280.webp 1280w"
+              sizes="(max-width: 860px) 46vw, 300px" width="1280" height="800"
+              alt="Crianças brincando na grama com sementes e elementos naturais" loading="lazy" decoding="async">
+            <figcaption>Brincar com sementes e natureza</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/raizes-tecelagem-640.webp"
+              srcset="assets/img/raizes-tecelagem-640.webp 640w, assets/img/raizes-tecelagem-1280.webp 899w"
+              sizes="(max-width: 860px) 46vw, 300px" width="899" height="562"
+              alt="Mão tecendo em pequeno tear de madeira com lãs coloridas" loading="lazy" decoding="async">
+            <figcaption>Tecelagem artesanal em tear</figcaption>
+          </figure>
+
+          <figure class="wide">
+            <img src="assets/img/raizes-brincar-patio-640.webp"
+              srcset="assets/img/raizes-brincar-patio-640.webp 640w, assets/img/raizes-brincar-patio-1280.webp 1280w"
+              sizes="(max-width: 860px) 92vw, 600px" width="1280" height="576"
+              alt="Crianças em brincar livre no pátio gramado com monte de terra e árvores" loading="lazy" decoding="async">
+            <figcaption>Movimento e ar livre no pátio gramado</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/raizes-sala-circulo-640.webp"
+              srcset="assets/img/raizes-sala-circulo-640.webp 640w, assets/img/raizes-sala-circulo-1280.webp 1280w"
+              sizes="(max-width: 860px) 46vw, 300px" width="1280" height="576"
+              alt="Crianças reunidas em roda na sala acolhedora com cabana de tecidos" loading="lazy" decoding="async">
+            <figcaption>Roda e acolhimento na sala</figcaption>
+          </figure>
+        </div>
       </div>
       <svg class="wave wave--bottom wave--to-cream" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
         <use href="#i-wave" />
