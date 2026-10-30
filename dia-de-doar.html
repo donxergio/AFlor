@@ -675,6 +675,56 @@
     <span class="wa-float__label">Fale conosco</span>
   </a>
 
+  <!-- ===================== POPUP PIX (reforço ao entrar na página) ===================== -->
+  <div class="ddd-modal" id="modal-dia-de-doar" role="dialog" aria-modal="true" aria-labelledby="modal-ddd-titulo"
+    aria-describedby="modal-ddd-desc" data-dia-de-doar data-ddd-modal hidden>
+    <div class="ddd-modal__backdrop" data-ddd-modal-close aria-hidden="true"></div>
+    <div class="ddd-modal__dialog" role="document">
+      <button type="button" class="ddd-modal__close" data-ddd-modal-close aria-label="Fechar janela de doação"
+        id="btn-fechar-modal-pix">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+
+      <p class="eyebrow">Campanha · Dia de Doar 2026</p>
+      <h2 id="modal-ddd-titulo">Doe pelo PIX e <em>cultive</em> essa semente</h2>
+      <p class="ddd-modal__lead" id="modal-ddd-desc">
+        Escaneie o QR Code no app do seu banco ou copie a chave PIX abaixo. Qualquer valor ajuda a manter vivos os
+        pátios, a arte e a natureza da AFLOR.
+      </p>
+
+      <div class="pix-card__qr ddd-modal__qr" data-pix-qr>
+        <svg aria-hidden="true">
+          <use href="#i-qr" />
+        </svg>
+        <span>QR Code PIX em breve</span>
+      </div>
+
+      <p class="pix-card__fav" data-pix-favorecido>AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores</p>
+
+      <div class="pix-key ddd-modal__key" data-pix-chave hidden>
+        <span>Chave PIX (CNPJ):</span>
+        <code data-pix-chave-valor></code>
+        <button type="button" class="btn btn--ghost btn--sm" data-pix-copiar id="btn-copiar-pix-modal">Copiar
+          chave</button>
+      </div>
+
+      <div class="ddd-modal__actions">
+        <a class="btn btn--sm" href="#seus-dados" data-ddd-modal-close id="cta-modal-dados">
+          Já doei · deixar meus dados
+          <svg aria-hidden="true">
+            <use href="#i-down" />
+          </svg>
+        </a>
+        <button type="button" class="btn btn--ghost btn--sm" data-ddd-modal-close id="btn-modal-ver-pagina">
+          Ver a página da campanha
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="consent-banner" id="aviso-privacidade" role="dialog" aria-modal="false" aria-labelledby="aviso-titulo"
     aria-describedby="aviso-texto" hidden>
     <h2 id="aviso-titulo">🌿 Sua privacidade importa</h2>

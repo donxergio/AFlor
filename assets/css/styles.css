@@ -1400,3 +1400,67 @@ ul.raizes-indicators { position: relative; z-index: 1; display: grid; grid-templ
   .raizes-partner-box__brand { align-self: center; }
 }
 
+/* 21.15 Popup de reforço do PIX (dia-de-doar.html) */
+body.has-modal-open { overflow: hidden; }
+.ddd-modal {
+  position: fixed; inset: 0; z-index: 120;
+  display: grid; place-items: center;
+  padding: clamp(0.85rem, 2.5vw, 1.5rem);
+  overflow-y: auto;
+}
+.ddd-modal__backdrop {
+  position: fixed; inset: 0;
+  background: rgba(58, 47, 43, 0.56);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.ddd-modal__dialog {
+  position: relative; z-index: 1;
+  width: min(100%, 30.5rem);
+  max-height: calc(100dvh - 1.7rem);
+  overflow-y: auto;
+  padding: clamp(1.35rem, 2.8vw, 2rem) clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 2.5vw, 1.75rem);
+  border-radius: var(--r-xl);
+  background: linear-gradient(160deg, var(--c-surface) 60%, var(--c-cream-100));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: rise var(--t-base) var(--ease) both;
+}
+.ddd-modal__close {
+  position: absolute; top: 0.9rem; right: 0.9rem;
+  display: grid; place-items: center;
+  width: 40px; height: 40px; padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--c-cream-100);
+  color: var(--c-ink-700);
+  cursor: pointer;
+  transition: background-color var(--t-fast) ease, color var(--t-fast) ease, transform var(--t-fast) ease;
+}
+.ddd-modal__close:hover {
+  background: var(--c-peach-200);
+  color: var(--c-ink-900);
+  transform: scale(1.05);
+}
+.ddd-modal__close svg { width: 20px; height: 20px; }
+.ddd-modal__dialog .eyebrow { justify-content: center; margin-bottom: 0.35rem; padding-inline: 2.2rem; }
+.ddd-modal__dialog h2 { font-size: var(--fs-xl); margin-bottom: 0.45rem; }
+.ddd-modal__lead { margin: 0 auto var(--sp-3); max-width: 26rem; color: var(--text-muted); font-size: var(--fs-sm); line-height: 1.5; }
+.ddd-modal__qr { width: min(210px, 60vw); margin-bottom: var(--sp-3); }
+.ddd-modal__key { margin-top: var(--sp-3); padding: 0.6rem 0.75rem; }
+.ddd-modal__actions {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.55rem;
+  margin-top: var(--sp-4); padding-top: var(--sp-3);
+  border-top: 1px dashed var(--border);
+}
+@media (max-width: 480px) {
+  .ddd-modal__qr { width: min(185px, 56vw); }
+  .ddd-modal__actions .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ddd-modal__dialog { animation: none; }
+}
+@media print {
+  .ddd-modal { display: none !important; }
+}

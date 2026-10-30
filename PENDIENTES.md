@@ -3,8 +3,8 @@
 ## Antes de producción
 - [x] **Clave de Web3Forms:** sustituir `SUA_CHAVE_WEB3FORMS_AQUI` en `assets/js/config.js` (`web3formsAccessKey`) **y** en el campo oculto `access_key` de `index.html`. Hasta entonces, el envío por correo usa el respaldo `mailto:`.
 - [ ] **Documentos:** añadir los enlaces de *Última Assembleia* y *Orçamento* en `docs` de `assets/js/config.js` (mientras estén vacíos, los botones muestran "Em breve").
-- [ ] **Textos de servicios:** revisar/confirmar las descripciones de *Consultoria em Pedagogia Waldorf* y *Projetos Sociais* en `index.html` (no venían en el contenido oficial). *Contraturno escolar* ya lleva "Oferecido pelo Jardim Ciranda."
-- [ ] **Dirección del Jardim:** confirmar dirección y coordenadas del Jardim Waldorf Ciranda (`maps.jardim` en `config.js` y el texto en `index.html`). Ahora usa la misma ubicación que la sede.
+- [x] **Textos de servicios:** revisar/confirmar las descripciones de *Consultoria em Pedagogia Waldorf* y *Projetos Sociais* en `index.html` (no venían en el contenido oficial). *Contraturno escolar* ya lleva "Oferecido pelo Jardim Ciranda."
+- [x] **Dirección del Jardim:** confirmar dirección y coordenadas del Jardim Waldorf Ciranda (`maps.jardim` en `config.js` y el texto en `index.html`). Ahora usa la misma ubicación que la sede.
 - [ ] **Opcional:** añadir CNPJ y clave PIX si se quieren mostrar.
 - [ ] **Comprobar la consola del navegador** (F12) para ver si hay errores de la política de seguridad (CSP). No llegué a verificarlo.
 
@@ -20,7 +20,8 @@
 
 ## Campaña Dia de Doar (`dia-de-doar.html`)
 - [x] **QR PIX:** `assets/img/pix-aflor.png` (limpio con `python .agents/scripts/build_pix_qr.py <imagen>`), clave CNPJ 58.981.530/0001-48 en `config.js`. QR estático sin valor fijo, identificador `diadedoar`.
-- [ ] **Validar los textos de la página:** la sección "O que é" y las cifras de 2024 vienen de la carta-convite oficial del Dia de Doar (carpeta *Materiais para Parcerias*); el resto (portada, "Por que doar", PIX y formulario) es redacción propia.
+- [x] **Popup de refuerzo con QR PIX:** al entrar en `dia-de-doar.html` (mientras la campaña esté activa) se abre un modal (`#modal-dia-de-doar`) con el código QR, la clave PIX copiable y botones para cerrar o ir al formulario `#seus-dados`, manteniendo intacta la sección `#pix` dentro de la página.
+- [ ] **Validar los textos de la página:** la sección "O que é" y las cifras de 2024 vienen de la carta-convite oficial del Dia de Doar (carpeta *Materiais para Parcerias*); el resto (portada, popup inicial, "Por que doar", PIX y formulario) es redacción propia.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.
 - [ ] **Opcional:** los modelos de ofício (apoyo financiero / participación / general) de *Materiais para Parcerias* sirven para pedir apoyo a la Prefeitura o a empresas, no para la web.

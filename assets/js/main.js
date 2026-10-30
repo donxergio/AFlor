@@ -61,42 +61,88 @@
 
   if (dddActive) {
     // QR Code PIX: só imagens locais (img-src 'self' na CSP)
-    var qrBox = $('[data-pix-qr]');
     var qrSrc = String(ddd.pixQr || '');
-    if (qrBox && /^assets\/img\/[\w.-]+\.(png|webp|jpe?g|svg)$/i.test(qrSrc)) {
-      var qrImg = doc.createElement('img');
-      qrImg.src = qrSrc;
-      qrImg.width = 260;
-      qrImg.height = 260;
-      qrImg.alt = 'QR Code PIX para doar à AFLOR';
-      qrImg.decoding = 'async';
-      qrBox.textContent = '';
-      qrBox.appendChild(qrImg);
-      qrBox.classList.add('is-ready');
+    if (/^assets\/img\/[\w.-]+\.(png|webp|jpe?g|svg)$/i.test(qrSrc)) {
+      $$('[data-pix-qr]').forEach(function (qrBox) {
+        var qrImg = doc.createElement('img');
+        qrImg.src = qrSrc;
+        qrImg.width = 260;
+        qrImg.height = 260;
+        qrImg.alt = 'QR Code PIX para doar à AFLOR';
+        qrImg.decoding = 'async';
+        qrBox.textContent = '';
+        qrBox.appendChild(qrImg);
+        qrBox.classList.add('is-ready');
+      });
     }
 
     // Chave PIX em texto + botão copiar
-    var keyBox = $('[data-pix-chave]');
     var pixKey = String(ddd.pixChave || '').trim().slice(0, 120);
-    if (keyBox && pixKey) {
-      var keyValue = $('[data-pix-chave-valor]', keyBox);
-      if (keyValue) keyValue.textContent = pixKey;
-      keyBox.hidden = false;
-      var copyBtn = $('[data-pix-copiar]', keyBox);
-      if (copyBtn && navigator.clipboard) {
-        copyBtn.addEventListener('click', function () {
-          navigator.clipboard.writeText(pixKey).then(function () {
-            copyBtn.textContent = 'Chave copiada ✓';
-            window.setTimeout(function () { copyBtn.textContent = 'Copiar chave'; }, 2500);
+    if (pixKey) {
+      $$('[data-pix-chave]').forEach(function (keyBox) {
+        var keyValue = $('[data-pix-chave-valor]', keyBox);
+        if (keyValue) keyValue.textContent = pixKey;
+        keyBox.hidden = false;
+        var copyBtn = $('[data-pix-copiar]', keyBox);
+        if (copyBtn && navigator.clipboard) {
+          copyBtn.addEventListener('click', function () {
+            navigator.clipboard.writeText(pixKey).then(function () {
+              copyBtn.textContent = 'Chave copiada ✓';
+              window.setTimeout(function () { copyBtn.textContent = 'Copiar chave'; }, 2500);
+            });
           });
-        });
-      } else if (copyBtn) {
-        copyBtn.hidden = true;
-      }
+        } else if (copyBtn) {
+          copyBtn.hidden = true;
+        }
+      });
     }
 
     if (ddd.pixFavorecido) {
       $$('[data-pix-favorecido]').forEach(function (el) { el.textContent = String(ddd.pixFavorecido).slice(0, 140); });
+    }
+
+    // Popup de reforço do PIX ao entrar em dia-de-doar.html
+    var dddModal = $('[data-ddd-modal]');
+    if (dddModal) {
+      var closeBtn = $('.ddd-modal__close', dddModal);
+      var closeModal = function () {
+        if (dddModal.hidden) return;
+        dddModal.hidden = true;
+        doc.body.classList.remove('has-modal-open');
+        if (banner && !readConsent()) window.setTimeout(showBanner, 400);
+      };
+
+      doc.body.classList.add('has-modal-open');
+      if (closeBtn) {
+        window.setTimeout(function () { closeBtn.focus(); }, 60);
+      }
+
+      $$('[data-ddd-modal-close]', dddModal).forEach(function (el) {
+        el.addEventListener('click', closeModal);
+      });
+
+      doc.addEventListener('keydown', function (e) {
+        if (dddModal.hidden) return;
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeModal();
+          return;
+        }
+        if (e.key === 'Tab') {
+          var focusables = $$('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])', dddModal)
+            .filter(function (el) { return !el.hidden && el.offsetParent !== null; });
+          if (!focusables.length) return;
+          var first = focusables[0];
+          var last = focusables[focusables.length - 1];
+          if (e.shiftKey && doc.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && doc.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
     }
   }
 
@@ -269,7 +315,7 @@
   }
 
   if (banner) {
-    if (!readConsent()) window.setTimeout(showBanner, 900);
+    if (!readConsent() && !doc.body.classList.contains('has-modal-open')) window.setTimeout(showBanner, 900);
     $$('[data-consent]', banner).forEach(function (btn) {
       btn.addEventListener('click', function () {
         var choice = btn.getAttribute('data-consent') === 'externos' ? 'externos' : 'essencial';
