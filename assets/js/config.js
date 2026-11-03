@@ -27,6 +27,9 @@
      */
     whatsappMessages: {
       raizes: 'Olá! Gostaria de informações sobre a inscrição no Projeto Raízes do Aprender.',
+      patrocinador: 'Olá! Gostaria de saber como ser um Patrocinador Frutificar na Campanha Dia de Doar da AFLOR. 🌱',
+      parceria: 'Olá! Gostaria de saber como ser uma Parceria que Germina nossas ações na Campanha Dia de Doar da AFLOR. 🌿',
+      vizinho: 'Olá! Gostaria de saber como ser um Vizinho Amigo Dá Flor na Campanha Dia de Doar da AFLOR. 🌸',
     },
 
     /** E-mail institucional (usado no fallback mailto:). */
@@ -112,6 +115,53 @@
       pixQr: 'assets/img/pix-aflor.png',
       pixChave: '58.981.530/0001-48',
       pixFavorecido: 'AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores',
+
+      /**
+       * Imagens e links pendentes da campanha (deixe '' para mostrar o espaço reservado "Em breve"):
+       *   seloFarolImg         → ex.: 'assets/img/selo-o-farol.webp'
+       *   bolsaImg             → ex.: 'assets/img/bolsa-ecologica-jardim.webp'
+       *   postDoacaoSementeUrl → link https do post no Instagram para marcar 5 pessoas
+       */
+      seloFarolImg: '',
+      bolsaImg: '',
+      postDoacaoSementeUrl: '',
+
+      /**
+       * 🎯 Aflorômetro (hodômetro de arrecadação):
+       *   valorAtual   → número em reais (ex.: 12500.50). Atualize aqui diariamente.
+       *   atualizadoEm → texto opcional da última atualização (ex.: '03/11/2026').
+       *   marcos       → os 5 marcos oficiais da campanha.
+       */
+      aflorometro: {
+        valorAtual: 0,
+        atualizadoEm: '',
+        marcos: [
+          { valor: 42463.85, descricao: '6 meses de Projeto Raízes do Aprender' },
+          { valor: 74927.70, descricao: '1 ano de Projeto Raízes do Aprender' },
+          { valor: 89012.70, descricao: '1 ano de Projeto Raízes do Aprender com atendimento fonológico' },
+          { valor: 178025.40, descricao: 'Atendimento para 32 crianças por 1 ano, com atendimento fonológico' },
+          { valor: 250000.00, descricao: 'Ampliação do espaço físico para possibilitar o atendimento de 48 crianças por dia da semana' },
+        ],
+      },
+
+      /**
+       * 🌸 Embaixadores AFLOR (4 pessoas).
+       * Tamanhos recomendados para harmonia visual dos cartões:
+       *   - depoimento: até ~220 caracteres
+       *   - bio:        até ~140 caracteres
+       * Exemplo de item:
+       *   { nome: 'Nome Sobrenome', foto: 'assets/img/embaixador-1.webp', bio: '...', depoimento: '...', instagram: 'https://www.instagram.com/...', whatsapp: '5547999999999' }
+       */
+      embaixadores: [],
+
+      /**
+       * 🌳 Rede de empresas apoiadoras.
+       * Exemplo de item para patrocinadores / parcerias / vizinhos:
+       *   { nome: 'Nome da Empresa', logo: 'assets/img/empresa.webp', declaracao: 'Ação ou declaração de apoio...', contato: '@empresa · (47) 99999-9999', url: 'https://...' }
+       */
+      patrocinadores: [],
+      parcerias: [],
+      vizinhos: [],
     },
   });
 })();

@@ -21,10 +21,21 @@
 ## Campaña Dia de Doar (`dia-de-doar.html`)
 - [x] **QR PIX:** `assets/img/pix-aflor.png` (limpio con `python .agents/scripts/build_pix_qr.py <imagen>`), clave CNPJ 58.981.530/0001-48 en `config.js`. QR estático sin valor fijo, descripción `Campanha Dia de Doar - AFLOR`, identificador `diadedoar` (CRC `1A34`).
 - [x] **Popup de refuerzo con QR PIX:** al entrar en `dia-de-doar.html` (mientras la campaña esté activa) se abre un modal (`#modal-dia-de-doar`) con el código QR, la clave PIX copiable y botones para cerrar o ir al formulario `#seus-dados`, manteniendo intacta la sección `#pix` dentro de la página.
-- [ ] **Validar los textos de la página:** la sección "O que é" y las cifras de 2024 vienen de la carta-convite oficial del Dia de Doar (carpeta *Materiais para Parcerias*); el resto (portada, popup inicial, "Por que doar", PIX y formulario) es redacción propia.
+- [x] **Nueva estructura oficial de la página (`dia-de-doar.html`):**
+  1. **Abertura + Projeto Raízes do Aprender** (con logo oficial, *Como fazemos isso*, indicadores de evaluación, espacio para el selo *O Farol* y llamadas a la acción).
+  2. **Modalidades de apoyo (*O Farol Joinville*):** *Embaixadores AFLOR* (4 tarjetas), *Patrocínio Frutificar*, *Parceria que Germinar*, *Vizinho Amigo Dá Flor* y *Doação Semente* (con los pasos del brinde de la bolsa ecológica para donaciones > R$ 80,00).
+  3. **Aflorômetro:** velocímetro/hodómetro semicircular en SVG con los 5 marcos de recaudación + barra flotante compacta (`#aflorometro-fixo`) durante el scroll.
+  4. **PIX + Cadastro de la campaña (`#seus-dados`):** formulario actualizado con *Nome completo*, *Instagram*, *WhatsApp*, *E-mail*, *Como ficou sabendo da Campanha*, *Filhos ou netos em idade escolar* (selección múltiple), *Aceito receber novidades* y consentimiento LGPD.
+  5. **Sobre a AFLOR** + **Sobre a Campanha do Dia de Doar** (`#o-que-e`).
+- [ ] **Imágenes y datos pendientes de cargar en `assets/js/config.js` (`diaDeDoar`):**
+  - `seloFarolImg`: subir imagen del sello *O Farol* (Prefeitura de Joinville) a `assets/img/`.
+  - `bolsaImg`: subir foto de la bolsa ecológica del Jardim Waldorf Ciranda a `assets/img/`.
+  - `postDoacaoSementeUrl`: pegar el enlace al post de Instagram donde se etiqueta a 5 personas.
+  - `aflorometro.valorAtual` y `aflorometro.atualizadoEm`: actualizar conforme avance la recaudación.
+  - `embaixadores`: completar los 4 embajadores (foto, `depoimento` recomendado hasta ~220 caracteres, `bio` recomendada hasta ~140 caracteres, Instagram y WhatsApp).
+  - `patrocinadores`, `parcerias` y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen empresas.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.
-- [ ] **Opcional:** los modelos de ofício (apoyo financiero / participación / general) de *Materiais para Parcerias* sirven para pedir apoyo a la Prefeitura o a empresas, no para la web.
 - Fin automático: el botón, la tarjeta y el enlace del pie desaparecen el 06/12/2026 a las 00:00 (`diaDeDoar.encerraEm`). Para probarlo, añade `?simular=encerrado` a la URL.
 
 ## En el proyecto JardimCiranda

@@ -1464,3 +1464,345 @@ body.has-modal-open { overflow: hidden; }
 @media print {
   .ddd-modal { display: none !important; }
 }
+
+/* 21.16 Nova estrutura da Campanha Dia de Doar (Projeto Raízes, Modalidades, Aflorômetro e Cadastro) */
+.ddd-intro {
+  position: relative; z-index: 1;
+  max-width: 52rem; margin: 0 auto var(--sp-6); text-align: center;
+}
+.ddd-intro .eyebrow { justify-content: center; }
+.ddd-intro h1 { font-size: var(--fs-2xl); margin-bottom: var(--sp-3); }
+.ddd-intro .ddd-closed { margin-inline: auto; text-align: left; }
+
+.ddd-raizes-card {
+  position: relative; z-index: 1;
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border-radius: var(--r-xl);
+  background: var(--c-surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.ddd-raizes-card__head {
+  display: grid; grid-template-columns: auto 1fr; gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: center; padding-bottom: var(--sp-5);
+  border-bottom: 1px dashed var(--border);
+}
+.ddd-raizes-card__logo {
+  width: clamp(140px, 18vw, 200px); height: auto;
+  padding: 0.75rem 1rem; border-radius: var(--r-lg);
+  background: #ffffff; border: 1px solid var(--border); box-shadow: var(--shadow-xs);
+}
+.ddd-raizes-card__head h2 { font-size: var(--fs-2xl); margin-bottom: 0.5rem; }
+.ddd-raizes-card__lead { margin: 0; font-size: var(--fs-lg); color: var(--c-ink-700); line-height: 1.65; }
+
+.ddd-raizes-card__body {
+  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(1.5rem, 4vw, 3rem);
+  padding-block: var(--sp-5); align-items: start;
+}
+.ddd-raizes-how h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-3); }
+.ddd-raizes-how ul.ddd-reasons { margin-top: 0; }
+.ddd-raizes-eval {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  border-radius: var(--r-lg);
+  background: var(--c-cream-100);
+  border: 1px solid var(--border);
+}
+.ddd-raizes-eval > p:first-child { margin-bottom: var(--sp-3); color: var(--c-ink-700); }
+.ddd-raizes-eval ul.check-list { margin-bottom: var(--sp-4); }
+.ddd-raizes-goal {
+  margin: 0; padding: 0.9rem 1.1rem;
+  border-radius: var(--r-md);
+  background: var(--c-ochre-200);
+  color: var(--c-ink-900); font-size: var(--fs-sm);
+}
+
+.ddd-raizes-card__foot {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding-top: var(--sp-5);
+  border-top: 1px dashed var(--border);
+}
+.ddd-farol {
+  display: flex; align-items: center; gap: 1rem;
+  flex: 1 1 280px;
+}
+.ddd-farol__seal {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.2rem; width: 108px; min-height: 92px; padding: 0.65rem;
+  border-radius: var(--r-md); border: 1.5px dashed var(--c-sage-300);
+  background: var(--c-sage-100); color: var(--c-sage-800);
+  text-align: center; font-weight: 800; font-size: var(--fs-xs); flex: none;
+}
+.ddd-farol__seal svg { width: 26px; height: 26px; color: var(--c-sage-700); }
+.ddd-farol__seal small { display: block; font-weight: 600; font-size: 0.7rem; color: var(--text-subtle); }
+.ddd-farol__seal.is-ready { padding: 0.35rem; border-style: solid; background: #ffffff; }
+.ddd-farol__seal.is-ready img { max-height: 82px; width: auto; object-fit: contain; }
+.ddd-farol__text p { margin: 0 0 0.25rem; color: var(--c-ink-900); font-size: var(--fs-base); }
+.ddd-farol__text small { color: var(--text-subtle); font-size: var(--fs-xs); }
+
+.ddd-raizes-cta { flex: 1 1 340px; }
+.ddd-raizes-cta__title {
+  margin: 0 0 0.65rem; font-family: var(--font-serif);
+  font-size: var(--fs-lg); font-weight: 600; color: var(--c-terracotta-700);
+}
+
+@media (max-width: 900px) {
+  .ddd-raizes-card__head { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .ddd-raizes-card__body { grid-template-columns: 1fr; }
+}
+
+/* Modalidades de apoio */
+.ddd-sublead {
+  margin-top: 0.5rem; font-weight: 800; color: var(--c-ink-900) !important;
+}
+.ddd-modality {
+  position: relative; z-index: 1;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--r-xl);
+  background: var(--c-surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.ddd-modality + .ddd-modality { margin-top: var(--sp-5); }
+.ddd-modality__head {
+  display: flex; align-items: flex-start; gap: 1rem; margin-bottom: var(--sp-4);
+}
+.ddd-modality__head .pillar__icon { flex: none; margin: 0; }
+.ddd-modality__head h3 { font-size: var(--fs-xl); margin: 0 0 0.25rem; }
+.ddd-modality__head p { margin: 0; color: var(--text-muted); }
+.ddd-modality__sub {
+  font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-terracotta-700);
+  margin: 0 0 var(--sp-3);
+}
+.ddd-modality__cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.85rem; margin-top: var(--sp-4); padding-top: var(--sp-4);
+  border-top: 1px dashed var(--border);
+}
+.ddd-modality__cta p { margin: 0; font-weight: 700; color: var(--c-ink-900); }
+
+.ddd-badge-soon {
+  display: inline-block; padding: 0.2rem 0.65rem; border-radius: var(--r-pill);
+  background: var(--c-ochre-200); color: var(--c-ink-900);
+  font-size: var(--fs-xs); font-weight: 800; width: fit-content;
+}
+
+/* Embaixadores (4 cartões) */
+ul.ddd-ambassadors {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem;
+  margin: 0; padding: 0;
+}
+.ddd-ambassador {
+  display: grid; grid-template-columns: 92px 1fr; gap: 1rem; align-items: start;
+  padding: 1.25rem; border-radius: var(--r-lg);
+  background: var(--c-cream-50); border: 1px solid var(--border);
+}
+.ddd-ambassador--placeholder { border-style: dashed; }
+.ddd-ambassador__photo {
+  width: 92px; height: 92px; border-radius: 50%; overflow: hidden;
+  display: grid; place-items: center;
+  background: var(--c-peach-200); border: 2px solid var(--c-surface);
+  box-shadow: var(--shadow-sm); color: var(--c-terracotta-700);
+}
+.ddd-ambassador__photo svg { width: 32px; height: 32px; }
+.ddd-ambassador__photo img { width: 100%; height: 100%; object-fit: cover; }
+.ddd-ambassador__body { display: flex; flex-direction: column; gap: 0.35rem; }
+.ddd-ambassador__body h4 { font-size: var(--fs-lg); margin: 0.1rem 0 0; }
+.ddd-ambassador__quote {
+  margin: 0; font-family: var(--font-serif); font-style: italic;
+  color: var(--c-ink-900); font-size: var(--fs-sm);
+}
+.ddd-ambassador__bio { margin: 0; color: var(--text-muted); font-size: var(--fs-xs); line-height: 1.5; }
+.ddd-ambassador__contacts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.25rem; font-size: var(--fs-xs); font-weight: 800; }
+@media (max-width: 860px) { ul.ddd-ambassadors { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .ddd-ambassador { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .ddd-ambassador__body { align-items: center; }
+}
+
+/* Empresas apoiadoras */
+.ddd-supporter-placeholder {
+  padding: 1.25rem 1.4rem; border-radius: var(--r-lg);
+  border: 1.5px dashed var(--border); background: var(--c-cream-50);
+  display: flex; flex-direction: column; gap: 0.35rem;
+}
+.ddd-supporter-placeholder p { margin: 0; color: var(--text-muted); font-size: var(--fs-sm); }
+ul.ddd-supporter-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem; margin: 0; padding: 0;
+}
+.ddd-supporter-card {
+  display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center;
+  padding: 1.15rem 1.25rem; border-radius: var(--r-lg);
+  background: var(--c-cream-50); border: 1px solid var(--border);
+}
+.ddd-supporter-card__logo {
+  width: 96px; height: 72px; border-radius: var(--r-sm);
+  background: #ffffff; border: 1px solid var(--border);
+  display: grid; place-items: center; padding: 0.4rem;
+}
+.ddd-supporter-card__logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.ddd-supporter-card__body h5 { font-size: var(--fs-base); margin: 0 0 0.25rem; font-family: var(--font-sans); font-weight: 800; }
+.ddd-supporter-card__quote { margin: 0 0 0.25rem; font-size: var(--fs-sm); color: var(--c-ink-700); }
+.ddd-supporter-card__contact { margin: 0; font-size: var(--fs-xs); color: var(--text-subtle); font-weight: 700; }
+
+/* Doação Semente */
+.ddd-modality--semente {
+  background: linear-gradient(145deg, var(--c-surface) 55%, var(--c-peach-200));
+}
+.ddd-semente-grid {
+  display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(1.5rem, 3.5vw, 2.75rem); align-items: center;
+}
+.ddd-semente-highlight {
+  padding: 0.9rem 1.15rem; border-radius: var(--r-md);
+  background: rgba(253, 251, 247, 0.85); border: 1px solid var(--border);
+  font-size: var(--fs-base); color: var(--c-ink-900); margin-bottom: var(--sp-4);
+}
+ol.ddd-steps--compact { margin-top: 0; gap: 0.65rem; }
+.ddd-steps--compact li { padding: 0.85rem 1.1rem 0.85rem 3.8rem; font-size: var(--fs-sm); }
+.ddd-steps--compact li::before { width: 2rem; height: 2rem; top: 0.8rem; left: 0.9rem; font-size: var(--fs-base); }
+.ddd-semente-note { margin: var(--sp-3) 0 0; font-size: var(--fs-xs); font-weight: 800; color: var(--c-terracotta-700); }
+.ddd-semente-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: var(--sp-4); }
+
+.ddd-bag-card__img {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.5rem; aspect-ratio: 1; width: min(300px, 100%); margin-inline: auto;
+  padding: 1.5rem; border-radius: var(--r-xl);
+  background: rgba(253, 251, 247, 0.9); border: 2px dashed var(--c-terracotta-600);
+  text-align: center; color: var(--c-ink-900); font-weight: 800;
+  box-shadow: var(--shadow-md);
+}
+.ddd-bag-card__img svg { width: 52px; height: 52px; color: var(--c-terracotta-600); }
+.ddd-bag-card__img small { font-weight: 600; font-size: var(--fs-xs); color: var(--text-subtle); }
+.ddd-bag-card__img.is-ready { padding: 0.5rem; border-style: solid; border-color: var(--border); overflow: hidden; }
+.ddd-bag-card__img.is-ready img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg); }
+@media (max-width: 860px) { .ddd-semente-grid { grid-template-columns: 1fr; } }
+
+/* Aflorômetro (hodômetro + marcos) */
+.aflorometro-card {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center; padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border-radius: var(--r-xl); background: var(--c-surface);
+  border: 1px solid var(--border); box-shadow: var(--shadow-lg);
+}
+.aflorometro-gauge {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: 1.25rem; border-radius: var(--r-lg);
+  background: linear-gradient(180deg, var(--c-cream-100), var(--c-surface));
+  border: 1px solid var(--border);
+}
+.aflorometro-svg { width: min(320px, 100%); height: auto; overflow: visible; }
+.aflorometro-svg__track { stroke: var(--c-cream-200); }
+.aflorometro-svg__fill {
+  stroke: var(--c-sage-700);
+  transition: stroke-dashoffset 1s var(--ease);
+}
+.aflorometro-svg__ticks circle { fill: var(--c-surface); stroke: var(--c-terracotta-600); stroke-width: 2.5px; }
+.aflorometro-svg__needle { fill: var(--c-terracotta-700); }
+.aflorometro-svg__hub { fill: var(--c-ink-900); }
+.aflorometro-svg__hub-inner { fill: var(--c-ochre-300); }
+.aflorometro-svg__label {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 800; fill: var(--c-ink-500);
+}
+.aflorometro-readout { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 0.25rem; }
+.aflorometro-readout__label { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-subtle); }
+.aflorometro-readout__value { font-family: var(--font-serif); font-size: var(--fs-2xl); color: var(--c-sage-800); line-height: 1.15; }
+.aflorometro-readout__next {
+  display: inline-block; margin-top: 0.25rem; padding: 0.25rem 0.85rem;
+  border-radius: var(--r-pill); background: var(--c-ochre-200);
+  color: var(--c-ink-900); font-size: var(--fs-xs); font-weight: 800;
+}
+.aflorometro-readout__date { margin-top: 0.25rem; font-size: var(--fs-xs); color: var(--text-subtle); }
+
+.aflorometro-milestones h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-3); }
+ol.aflorometro-list { display: grid; gap: 0.65rem; margin: 0; padding: 0; }
+.aflorometro-item {
+  display: grid; grid-template-columns: auto auto 1fr; gap: 0.75rem; align-items: baseline;
+  padding: 0.85rem 1.1rem; border-radius: var(--r-md);
+  background: var(--c-cream-50); border: 1px solid var(--border);
+  transition: border-color var(--t-fast) ease, background-color var(--t-fast) ease;
+}
+.aflorometro-item__step {
+  padding: 0.15rem 0.55rem; border-radius: var(--r-pill);
+  background: var(--c-cream-200); color: var(--c-ink-700);
+  font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.aflorometro-item__amount {
+  font-family: var(--font-serif); font-size: var(--fs-base); font-weight: 700;
+  color: var(--c-terracotta-700); white-space: nowrap;
+}
+.aflorometro-item p { margin: 0; font-size: var(--fs-sm); color: var(--c-ink-700); line-height: 1.45; }
+.aflorometro-item.is-current {
+  border-color: var(--c-ochre-300); background: var(--c-ochre-200);
+}
+.aflorometro-item.is-current .aflorometro-item__step {
+  background: var(--c-terracotta-600); color: var(--c-cream-50);
+}
+.aflorometro-item.is-reached {
+  border-color: var(--c-sage-300); background: var(--c-sage-100);
+}
+.aflorometro-item.is-reached .aflorometro-item__step {
+  background: var(--c-sage-700); color: var(--c-cream-50);
+}
+@media (max-width: 900px) { .aflorometro-card { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .aflorometro-item { grid-template-columns: auto 1fr; }
+  .aflorometro-item p { grid-column: 1 / -1; }
+}
+
+/* Barra flutuante compacta do Aflorômetro durante a navegação */
+.aflorometro-bar {
+  position: fixed; left: 1.25rem; bottom: 1.25rem; z-index: 45;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.5rem 0.6rem 0.5rem 1rem;
+  border-radius: var(--r-pill);
+  background: rgba(253, 251, 247, 0.96);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  opacity: 0; pointer-events: none; transform: translateY(12px);
+  transition: opacity var(--t-base) ease, transform var(--t-base) var(--ease);
+}
+.aflorometro-bar.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.aflorometro-bar__info {
+  display: flex; align-items: center; gap: 0.55rem;
+  text-decoration: none; color: var(--c-ink-900); font-size: var(--fs-xs);
+}
+.aflorometro-bar__tag { font-weight: 800; color: var(--c-terracotta-700); }
+.aflorometro-bar__val { font-family: var(--font-serif); font-size: var(--fs-sm); color: var(--c-sage-800); }
+.aflorometro-bar__next {
+  padding-left: 0.55rem; border-left: 1px solid var(--border);
+  color: var(--text-muted); font-weight: 700;
+}
+.aflorometro-bar .btn { min-height: 36px; padding: 0.35rem 0.85rem; font-size: var(--fs-xs); }
+@media (max-width: 760px) {
+  .aflorometro-bar__next { display: none; }
+  .aflorometro-bar { left: 0.75rem; bottom: 0.85rem; }
+}
+@media print {
+  .aflorometro-bar { display: none !important; }
+}
+
+/* Bloco Sobre a AFLOR (dia-de-doar.html) */
+.ddd-about-aflor-section { padding-block: var(--sp-7); }
+.ddd-about-aflor {
+  position: relative; z-index: 1;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--r-xl);
+  background: linear-gradient(135deg, var(--c-surface), var(--c-sage-100));
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.ddd-about-aflor__brand { display: flex; align-items: center; gap: 1.15rem; }
+.ddd-about-aflor__brand img { width: 64px; height: 64px; flex: none; }
+.ddd-about-aflor__brand h2 { font-size: var(--fs-xl); margin: 0 0 0.25rem; }
+.ddd-about-aflor__brand p { margin: 0; color: var(--c-ink-700); }
+
+/* Ajustes de campos no Cadastro Dia de Doar */
+.choice-grid--checks { grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr)); }
+.choice-grid--two { grid-template-columns: repeat(2, minmax(100px, 160px)); }
+body:has(#aviso-privacidade:not([hidden])) .aflorometro-bar {
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + var(--banner-h, 190px));
+}

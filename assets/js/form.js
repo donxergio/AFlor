@@ -1,6 +1,6 @@
 /**
  * AFLOR — form.js
- * Formulário unificado "Faça Parte" 100% estático (zero backend):
+ * Formulário unificado "Faça Parte" e Cadastro "Dia de Doar" 100% estático (zero backend):
  *   (a) WhatsApp — monta link wa.me com mensagem sanitizada (canal principal);
  *   (b) E-mail   — envia via fetch() para Web3Forms/Formspree (contato.aflor@gmail.com),
  *                  com fallback mailto: se a API não estiver configurada.
@@ -42,7 +42,40 @@
     'dia-de-doar': 'Dia de Doar',
     livre: 'Doação Livre',
   };
-  var FIELDS = ['nome', 'email', 'telefone', 'motivo', 'categoria', 'doacao', 'consentimento'];
+  var COMO_SOUBE = {
+    whatsapp: 'WhatsApp',
+    embaixadores: 'Indicação dos Embaixadores da Campanha',
+    'empresa-patrocinadora': 'Trabalho na empresa patrocinadora',
+    'instagram-aflor': 'Acompanho o Instagram da AFLOR',
+    'dia-de-doar-joinville': 'Vi no site/insta do Dia de Doar Joinville',
+    'parceiros-amigos': 'Indicação de parceiros / amigos',
+    'comunidade-jardim-aflor': 'Faço parte da comunidade do Jardim Waldorf Ciranda / AFLOR',
+    outros: 'Outros',
+  };
+  var FILHOS_NETOS = {
+    nao: 'Não',
+    '0-3': 'Sim, entre 0 e 3 anos',
+    '3-6': 'Sim, entre 3 e 6 anos',
+    '7-9': 'Sim, entre 7 e 9 anos',
+    '9-mais': 'Sim, acima de 9 anos',
+  };
+  var NOVIDADES = {
+    sim: 'Sim',
+    nao: 'Não',
+  };
+  var FIELDS = [
+    'nome',
+    'instagram',
+    'email',
+    'telefone',
+    'motivo',
+    'categoria',
+    'doacao',
+    'como_soube',
+    'filhos_netos',
+    'novidades',
+    'consentimento',
+  ];
   var NAME_RE = /^[\p{L}\p{M}' .-]{3,80}$/u;
   var EMAIL_RE = /^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]{1,190}\.[A-Za-z]{2,24}$/;
   var has = function (obj, key) { return Object.prototype.hasOwnProperty.call(obj, key); };
@@ -76,7 +109,8 @@
 
   var conditionals = Array.prototype.slice.call(form.querySelectorAll('[data-show-when]'));
   function updateConditionals() {
-    var motivo = form.elements.namedItem('motivo').value;
+    var motivoEl = form.elements.namedItem('motivo');
+    var motivo = motivoEl ? motivoEl.value : '';
     conditionals.forEach(function (box) {
       box.hidden = box.getAttribute('data-show-when') !== motivo;
     });
@@ -87,13 +121,22 @@
   function readForm() {
     var fd = new FormData(form);
     var motivo = sanitize(fd.get('motivo'), 20);
+    var fnRaw = fd.getAll ? fd.getAll('filhos_netos') : [];
+    var fnValid = fnRaw
+      .map(function (v) { return sanitize(v, 16); })
+      .filter(function (v) { return has(FILHOS_NETOS, v); });
+
     return {
       nome: sanitize(fd.get('nome'), 80),
+      instagram: sanitize(fd.get('instagram'), 60),
       email: sanitize(fd.get('email'), 120).toLowerCase(),
       telefone: onlyDigits(fd.get('telefone')).slice(0, 13),
       motivo: motivo,
       categoria: motivo === 'associar' ? sanitize(fd.get('categoria'), 2) : '',
       doacao: motivo === 'doacao' ? sanitize(fd.get('doacao'), 20) : '',
+      como_soube: sanitize(fd.get('como_soube'), 40),
+      filhos_netos: fnValid,
+      novidades: sanitize(fd.get('novidades'), 10),
       mensagem: sanitize(fd.get('mensagem'), 600),
       consentimento: fd.get('consentimento') === 'sim',
       botcheck: fd.get('botcheck') !== null,
@@ -102,10 +145,20 @@
 
   function validate(data, canal) {
     var errors = {};
-    if (!NAME_RE.test(data.nome)) errors.nome = 'Informe seu nome (mínimo 3 letras, sem números).';
+    if (!NAME_RE.test(data.nome)) errors.nome = 'Informe seu nome completo (mínimo 3 letras, sem números).';
     if (!has(MOTIVOS, data.motivo)) errors.motivo = 'Selecione como você quer participar.';
     if (data.motivo === 'associar' && !has(CATEGORIAS, data.categoria)) errors.categoria = 'Escolha a categoria de associado (a, b, c ou d).';
     if (data.motivo === 'doacao' && !has(DOACOES, data.doacao)) errors.doacao = 'Escolha o tipo de doação.';
+
+    if (form.elements.namedItem('como_soube') && !has(COMO_SOUBE, data.como_soube)) {
+      errors.como_soube = 'Selecione como você ficou sabendo da campanha.';
+    }
+    if (document.getElementById('campo-filhos_netos') && !data.filhos_netos.length) {
+      errors.filhos_netos = 'Selecione pelo menos uma opção.';
+    }
+    if (document.getElementById('campo-novidades') && !has(NOVIDADES, data.novidades)) {
+      errors.novidades = 'Escolha Sim ou Não.';
+    }
 
     if (data.telefone && !/^(55)?[1-9]{2}9?\d{8}$/.test(data.telefone)) {
       errors.telefone = 'Telefone inválido. Use DDD + número, ex.: (47) 99999-9999.';
@@ -172,12 +225,27 @@
 
   /* ---------------- Mensagem ---------------- */
 
+  function formatFilhosNetos(list) {
+    if (!list || !list.length) return '';
+    return list.map(function (k) { return FILHOS_NETOS[k]; }).filter(Boolean).join('; ');
+  }
+
   function summaryLines(d) {
     var lines = ['• Nome: ' + d.nome, '• Interesse: ' + MOTIVOS[d.motivo]];
     if (d.categoria) lines.push('• Categoria de associado: ' + CATEGORIAS[d.categoria]);
     if (d.doacao) lines.push('• Tipo de doação: ' + DOACOES[d.doacao]);
+    if (d.instagram) lines.push('• Instagram: ' + d.instagram);
     if (d.telefone) lines.push('• WhatsApp: ' + formatPhone(d.telefone));
     if (d.email) lines.push('• E-mail: ' + d.email);
+    if (d.como_soube && COMO_SOUBE[d.como_soube]) {
+      lines.push('• Como soube da campanha: ' + COMO_SOUBE[d.como_soube]);
+    }
+    if (d.filhos_netos && d.filhos_netos.length) {
+      lines.push('• Filhos/netos em idade escolar: ' + formatFilhosNetos(d.filhos_netos));
+    }
+    if (d.novidades && NOVIDADES[d.novidades]) {
+      lines.push('• Receber novidades da AFLOR e Jardim Ciranda: ' + NOVIDADES[d.novidades]);
+    }
     if (d.mensagem) lines.push('', 'Mensagem: ' + d.mensagem);
     return lines;
   }
@@ -185,7 +253,7 @@
   function intro(d) {
     if (d.motivo === 'associar') return 'Olá! Quero fazer parte da AFLOR como associado(a). 🌸';
     if (d.motivo === 'voluntariado') return 'Olá! Quero ser voluntário(a) da AFLOR. 🌱';
-    if (d.doacao === 'dia-de-doar') return 'Olá! Participei do Dia de Doar da AFLOR e quero deixar meus dados. 🎁';
+    if (d.doacao === 'dia-de-doar') return 'Olá! Participei da Campanha Dia de Doar da AFLOR e quero enviar meu cadastro. 🎁';
     return 'Olá! Quero apoiar a AFLOR com uma doação. 💛';
   }
 
@@ -267,12 +335,16 @@
       subject: 'Faça Parte (' + MOTIVOS[data.motivo] + (data.doacao ? ' — ' + DOACOES[data.doacao] : '') + ') — ' + data.nome,
       from_name: 'Site AFLOR',
       name: data.nome,
+      instagram: data.instagram || '—',
       email: data.email,
       replyto: data.email,
       interesse: MOTIVOS[data.motivo],
       categoria_associado: data.categoria ? CATEGORIAS[data.categoria] : '—',
       tipo_doacao: data.doacao ? DOACOES[data.doacao] : '—',
       telefone: data.telefone ? formatPhone(data.telefone) : '—',
+      como_soube: data.como_soube && COMO_SOUBE[data.como_soube] ? COMO_SOUBE[data.como_soube] : '—',
+      filhos_netos_idade_escolar: data.filhos_netos && data.filhos_netos.length ? formatFilhosNetos(data.filhos_netos) : '—',
+      receber_novidades: data.novidades && NOVIDADES[data.novidades] ? NOVIDADES[data.novidades] : '—',
       mensagem: data.mensagem || '—',
       consentimento_lgpd: 'Sim — ' + new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
     };
@@ -308,7 +380,7 @@
         updateConditionals();
         updateCounter();
         startedAt = Date.now();
-        setStatus('ok', 'Recebemos sua mensagem! Em breve entraremos em contato. Bem-vinda! Bem-vindo! 🌸', null);
+        setStatus('ok', 'Recebemos seu cadastro! Em breve entraremos em contato. Bem-vinda! Bem-vindo! 🌸', null);
       })
       .catch(function () {
         setStatus('err', 'Não conseguimos enviar agora. Por favor, tente por outro canal:', fallbacks);
@@ -351,20 +423,30 @@
   });
 
   form.addEventListener('change', function (e) {
-    var name = e.target && e.target.name;
+    var target = e.target;
+    var name = target && target.name;
     if (name === 'motivo') {
       updateConditionals();
       setFieldError('categoria', '');
       setFieldError('doacao', '');
     }
-    if (name === 'categoria' || name === 'doacao' || name === 'motivo') {
+    if (name === 'filhos_netos') {
+      // Se marcou "Não", desmarca as faixas etárias; se marcou uma faixa etária, desmarca "Não".
+      if (target.hasAttribute('data-fn-none') && target.checked) {
+        Array.prototype.slice.call(form.querySelectorAll('[data-fn-age]')).forEach(function (cb) { cb.checked = false; });
+      } else if (target.hasAttribute('data-fn-age') && target.checked) {
+        var noneCb = form.querySelector('[data-fn-none]');
+        if (noneCb) noneCb.checked = false;
+      }
+    }
+    if (name === 'categoria' || name === 'doacao' || name === 'motivo' || name === 'como_soube' || name === 'filhos_netos' || name === 'novidades') {
       var errs = validate(readForm(), 'whatsapp');
       setFieldError(name, errs[name]);
     }
   });
 
   // Validação ao sair do campo (feedback gentil, não intrusivo)
-  ['nome', 'telefone', 'email', 'consentimento'].forEach(function (name) {
+  ['nome', 'instagram', 'telefone', 'email', 'como_soube', 'consentimento'].forEach(function (name) {
     var el = form.elements.namedItem(name);
     if (!el || !el.addEventListener) return;
     el.addEventListener('blur', function () {
