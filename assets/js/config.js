@@ -108,7 +108,7 @@
      */
     diaDeDoar: {
       encerraEm: '2026-12-06T00:00:00-03:00',
-      // QR estático decodificado: chave CNPJ 58.981.530/0001-48, txid "diadedoar", sem valor fixo
+      // QR estático decodificado: chave CNPJ 58.981.530/0001-48, msg "Campanha Dia de Doar - AFLOR", txid "diadedoar", sem valor fixo
       pixQr: 'assets/img/pix-aflor.png',
       pixChave: '58.981.530/0001-48',
       pixFavorecido: 'AFLOR — Associação Pedagógica Antroposófica Ciranda das Flores',

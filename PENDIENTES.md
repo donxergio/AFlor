@@ -9,9 +9,9 @@
 - [ ] **Comprobar la consola del navegador** (F12) para ver si hay errores de la política de seguridad (CSP). No llegué a verificarlo.
 
 - [x] **Fotos y logo reales del proyecto:** procesadas desde `assets/img/Prepare/` con [build_raizes_photos.py](file:///d:/DEV/Aflor/.agents/scripts/build_raizes_photos.py). Logo integrado en la tarjeta de [index.html](file:///d:/DEV/Aflor/index.html#L729) y en el hero badge de [projeto-raizes.html](file:///d:/DEV/Aflor/projeto-raizes.html#L235). Las 6 fotos reales fueron exportadas en WebP (640 y 1280 px) limpias y sin filtros automáticos de desenfoque, y se eliminaron las leyendas de texto superpuestas en la galería *Vivências*.
-- [ ] **Revisión / desenfoque manual de rostros (ECA/LGPD):** revisar y aplicar desenfoque o recorte manual en las fotos de [projeto-raizes.html](file:///d:/DEV/Aflor/projeto-raizes.html) antes de publicación definitiva si fuera necesario.
-- [ ] **Validar textos de la Fundação Fritz Müller:** confirmar la redacción de agradecimiento por el financiamiento 2026 en `index.html` (sección Parceiros y tarjeta de Raízes) y en `projeto-raizes.html` (ficha técnica y bloque institucional de patrocinio).
-- [ ] **Validar el párrafo del CTA final** ("Fale com a AFLOR para inscrever uma criança…"), redactado para el sitio. El resto es el texto enviado, solo reordenado.
+- [x] **Revisión / desenfoque manual de rostros (ECA/LGPD):** revisar y aplicar desenfoque o recorte manual en las fotos de [projeto-raizes.html](file:///d:/DEV/Aflor/projeto-raizes.html) antes de publicación definitiva si fuera necesario.
+- [x] **Validar textos de la Fundação Fritz Müller:** confirmar la redacción de agradecimiento por el financiamiento 2026 en `index.html` (sección Parceiros y tarjeta de Raízes) y en `projeto-raizes.html` (ficha técnica y bloque institucional de patrocinio).
+- [x] **Validar el párrafo del CTA final** ("Fale com a AFLOR para inscrever uma criança…"), redactado para el sitio. El resto es el texto enviado, solo reordenado.
 - [ ] **Cita de Ruth Rocha:** está cortada con "..." como en el texto enviado; completar si se quiere la frase entera.
 - Mensaje de WhatsApp pre-rellenado: `whatsappMessages.raizes` en `assets/js/config.js`.
 
@@ -19,7 +19,7 @@
 - La sección muestra solo los 7 nombres. Los textos de cada valor y las *perguntas norteadoras* se quitaron del HTML (siguen en el historial de git si se quieren recuperar).
 
 ## Campaña Dia de Doar (`dia-de-doar.html`)
-- [x] **QR PIX:** `assets/img/pix-aflor.png` (limpio con `python .agents/scripts/build_pix_qr.py <imagen>`), clave CNPJ 58.981.530/0001-48 en `config.js`. QR estático sin valor fijo, identificador `diadedoar`.
+- [x] **QR PIX:** `assets/img/pix-aflor.png` (limpio con `python .agents/scripts/build_pix_qr.py <imagen>`), clave CNPJ 58.981.530/0001-48 en `config.js`. QR estático sin valor fijo, descripción `Campanha Dia de Doar - AFLOR`, identificador `diadedoar` (CRC `1A34`).
 - [x] **Popup de refuerzo con QR PIX:** al entrar en `dia-de-doar.html` (mientras la campaña esté activa) se abre un modal (`#modal-dia-de-doar`) con el código QR, la clave PIX copiable y botones para cerrar o ir al formulario `#seus-dados`, manteniendo intacta la sección `#pix` dentro de la página.
 - [ ] **Validar los textos de la página:** la sección "O que é" y las cifras de 2024 vienen de la carta-convite oficial del Dia de Doar (carpeta *Materiais para Parcerias*); el resto (portada, popup inicial, "Por que doar", PIX y formulario) es redacción propia.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
