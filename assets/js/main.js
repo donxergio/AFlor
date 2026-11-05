@@ -59,7 +59,7 @@
     else el.hidden = false;
   });
 
-  var localImgRe = /^assets\/img\/[\w./-]+\.(png|webp|jpe?g|svg)$/i;
+  var localImgRe = /^assets\/img\/[\w./-]+\.(png|webp|jpe?g|svg)(\?v=[\w.-]+)?$/i;
 
   function formatBRL(num) {
     var n = typeof num === 'number' && isFinite(num) ? Math.max(0, num) : 0;
