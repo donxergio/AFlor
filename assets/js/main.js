@@ -182,7 +182,8 @@
     var key = box.getAttribute('data-ddd-supporters');
     var list = ddd[key];
     if (!Array.isArray(list) || !list.length) return;
-    box.textContent = '';
+    var placeholder = $('.ddd-supporter-placeholder', box);
+    if (placeholder) placeholder.remove();
     var ul = doc.createElement('ul');
     ul.className = 'ddd-supporter-grid';
     ul.setAttribute('role', 'list');
