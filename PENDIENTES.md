@@ -23,7 +23,7 @@
 - [x] **Popup de refuerzo con QR PIX:** al entrar en `dia-de-doar.html` (mientras la campaña esté activa) se abre un modal (`#modal-dia-de-doar`) con el código QR, la clave PIX copiable y botones para cerrar o ir al formulario `#seus-dados`, manteniendo intacta la sección `#pix` dentro de la página.
 - [x] **Nueva estructura oficial de la página (`dia-de-doar.html`):**
   1. **Abertura + Projeto Raízes do Aprender** (con logo oficial, *Como fazemos isso*, indicadores de evaluación, espacio para el selo *O Farol* y llamadas a la acción).
-  2. **Modalidades de apoyo (*O Farol Joinville*):** *Embaixadores AFLOR* (4 tarjetas), *Patrocínio Frutificar*, *Parceria que Germinar*, *Vizinho Amigo Dá Flor* y *Doação Semente* (con los pasos del brinde de la bolsa ecológica para donaciones > R$ 80,00).
+  2. **Modalidades de apoyo (*O Farol Joinville*):** *Embaixadores AFLOR* (**Taísa Rodrigues**; los espacios vacíos de Embaixador 2, 3 y 4 se retiraron hasta que existan), *Patrocínio Frutificar*, *Parceria que Germinar*, *Vizinho Amigo Dá Flor* y *Doação Semente* (con los pasos del brinde de la bolsa ecológica para donaciones > R$ 80,00).
   3. **Aflorômetro:** velocímetro/hodómetro semicircular en SVG con los 5 marcos de recaudación + barra flotante compacta (`#aflorometro-fixo`) durante el scroll.
   4. **PIX + Cadastro de la campaña (`#seus-dados`):** formulario actualizado con *Nome completo*, *Instagram*, *WhatsApp*, *E-mail*, *Como ficou sabendo da Campanha*, *Filhos ou netos em idade escolar* (selección múltiple), *Aceito receber novidades* y consentimiento LGPD.
   5. **Sobre a AFLOR** + **Sobre a Campanha do Dia de Doar** (`#o-que-e`).
@@ -32,7 +32,7 @@
   - [ ] `bolsaImg`: subir foto de la bolsa ecológica del Jardim Waldorf Ciranda a `assets/img/`.
   - [ ] `postDoacaoSementeUrl`: pegar el enlace al post de Instagram donde se etiqueta a 5 personas.
   - [ ] `aflorometro.valorAtual` y `aflorometro.atualizadoEm`: actualizar conforme avance la recaudación.
-  - [ ] `embaixadores`: **Taísa Rodrigues** ya integrada con foto, depoimento, bio y contactos (`@taicomunica` / `47988643373`); pendiente añadir los otros 3 embajadores.
+  - [x] `embaixadores`: **Taísa Rodrigues** ya integrada con foto, depoimento, bio y contactos (`@taicomunica` / `47988643373`). Se retiraron las tarjetas vacías de Embaixador 2, 3 y 4 (se añadirán más adelante cuando existan).
   - [ ] `patrocinadores`, `parcerias` (ya incluida **Sarah Pinnow / Felice Granola e Poesia** en `dia-de-doar.html`) y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen más empresas.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.

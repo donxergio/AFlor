@@ -1587,9 +1587,9 @@ body.has-modal-open { overflow: hidden; }
   font-size: var(--fs-xs); font-weight: 800; width: fit-content;
 }
 
-/* Embaixadores (4 cartões) */
+/* Embaixadores */
 ul.ddd-ambassadors {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem;
+  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
   margin: 0; padding: 0;
 }
 .ddd-ambassador {

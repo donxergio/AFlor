@@ -145,7 +145,7 @@
       },
 
       /**
-       * 🌸 Embaixadores AFLOR (4 pessoas).
+       * 🌸 Embaixadores AFLOR (adicionados conforme forem confirmados).
        * Tamanhos recomendados para harmonia visual dos cartões:
        *   - depoimento: até ~220 caracteres
        *   - bio:        até ~140 caracteres
