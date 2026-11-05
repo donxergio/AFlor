@@ -140,7 +140,7 @@
           { valor: 74927.70, descricao: '1 ano de Projeto Raízes do Aprender' },
           { valor: 89012.70, descricao: '1 ano de Projeto Raízes do Aprender com atendimento fonológico' },
           { valor: 178025.40, descricao: 'Atendimento para 32 crianças por 1 ano, com atendimento fonológico' },
-          { valor: 250000.00, descricao: 'Ampliação do espaço físico para possibilitar o atendimento de 48 crianças por dia da semana' },
+          { valor: 250000.00, descricao: 'ampliação do espaço físico para possibilitar o atendimento de 48 crianças por dia da semana' },
         ],
       },
 
