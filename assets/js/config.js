@@ -122,7 +122,7 @@
        *   bolsaImg             → ex.: 'assets/img/bolsa-ecologica-jardim.webp'
        *   postDoacaoSementeUrl → link https do post no Instagram para marcar 5 pessoas
        */
-      seloFarolImg: '',
+      seloFarolImg: 'assets/img/selo-o-farol.webp',
       bolsaImg: '',
       postDoacaoSementeUrl: '',
 

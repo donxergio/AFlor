@@ -1873,3 +1873,6 @@ ul.ddd-partner-feature__contacts {
   .ddd-partner-feature { grid-template-columns: 1fr; }
   .ddd-partner-feature__media { max-width: 300px; margin-inline: auto; }
 }
+.ddd-ambassador--featured {
+  grid-column: 1 / -1;
+}
