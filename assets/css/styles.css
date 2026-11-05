@@ -1678,61 +1678,67 @@ ol.ddd-steps--compact { margin-top: 0; gap: 0.65rem; }
 .ddd-bag-card__img.is-ready img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-lg); }
 @media (max-width: 860px) { .ddd-semente-grid { grid-template-columns: 1fr; } }
 
-/* Aflorômetro (hodômetro + marcos) */
+/* Aflorômetro (hodômetro compacto à esquerda + texto e marcos ao lado) */
 .aflorometro-card {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center; padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  display: grid; grid-template-columns: 240px 1fr; gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: center; padding: clamp(1.25rem, 3vw, 2.25rem);
   border-radius: var(--r-xl); background: var(--c-surface);
   border: 1px solid var(--border); box-shadow: var(--shadow-lg);
 }
 .aflorometro-gauge {
   display: flex; flex-direction: column; align-items: center; text-align: center;
-  padding: 1.25rem; border-radius: var(--r-lg);
+  padding: 1.1rem 1rem; border-radius: var(--r-lg);
   background: linear-gradient(180deg, var(--c-cream-100), var(--c-surface));
   border: 1px solid var(--border);
 }
-.aflorometro-svg { width: min(320px, 100%); height: auto; overflow: visible; }
+.aflorometro-svg { width: 200px; max-width: 100%; height: auto; overflow: visible; }
 .aflorometro-svg__track { stroke: var(--c-cream-200); }
 .aflorometro-svg__fill {
   stroke: var(--c-sage-700);
   transition: stroke-dashoffset 1s var(--ease);
 }
 .aflorometro-svg__ticks circle { fill: var(--c-surface); stroke: var(--c-terracotta-600); stroke-width: 2.5px; }
+.aflorometro-svg__tick-label {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 800; fill: var(--c-terracotta-700);
+}
 .aflorometro-svg__needle { fill: var(--c-terracotta-700); }
 .aflorometro-svg__hub { fill: var(--c-ink-900); }
 .aflorometro-svg__hub-inner { fill: var(--c-ochre-300); }
 .aflorometro-svg__label {
   font-family: var(--font-sans); font-size: 11px; font-weight: 800; fill: var(--c-ink-500);
 }
-.aflorometro-readout { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 0.25rem; }
-.aflorometro-readout__label { font-size: var(--fs-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-subtle); }
-.aflorometro-readout__value { font-family: var(--font-serif); font-size: var(--fs-2xl); color: var(--c-sage-800); line-height: 1.15; }
+.aflorometro-readout { display: flex; flex-direction: column; gap: 0.15rem; margin-top: 0.25rem; }
+.aflorometro-readout__label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); }
+.aflorometro-readout__value { font-family: var(--font-serif); font-size: var(--fs-xl); color: var(--c-sage-800); line-height: 1.15; }
 .aflorometro-readout__next {
-  display: inline-block; margin-top: 0.25rem; padding: 0.25rem 0.85rem;
+  display: inline-block; margin-top: 0.25rem; padding: 0.2rem 0.7rem;
   border-radius: var(--r-pill); background: var(--c-ochre-200);
-  color: var(--c-ink-900); font-size: var(--fs-xs); font-weight: 800;
+  color: var(--c-ink-900); font-size: 0.72rem; font-weight: 800;
 }
-.aflorometro-readout__date { margin-top: 0.25rem; font-size: var(--fs-xs); color: var(--text-subtle); }
+.aflorometro-readout__date { margin-top: 0.2rem; font-size: var(--fs-xs); color: var(--text-subtle); }
 
-.aflorometro-milestones h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-3); }
-ol.aflorometro-list { display: grid; gap: 0.65rem; margin: 0; padding: 0; }
+.aflorometro-head { margin-bottom: var(--sp-3); }
+.aflorometro-head .eyebrow { margin-bottom: 0.25rem; }
+.aflorometro-head h2 { font-size: var(--fs-2xl); margin-bottom: 0.2rem; }
+.aflorometro-head p { margin: 0; font-size: var(--fs-sm); color: var(--c-ink-700); }
+ol.aflorometro-list { display: grid; gap: 0.5rem; margin: 0; padding: 0; }
 .aflorometro-item {
-  display: grid; grid-template-columns: auto auto 1fr; gap: 0.75rem; align-items: baseline;
-  padding: 0.85rem 1.1rem; border-radius: var(--r-md);
+  display: grid; grid-template-columns: auto auto 1fr; gap: 0.65rem; align-items: baseline;
+  padding: 0.65rem 0.95rem; border-radius: var(--r-md);
   background: var(--c-cream-50); border: 1px solid var(--border);
   transition: border-color var(--t-fast) ease, background-color var(--t-fast) ease;
 }
 .aflorometro-item__step {
-  padding: 0.15rem 0.55rem; border-radius: var(--r-pill);
+  padding: 0.12rem 0.5rem; border-radius: var(--r-pill);
   background: var(--c-cream-200); color: var(--c-ink-700);
-  font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
 }
 .aflorometro-item__amount {
-  font-family: var(--font-serif); font-size: var(--fs-base); font-weight: 700;
+  font-family: var(--font-serif); font-size: var(--fs-sm); font-weight: 700;
   color: var(--c-terracotta-700); white-space: nowrap;
 }
-.aflorometro-item p { margin: 0; font-size: var(--fs-sm); color: var(--c-ink-700); line-height: 1.45; }
+.aflorometro-item p { margin: 0; font-size: var(--fs-sm); color: var(--c-ink-700); line-height: 1.4; }
 .aflorometro-item.is-current {
   border-color: var(--c-ochre-300); background: var(--c-ochre-200);
 }
@@ -1745,8 +1751,13 @@ ol.aflorometro-list { display: grid; gap: 0.65rem; margin: 0; padding: 0; }
 .aflorometro-item.is-reached .aflorometro-item__step {
   background: var(--c-sage-700); color: var(--c-cream-50);
 }
-@media (max-width: 900px) { .aflorometro-card { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .aflorometro-card { grid-template-columns: 1fr; }
+  .aflorometro-gauge { flex-direction: row; justify-content: center; gap: 1.25rem; text-align: left; }
+  .aflorometro-svg { width: 150px; flex-shrink: 0; }
+}
 @media (max-width: 560px) {
+  .aflorometro-gauge { flex-direction: column; text-align: center; }
   .aflorometro-item { grid-template-columns: auto 1fr; }
   .aflorometro-item p { grid-column: 1 / -1; }
 }

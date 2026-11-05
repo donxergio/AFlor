@@ -40,10 +40,10 @@
   <link rel="preload" href="assets/fonts/lora-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/nunito-var.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/config.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/form.js" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <script src="assets/js/config.js?v=3" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
+  <script src="assets/js/form.js?v=3" defer></script>
 </head>
 
 <body>
@@ -473,48 +473,6 @@
                 </ul>
               </div>
             </li>
-            <li class="ddd-ambassador ddd-ambassador--placeholder">
-              <div class="ddd-ambassador__photo" aria-hidden="true">
-                <svg>
-                  <use href="#i-heart" />
-                </svg>
-              </div>
-              <div class="ddd-ambassador__body">
-                <span class="ddd-badge-soon">Embaixador(a) 2 · Em breve</span>
-                <h4>Espaço reservado para Embaixador(a) AFLOR</h4>
-                <p class="ddd-ambassador__quote">“Depoimento de apoio ao Projeto Raízes do Aprender e à Campanha Dia de
-                  Doar.”</p>
-                <p class="ddd-ambassador__bio">Mini bio de apresentação e vínculo com a causa da infância.</p>
-              </div>
-            </li>
-            <li class="ddd-ambassador ddd-ambassador--placeholder">
-              <div class="ddd-ambassador__photo" aria-hidden="true">
-                <svg>
-                  <use href="#i-heart" />
-                </svg>
-              </div>
-              <div class="ddd-ambassador__body">
-                <span class="ddd-badge-soon">Embaixador(a) 3 · Em breve</span>
-                <h4>Espaço reservado para Embaixador(a) AFLOR</h4>
-                <p class="ddd-ambassador__quote">“Depoimento de apoio ao Projeto Raízes do Aprender e à Campanha Dia de
-                  Doar.”</p>
-                <p class="ddd-ambassador__bio">Mini bio de apresentação e vínculo com a causa da infância.</p>
-              </div>
-            </li>
-            <li class="ddd-ambassador ddd-ambassador--placeholder">
-              <div class="ddd-ambassador__photo" aria-hidden="true">
-                <svg>
-                  <use href="#i-heart" />
-                </svg>
-              </div>
-              <div class="ddd-ambassador__body">
-                <span class="ddd-badge-soon">Embaixador(a) 4 · Em breve</span>
-                <h4>Espaço reservado para Embaixador(a) AFLOR</h4>
-                <p class="ddd-ambassador__quote">“Depoimento de apoio ao Projeto Raízes do Aprender e à Campanha Dia de
-                  Doar.”</p>
-                <p class="ddd-ambassador__bio">Mini bio de apresentação e vínculo com a causa da infância.</p>
-              </div>
-            </li>
           </ul>
         </div>
 
@@ -746,52 +704,51 @@
     <!-- ===================== AFLORÔMETRO ===================== -->
     <section class="section" id="aflorometro" aria-labelledby="aflorometro-titulo">
       <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">Nossa meta de arrecadação</p>
-          <h2 id="aflorometro-titulo"><em>Aflorômetro</em></h2>
-          <p>Veja como estamos no alcance da nossa meta de arrecadação!</p>
-        </header>
-
         <div class="aflorometro-card reveal" data-aflorometro>
           <div class="aflorometro-gauge">
-            <!-- Velocímetro / hodômetro semicircular em SVG puro (sem estilos inline, 100% compatível com a CSP) -->
-            <svg class="aflorometro-svg" viewBox="0 0 320 190" role="img"
+            <!-- Velocímetro / hodômetro semicircular compacto em SVG puro (sem estilos inline, 100% compatível com a CSP) -->
+            <svg class="aflorometro-svg" width="200" height="120" viewBox="0 0 320 190" role="img"
               aria-labelledby="aflorometro-svg-titulo aflorometro-svg-desc">
               <title id="aflorometro-svg-titulo">Hodômetro de arrecadação da Campanha Dia de Doar</title>
-              <desc id="aflorometro-svg-desc">Gráfico semicircular indicando o valor arrecadado rumo à meta máxima de
-                R$ 250.000,00.</desc>
+              <desc id="aflorometro-svg-desc">Gráfico semicircular indicando o valor arrecadado rumo aos 5 marcos da
+                campanha, até R$ 250.000,00.</desc>
 
               <!-- Trilha de fundo (semicírculo raio 120, centro 160,155; comprimento = pi * 120 ≈ 377) -->
-              <path class="aflorometro-svg__track" d="M 40 155 A 120 120 0 0 1 280 155" fill="none" stroke-width="24"
+              <path class="aflorometro-svg__track" d="M 40 155 A 120 120 0 0 1 280 155" fill="none" stroke-width="22"
                 stroke-linecap="round" />
 
               <!-- Arco preenchido (controlado por stroke-dashoffset via JS) -->
-              <path class="aflorometro-svg__fill" d="M 40 155 A 120 120 0 0 1 280 155" fill="none" stroke-width="24"
+              <path class="aflorometro-svg__fill" d="M 40 155 A 120 120 0 0 1 280 155" fill="none" stroke-width="22"
                 stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="377" data-aflorometro-arc />
 
               <!-- Marcações dos 5 marcos ao redor do arco -->
               <g class="aflorometro-svg__ticks" aria-hidden="true">
-                <!-- Marco 1 (20% do arco visual) -->
+                <!-- 1º Marco -->
                 <circle cx="55" cy="96" r="4.5" />
-                <!-- Marco 2 (40% do arco visual) -->
+                <text x="33" y="96" text-anchor="end" class="aflorometro-svg__tick-label">1º</text>
+                <!-- 2º Marco -->
                 <circle cx="96" cy="53" r="4.5" />
-                <!-- Marco 3 (60% do arco visual) -->
+                <text x="80" y="40" text-anchor="end" class="aflorometro-svg__tick-label">2º</text>
+                <!-- 3º Marco -->
                 <circle cx="160" cy="35" r="4.5" />
-                <!-- Marco 4 (80% do arco visual) -->
+                <text x="160" y="19" text-anchor="middle" class="aflorometro-svg__tick-label">3º</text>
+                <!-- 4º Marco -->
                 <circle cx="224" cy="53" r="4.5" />
-                <!-- Marco 5 (100% do arco visual) -->
+                <text x="240" y="40" text-anchor="start" class="aflorometro-svg__tick-label">4º</text>
+                <!-- 5º Marco -->
                 <circle cx="265" cy="96" r="4.5" />
+                <text x="287" y="96" text-anchor="start" class="aflorometro-svg__tick-label">5º</text>
               </g>
 
               <!-- Setinha / ponteiro do hodômetro (-90° = R$ 0; +90° = R$ 250.000) -->
               <g transform="rotate(-90 160 155)" data-aflorometro-needle>
-                <polygon class="aflorometro-svg__needle" points="160,48 154,155 166,155" />
-                <circle class="aflorometro-svg__hub" cx="160" cy="155" r="13" />
-                <circle class="aflorometro-svg__hub-inner" cx="160" cy="155" r="5" />
+                <polygon class="aflorometro-svg__needle" points="160,50 154,155 166,155" />
+                <circle class="aflorometro-svg__hub" cx="160" cy="155" r="12" />
+                <circle class="aflorometro-svg__hub-inner" cx="160" cy="155" r="4.5" />
               </g>
 
-              <text x="32" y="182" class="aflorometro-svg__label">R$ 0</text>
-              <text x="288" y="182" text-anchor="end" class="aflorometro-svg__label">R$ 250 mil</text>
+              <text x="34" y="182" class="aflorometro-svg__label">R$ 0</text>
+              <text x="286" y="182" text-anchor="end" class="aflorometro-svg__label">R$ 250 mil</text>
             </svg>
 
             <div class="aflorometro-readout">
@@ -803,7 +760,11 @@
           </div>
 
           <div class="aflorometro-milestones">
-            <h3>Marcos de arrecadação</h3>
+            <header class="aflorometro-head">
+              <p class="eyebrow">Nossa meta de arrecadação</p>
+              <h2 id="aflorometro-titulo"><em>Aflorômetro</em></h2>
+              <p>Veja como estamos no alcance da nossa meta de arrecadação!</p>
+            </header>
             <ol class="aflorometro-list" role="list" data-aflorometro-lista>
               <li class="aflorometro-item" data-marco-valor="42463.85">
                 <span class="aflorometro-item__step">1º Marco</span>

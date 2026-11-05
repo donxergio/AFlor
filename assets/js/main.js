@@ -111,7 +111,7 @@
   // Embaixadores AFLOR (se houver itens em config.js → diaDeDoar.embaixadores)
   var embList = $('[data-ddd-embaixadores]');
   if (embList && Array.isArray(ddd.embaixadores) && ddd.embaixadores.length) {
-    embList.textContent = '';
+    $$('.ddd-ambassador--placeholder', embList).forEach(function (el) { el.remove(); });
     ddd.embaixadores.slice(0, 8).forEach(function (emb) {
       if (!emb || !emb.nome) return;
       var li = doc.createElement('li');
