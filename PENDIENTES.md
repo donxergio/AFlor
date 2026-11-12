@@ -33,7 +33,7 @@
   - [ ] `postDoacaoSementeUrl`: pegar el enlace al post de Instagram donde se etiqueta a 5 personas.
   - [ ] `aflorometro.valorAtual` y `aflorometro.atualizadoEm`: actualizar conforme avance la recaudación.
   - [x] `embaixadores`: **Taísa Rodrigues** ya integrada con foto, depoimento, bio y contactos (`@taicomunica` / `47988643373`). Se retiraron las tarjetas vacías de Embaixador 2, 3 y 4 (se añadirán más adelante cuando existan).
-  - [ ] `patrocinadores`, `parcerias` (ya incluida **Sarah Pinnow / Felice Granola e Poesia** en `dia-de-doar.html`) y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen más empresas.
+  - [ ] `patrocinadores` (ya incluida **LASE do Brasil** en `dia-de-doar.html`), `parcerias` (ya incluida **Sarah Pinnow / Felici Granola e Poesia** en `dia-de-doar.html`) y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen más empresas.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.
 - Fin automático: el botón, la tarjeta y el enlace del pie desaparecen el 06/12/2026 a las 00:00 (`diaDeDoar.encerraEm`). Para probarlo, añade `?simular=encerrado` a la URL.

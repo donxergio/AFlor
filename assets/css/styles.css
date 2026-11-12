@@ -1835,6 +1835,12 @@ body:has(#aviso-privacidade:not([hidden])) .aflorometro-bar {
 .ddd-partner-feature__media img {
   width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; display: block;
 }
+.ddd-partner-feature__media--contain {
+  background: #fff;
+}
+.ddd-partner-feature__media--contain img {
+  aspect-ratio: auto; object-fit: contain;
+}
 .ddd-partner-feature__body {
   display: flex; flex-direction: column; gap: 0.9rem;
 }
