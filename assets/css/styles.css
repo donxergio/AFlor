@@ -1890,6 +1890,64 @@ ul.ddd-partner-feature__contacts {
   .ddd-partner-feature { grid-template-columns: 1fr; }
   .ddd-partner-feature__media { max-width: 300px; margin-inline: auto; }
 }
+.ddd-partner-feature--no-media {
+  grid-template-columns: 1fr;
+}
 .ddd-ambassador--featured {
   grid-column: 1 / -1;
+}
+
+/* Modalidades de Doação Semente (Doação Livre + Doe e ganhe) */
+.ddd-semente-options {
+  display: grid; gap: 1.25rem;
+}
+.ddd-semente-option {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.25rem; padding: clamp(1.15rem, 2.5vw, 1.65rem);
+  border-radius: var(--r-lg); background: rgba(253, 251, 247, 0.92);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.ddd-semente-option--gifts {
+  flex-direction: column; align-items: stretch;
+}
+.ddd-semente-option__body,
+.ddd-semente-option__head {
+  flex: 1 1 320px;
+}
+.ddd-semente-option h5 {
+  margin: 0 0 0.35rem; font-family: var(--font-sans); font-size: var(--fs-lg);
+  font-weight: 900; color: var(--c-ink-900);
+}
+.ddd-semente-option p {
+  margin: 0; font-size: var(--fs-base); color: var(--c-ink-700); line-height: 1.55;
+}
+.ddd-semente-option__actions {
+  flex: none;
+}
+.ddd-semente-gifts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 1rem;
+}
+.ddd-semente-gift {
+  display: grid; grid-template-columns: 112px 1fr; gap: 1rem; align-items: center;
+  padding: 1rem 1.15rem; border-radius: var(--r-md);
+  background: var(--c-surface); border: 1px solid var(--border);
+}
+.ddd-semente-gift__thumb {
+  width: 112px; height: 96px; object-fit: cover;
+  border-radius: var(--r-sm); border: 1px solid var(--border);
+  background: var(--c-cream-50); display: block;
+}
+.ddd-semente-gift__info {
+  display: flex; flex-direction: column; gap: 0.65rem;
+}
+.ddd-semente-gift__info p {
+  margin: 0; font-size: var(--fs-sm); color: var(--c-ink-900); line-height: 1.45;
+}
+.ddd-semente-gift__actions {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+@media (max-width: 560px) {
+  .ddd-semente-gift { grid-template-columns: 1fr; }
+  .ddd-semente-gift__thumb { width: 100%; max-width: 220px; height: 140px; margin-inline: auto; }
 }

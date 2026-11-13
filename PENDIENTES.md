@@ -23,17 +23,17 @@
 - [x] **Popup de refuerzo con QR PIX:** al entrar en `dia-de-doar.html` (mientras la campaña esté activa) se abre un modal (`#modal-dia-de-doar`) con el código QR, la clave PIX copiable y botones para cerrar o ir al formulario `#seus-dados`, manteniendo intacta la sección `#pix` dentro de la página.
 - [x] **Nueva estructura oficial de la página (`dia-de-doar.html`):**
   1. **Abertura + Projeto Raízes do Aprender** (con logo oficial, *Como fazemos isso*, indicadores de evaluación, espacio para el selo *O Farol* y llamadas a la acción).
-  2. **Modalidades de apoyo (*O Farol Joinville*):** *Embaixadores AFLOR* (**Taísa Rodrigues**; los espacios vacíos de Embaixador 2, 3 y 4 se retiraron hasta que existan), *Patrocínio Frutificar*, *Parceria que Germinar*, *Vizinho Amigo Dá Flor* y *Doação Semente* (con los pasos del brinde de la bolsa ecológica para donaciones > R$ 80,00).
+  2. **Modalidades de apoyo (*O Farol Joinville*):** *Embaixadores AFLOR* (**Taísa Rodrigues** y **Andréia Baldissera**), *Patrocínio Frutificar* (**LASE do Brasil** y **Jardim Waldorf Ciranda**), *Parceria que Germinar* (**Sarah Pinnow / Felici Granola e Poesia** y **Luana Pereira**), *Vizinho Amigo Dá Flor* y *Doação Semente* (con modalidades *Doação Livre* y *Doe e ganhe*: tapete Kapazi para R$ 30,00 y ecobag del Jardim Waldorf Ciranda para R$ 80,00).
   3. **Aflorômetro:** velocímetro/hodómetro semicircular en SVG con los 5 marcos de recaudación + barra flotante compacta (`#aflorometro-fixo`) durante el scroll.
   4. **PIX + Cadastro de la campaña (`#seus-dados`):** formulario actualizado con *Nome completo*, *Instagram*, *WhatsApp*, *E-mail*, *Como ficou sabendo da Campanha*, *Filhos ou netos em idade escolar* (selección múltiple), *Aceito receber novidades* y consentimiento LGPD.
   5. **Sobre a AFLOR** + **Sobre a Campanha do Dia de Doar** (`#o-que-e`).
 - [ ] **Imágenes y datos pendientes de cargar en `assets/js/config.js` (`diaDeDoar`):**
   - [x] `seloFarolImg`: imagen del sello *O Farol* (`assets/img/selo-o-farol.webp` y `.png` con fondo transparente) integrada en `dia-de-doar.html` y `config.js`.
-  - [ ] `bolsaImg`: subir foto de la bolsa ecológica del Jardim Waldorf Ciranda a `assets/img/`.
-  - [ ] `postDoacaoSementeUrl`: pegar el enlace al post de Instagram donde se etiqueta a 5 personas.
-  - [ ] `aflorometro.valorAtual` y `aflorometro.atualizadoEm`: actualizar conforme avance la recaudación.
-  - [x] `embaixadores`: **Taísa Rodrigues** ya integrada con foto, depoimento, bio y contactos (`@taicomunica` / `47988643373`). Se retiraron las tarjetas vacías de Embaixador 2, 3 y 4 (se añadirán más adelante cuando existan).
-  - [ ] `patrocinadores` (ya incluida **LASE do Brasil** en `dia-de-doar.html`), `parcerias` (ya incluida **Sarah Pinnow / Felici Granola e Poesia** en `dia-de-doar.html`) y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen más empresas.
+  - [x] `bolsaImg`: fotos de brindes de *Doação Semente* (`assets/img/brinde-ecobag-jardim-640.webp`, `assets/img/bolsa-ecologica-jardim.webp` y `assets/img/brinde-tapete-kapazi-640.webp` / `1280.webp`) integradas en `dia-de-doar.html` y `config.js`.
+  - [ ] `postDoacaoSementeUrl`: pegar el enlace al post de Instagram donde se etiqueta a 5 personas (si vuelve a usarse).
+  - [x] `aflorometro.valorAtual` (`200`) y `aflorometro.atualizadoEm` (`'13/11/2026'`): actualizar conforme avance la recaudación.
+  - [x] `embaixadores`: **Taísa Rodrigues** y **Andréia Baldissera** ya integradas con foto, depoimento, bio y contactos.
+  - [ ] `patrocinadores` (ya incluidas **LASE do Brasil** y **Jardim Waldorf Ciranda** con foto `4 JWC_página` en `dia-de-doar.html`), `parcerias` (ya incluidas **Sarah Pinnow / Felici Granola e Poesia** y **Luana Pereira** en `dia-de-doar.html`, pendiente foto de Luana Pereira cuando se suba al Drive) y `vizinhos`: añadir logos, declaraciones de apoyo y contactos conforme se sumen más empresas.
 - [x] **Fecha confirmada:** 1 de diciembre de 2026 (primera terça-feira tras la Black Friday, según el material oficial).
 - [ ] **Confirmar la descripción del PL de Joinville** (tarjeta "Joinville também doa"); el PDF todavía no se ha leído.
 - Fin automático: el botón, la tarjeta y el enlace del pie desaparecen el 06/12/2026 a las 00:00 (`diaDeDoar.encerraEm`). Para probarlo, añade `?simular=encerrado` a la URL.

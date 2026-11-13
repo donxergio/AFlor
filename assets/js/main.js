@@ -355,6 +355,13 @@
     var dddModal = $('[data-ddd-modal]');
     if (dddModal) {
       var closeBtn = $('.ddd-modal__close', dddModal);
+      var openModal = function () {
+        dddModal.hidden = false;
+        doc.body.classList.add('has-modal-open');
+        if (closeBtn) {
+          window.setTimeout(function () { closeBtn.focus(); }, 60);
+        }
+      };
       var closeModal = function () {
         if (dddModal.hidden) return;
         dddModal.hidden = true;
@@ -366,6 +373,13 @@
       if (closeBtn) {
         window.setTimeout(function () { closeBtn.focus(); }, 60);
       }
+
+      $$('[data-ddd-modal-open]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal();
+        });
+      });
 
       $$('[data-ddd-modal-close]', dddModal).forEach(function (el) {
         el.addEventListener('click', closeModal);

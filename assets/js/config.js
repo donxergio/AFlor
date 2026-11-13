@@ -123,7 +123,7 @@
        *   postDoacaoSementeUrl → link https do post no Instagram para marcar 5 pessoas
        */
       seloFarolImg: 'assets/img/selo-o-farol.webp',
-      bolsaImg: '',
+      bolsaImg: 'assets/img/bolsa-ecologica-jardim.webp',
       postDoacaoSementeUrl: '',
 
       /**
@@ -133,8 +133,8 @@
        *   marcos       → os 5 marcos oficiais da campanha.
        */
       aflorometro: {
-        valorAtual: 0,
-        atualizadoEm: '',
+        valorAtual: 200,
+        atualizadoEm: '13/11/2026',
         marcos: [
           { valor: 42463.85, descricao: '6 meses de Projeto Raízes do Aprender' },
           { valor: 74927.70, descricao: '1 ano de Projeto Raízes do Aprender' },
