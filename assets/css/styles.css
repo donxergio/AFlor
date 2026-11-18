@@ -1938,6 +1938,9 @@ ul.ddd-partner-feature__contacts {
   border-radius: var(--r-sm); border: 1px solid var(--border);
   background: var(--c-cream-50); display: block;
 }
+.ddd-semente-gift__thumb--contain {
+  object-fit: contain; background: #fff; padding: 0.25rem;
+}
 .ddd-semente-gift__info {
   display: flex; flex-direction: column; gap: 0.65rem;
 }
