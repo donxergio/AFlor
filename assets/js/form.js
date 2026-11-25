@@ -74,6 +74,7 @@
     'como_soube',
     'filhos_netos',
     'novidades',
+    'brinde_desejado',
     'consentimento',
   ];
   var NAME_RE = /^[\p{L}\p{M}' .-]{3,80}$/u;
@@ -137,6 +138,7 @@
       como_soube: sanitize(fd.get('como_soube'), 40),
       filhos_netos: fnValid,
       novidades: sanitize(fd.get('novidades'), 10),
+      brinde_desejado: sanitize(fd.get('brinde_desejado'), 200),
       mensagem: sanitize(fd.get('mensagem'), 600),
       consentimento: fd.get('consentimento') === 'sim',
       botcheck: fd.get('botcheck') !== null,
@@ -246,6 +248,9 @@
     if (d.novidades && NOVIDADES[d.novidades]) {
       lines.push('• Receber novidades da AFLOR e Jardim Ciranda: ' + NOVIDADES[d.novidades]);
     }
+    if (d.brinde_desejado) {
+      lines.push('• Brinde desejado (Doação Semente): ' + d.brinde_desejado);
+    }
     if (d.mensagem) lines.push('', 'Mensagem: ' + d.mensagem);
     return lines;
   }
@@ -345,6 +350,7 @@
       como_soube: data.como_soube && COMO_SOUBE[data.como_soube] ? COMO_SOUBE[data.como_soube] : '—',
       filhos_netos_idade_escolar: data.filhos_netos && data.filhos_netos.length ? formatFilhosNetos(data.filhos_netos) : '—',
       receber_novidades: data.novidades && NOVIDADES[data.novidades] ? NOVIDADES[data.novidades] : '—',
+      brinde_desejado: data.brinde_desejado || '—',
       mensagem: data.mensagem || '—',
       consentimento_lgpd: 'Sim — ' + new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }),
     };

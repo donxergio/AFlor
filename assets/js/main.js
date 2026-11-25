@@ -351,7 +351,7 @@
       $$('[data-pix-favorecido]').forEach(function (el) { el.textContent = String(ddd.pixFavorecido).slice(0, 140); });
     }
 
-    // Popup de reforço do PIX ao entrar em dia-de-doar.html
+    // Popup do PIX sob demanda (aberto apenas ao clicar nos botões de doação)
     var dddModal = $('[data-ddd-modal]');
     if (dddModal) {
       var closeBtn = $('.ddd-modal__close', dddModal);
@@ -366,13 +366,7 @@
         if (dddModal.hidden) return;
         dddModal.hidden = true;
         doc.body.classList.remove('has-modal-open');
-        if (banner && !readConsent()) window.setTimeout(showBanner, 400);
       };
-
-      doc.body.classList.add('has-modal-open');
-      if (closeBtn) {
-        window.setTimeout(function () { closeBtn.focus(); }, 60);
-      }
 
       $$('[data-ddd-modal-open]').forEach(function (el) {
         el.addEventListener('click', function (e) {

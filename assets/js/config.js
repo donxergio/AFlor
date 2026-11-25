@@ -133,8 +133,8 @@
        *   marcos       → os 5 marcos oficiais da campanha.
        */
       aflorometro: {
-        valorAtual: 200,
-        atualizadoEm: '13/11/2026',
+        valorAtual: 770,
+        atualizadoEm: '25/11/2026',
         marcos: [
           { valor: 42463.85, descricao: '6 meses de Projeto Raízes do Aprender' },
           { valor: 74927.70, descricao: '1 ano de Projeto Raízes do Aprender' },
